@@ -1,0 +1,88 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="UCUserRoleDetails.ascx.cs" Inherits="User_Controls_UCUserRoleDetails" %>
+<table>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <asp:Label ID="lblResult" runat="server"></asp:Label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            User:</td>
+        <td>
+            <asp:DropDownList ID="ddlUser" runat="server" AppendDataBoundItems="True" AutoPostBack="True"
+                DataTextField="UserName" DataValueField="ID" OnSelectedIndexChanged="ddlUser_SelectedIndexChanged"
+                Width="261px">
+            </asp:DropDownList><br />
+            <asp:RequiredFieldValidator ID="UserReq" runat="server" ControlToValidate="ddlUser"
+                Display="dynamic" ErrorMessage="Please select the User." InitialValue="-Select-"
+                ValidationGroup="VGSubmit"></asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Role:</td>
+        <td>
+            <asp:DropDownList ID="ddlRole" runat="server" AppendDataBoundItems="True" DataTextField="Role"
+                DataValueField="ID" Width="261px">
+            </asp:DropDownList><br />
+            <asp:RequiredFieldValidator ID="RoleReq" runat="server" ControlToValidate="ddlRole"
+                Display="dynamic" ErrorMessage="Please select the Role." InitialValue="-Select-"
+                ValidationGroup="VGSubmit"></asp:RequiredFieldValidator>
+        </td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <asp:Button ID="btnSubmit" runat="server" OnClick="btnSubmit_Click" Text="Add" ValidationGroup="VGSubmit" />
+            <asp:Button ID="btnCancel" runat="server" OnClick="btnCancel_Click" Text="Cancel" /></td>
+    </tr>
+    <tr>
+        <td>
+        </td>
+        <td>
+            <asp:GridView ID="gvUserRoleDetails" runat="server" AllowPaging="True" AutoGenerateColumns="False"
+                DataKeyNames="ID" OnPageIndexChanging="gvUserRoleDetails_PageIndexChanging"
+                OnRowCommand="gvUserRoleDetails_RowCommand" OnRowDataBound="gvUserRoleDetails_RowDataBound"
+                OnRowEditing="gvUserRoleDetails_RowEditing" OnSelectedIndexChanging="gvUserRoleDetails_SelectedIndexChanging"
+                ShowFooter="True" Width="100%">
+                <Columns>
+                    <asp:TemplateField HeaderText="Role">
+                        <EditItemTemplate>
+                            <br />
+                            &nbsp;
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                            &nbsp;<br />
+                        </FooterTemplate>
+                        <ItemTemplate>
+                            <asp:Label ID="lblRole" runat="server" Text='<%# Bind("Role") %>'></asp:Label>
+                            &nbsp;&nbsp;
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Active">
+                        <ItemTemplate>
+                            <asp:Image ID="imgbtnActivate" runat="server" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lnkbtnActiveness" runat="server" CommandArgument="<%# Container.DataItemIndex %>"
+                                CommandName="Activeness">Activate</asp:LinkButton>&nbsp;
+                            <asp:HiddenField ID="hdfIsActive" runat="server" Value='<%# Bind("IsActive") %>' />
+                        </ItemTemplate>
+                        <EditItemTemplate>
+                            &nbsp;
+                        </EditItemTemplate>
+                        <FooterTemplate>
+                            &nbsp;
+                        </FooterTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+            <asp:HiddenField ID="hdfID" runat="server" Value='<%# Bind("ID") %>' />
+        </td>
+    </tr>
+</table>

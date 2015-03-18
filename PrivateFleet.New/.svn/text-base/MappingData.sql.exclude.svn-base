@@ -1,0 +1,31 @@
+select * from tblQuotationDetails
+
+SElect distinct a.ACCIDorCHARGETYPEID,a.QuoteValue,b.QuoteValue
+FROM
+(
+select  QuoteValue,OptionID,ACCIDorCHARGETYPEID,IsChargeType
+From tblQuotationDetails
+where optionId=2
+
+
+) a 
+inner join
+(
+	select  QuoteValue,OptionID,ACCIDorCHARGETYPEID,IsChargeType
+	From tblQuotationDetails
+	where optionId=1
+) b
+
+on a.ACCIDorCHARGETYPEID=b.ACCIDorCHARGETYPEID and a.IsChargeType=b.IsChargeType
+
+
+select  QuoteValue,OptionID,ACCIDorCHARGETYPEID
+From tblQuotationDetails
+where optionId=2
+
+
+select * from dbo.tblRequestAccessories where RequestID=19
+
+	select  QuoteValue,OptionID,ACCIDorCHARGETYPEID
+	From tblQuotationDetails
+	where optionId=1

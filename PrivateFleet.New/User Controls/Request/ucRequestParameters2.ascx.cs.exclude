@@ -1,0 +1,201 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using Mechsoft.FleetDeal;
+using log4net;
+
+public partial class User_Controls_Request_ucRequestParameters : System.Web.UI.UserControl
+{
+    //declare and initialize logger object
+    static ILog logger = LogManager.GetLogger(typeof(User_Controls_Request_ucRequestParameters));
+    static DataTable dtParams = null;//static
+
+    #region "Variables and Properties"
+
+    private DataTable _dtParameters;
+    public DataTable dtParameters
+    {
+        get
+        {
+            if (ViewState["dtParameters"] != null)
+                _dtParameters = dtParams;// (DataTable)ViewState["dtParameters"];
+            return _dtParameters;
+        }
+        set
+        {
+            _dtParameters = value;
+           // ViewState["dtParameters"] = _dtParameters;
+        }
+    }
+    #endregion
+
+    #region "Page Load"
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            if (!IsPostBack)
+            {
+                BuildDataTable();
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            logger.Error("Page Load Event : " + ex.Message);
+        }
+    }
+    #endregion
+
+    #region "Methods"
+    /// <summary>
+    /// create datatable for selected additional accessories
+    /// </summary>
+    private void BuildDataTable()
+    {
+        dtParams = new DataTable();
+        logger.Debug("Method Start : BuildDataTable");
+
+        try
+        {
+            DataColumn colString = new DataColumn("ID");
+            //colString.DataType = System.Type.GetType("System.String");
+            dtParams.Columns.Add(colString);
+            dtParams.Columns.Add("AccessoryName");
+            dtParams.Columns.Add("Specification");
+            dtParams.Columns.Add("IsDBDriven");
+            dtParams.Columns[1].Unique = true;
+            ClearConstraintsOfDataTable(dtParams);
+
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+            logger.Debug("Method End : BuildDataTable");
+        }
+    }
+
+
+    private void ClearConstraintsOfDataTable(DataTable dtSelectedAcc)
+    {
+        dtParams.Columns["IsDBDriven"].AllowDBNull = true;
+        dtParams.Columns["AccessoryName"].AllowDBNull = true;
+        dtParams.Columns["Specification"].AllowDBNull = true;
+        dtParams.Columns[0].AllowDBNull = true;
+    }
+
+
+    /// <summary>
+    /// Method to bind parameters to grid
+    /// </summary>
+    public void BindParameters()
+    {
+        logger.Debug("Method Start : BindParameters");
+
+        try
+        {
+
+            TemplateField TempFeild = new TemplateField();
+            TempFeild.HeaderTemplate = new gvTemlateCreatorForAutoCompleteExtender(DataControlRowType.Header, "Value","Specification" );
+            TempFeild.ItemTemplate = new gvTemlateCreatorForAutoCompleteExtender(DataControlRowType.DataRow, "Value", "Specification");
+            TempFeild.HeaderTemplate.InstantiateIn(gvParameters);
+            TempFeild.ItemTemplate.InstantiateIn(gvParameters);
+
+            gvParameters.Columns.Add(TempFeild);
+
+
+
+            DataTable dt=null;
+            if (ViewState["dtParameters"] == null)
+            {
+                Cls_Accessories objAccessory = new Cls_Accessories();
+                dt = objAccessory.GetActiveParameters();
+                ViewState["dtParameters"] = dt;
+            }
+            else
+            {
+                dt = (DataTable)ViewState["dtParameters"];
+            }
+
+            //bind selected additional accessories to grid
+            gvParameters.DataSource = dt;
+            gvParameters.DataBind();
+
+
+        }
+        catch (Exception ex)
+        {
+            logger.Error("BindParameters Method : " + ex.Message);
+            throw;
+        }
+        finally
+        {
+            logger.Debug("Method End : BindParameters");
+        }
+    }
+
+  
+    #endregion
+
+    #region "Events"
+
+    protected void ibtnSave_Click(object sender, ImageClickEventArgs e)
+    {
+        try
+        {
+            dtParams.Rows.Clear();
+            int i = 1;
+            foreach (GridViewRow gvRow in gvParameters.Rows)
+            {
+                TextBox txt = (TextBox)gvRow.FindControl("txtValue" + i);
+                Label lbl = (Label)gvRow.FindControl("lblAccessory");
+                HiddenField hdfID = (HiddenField)gvRow.FindControl("hdfID");
+                DataRow dr = dtParams.NewRow();
+
+                if (hdfID != null)
+                    dr["ID"] = hdfID.Value;
+
+                if (lbl != null)
+                    dr["AccessoryName"] = lbl.Text;
+
+                if (txt != null)
+                    dr["Specification"] = txt.Text;
+
+                dr["IsDBDriven"] = "True";
+                dtParams.Rows.Add(dr);
+                i++;
+
+            }
+            ViewState["dtParameters"] = dtParams;
+           
+           
+        }
+        catch (Exception ex)
+        {
+            logger.Error("ibtnSave_Click Event : " + ex.Message);
+        }
+    }
+    #endregion
+    protected void gvParameters_DataBound(object sender, EventArgs e)
+    {
+
+    }
+    protected void gvParameters_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+           
+        }
+    }
+}

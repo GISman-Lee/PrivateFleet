@@ -1,0 +1,496 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <script src="js/jquery-1.2.1.min.js" type="text/javascript"></script>
+
+    <script src="js/menu.js" type="text/javascript"></script>
+
+    <link href="CSS/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <title>Untitled Page </title>
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="Quotation.aspx" id="aspnetForm">
+        <div>
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJLTg2MDY1MzMyD2QWAmYPZBYCAgMPZBYEAgMPDxYCHgRUZXh0BQ1RdW90ZSBSZXF1ZXN0ZGQCBQ9kFgQCBw88KwAJAQAPFgQeCERhdGFLZXlzFgAeC18hSXRlbUNvdW50AgRkFghmD2QWBAIBDw8WAh8ABRFNYWtlLE1vZGVsLFNlcmllc2RkAgMPDxYCHwAFE0NELERBV04sU0VSSUVTLTEyNTRkZAIBD2QWBAIBDw8WAh8ABQlCb2R5IFR5cGVkZAIDDw8WAh8ABQdNZXRhbGljZGQCAg9kFgQCAQ8PFgIfAAULQXV0by9NYW51YWxkZAIDDw8WAh8ABQRBdXRvZGQCAw9kFgQCAQ8PFgIfAAUFQ29sdXJkZAIDDw8WAh8ABQ1NZXRhbGljICBCbHVlZGQCCA88KwANAQAPFgYeC18hRGF0YUJvdW5kZx4JUGFnZUNvdW50AgEfAgIMZBYCZg9kFhwCAQ9kFgJmD2QWBgIBDw8WAh4HVmlzaWJsZWdkZAIDDw8WAh8ABSBSZWNvbW1hbmRlZCBSZXRhaWwgUHJpY2UgRXhjIEdTVBYCHgVTdHlsZQURcGFkZGluZy1sZWZ0OiA1cHhkAgUPDxYCHwBlZGQCAg8PFgQeCENzc0NsYXNzBQ1ncmlkYWN0aXZlcm93HgRfIVNCAgJkFgZmD2QWBgIBDw8WAh8FZ2RkAgMPDxYCHwAFFkFkZGl0aW9uYWwgQWNjZXNzb3JpZXMWAh8GBRFwYWRkaW5nLWxlZnQ6IDVweGQCBQ8PFgIfAGVkZAIBDw8WAh8FaGRkAgIPDxYCHwVoZGQCAw9kFgJmD2QWBAIDDw8WAh8ABQ5Qb3dlciBzdGVlcmluZ2RkAgUPDxYCHwAFQnRoaXMgaXMgcG93ZXIgc3RlYXJpbmcgb2ZmZXJpbmcgbW9zdCB2YWx1YWJsZSBzZXJ2aWNlIHRvIGN1c3RvbWVyc2RkAgQPDxYEHwcFDWdyaWRhY3RpdmVyb3cfCAICZBYGZg9kFgYCAQ8PFgIfBWdkZAIDDw8WAh8ABQ1GaXhlZCBDaGFyZ2VzFgIfBgURcGFkZGluZy1sZWZ0OiA1cHhkAgUPDxYCHwBlZGQCAQ8PFgIfBWhkZAICDw8WAh8FaGRkAgUPZBYCZg9kFgQCAw8PFgIfAAUMUHJlLURlbGl2ZXJ5ZGQCBQ8PFgIfAGVkZAIGD2QWAmYPZBYEAgMPDxYCHwAFDkZsZWV0IERpc2NvdW50ZGQCBQ8PFgIfAGVkZAIHD2QWAmYPZBYEAgMPDxYCHwAFB0xDVC9HU1RkZAIFDw8WAh8AZWRkAggPZBYCZg9kFgQCAw8PFgIfAAUKU3RhbXAgRHV0eWRkAgUPDxYCHwBlZGQCCQ9kFgJmD2QWBAIDDw8WAh8ABQxSZWdpc3RyYXRpb25kZAIFDw8WAh8AZWRkAgoPZBYCZg9kFgQCAw8PFgIfAAUJUGxhdGUgRmVlZGQCBQ8PFgIfAGVkZAILD2QWAmYPZBYEAgMPDxYCHwAFA0NUUGRkAgUPDxYCHwBlZGQCDA9kFgJmD2QWBAIDDw8WAh8ABSVUb3RhbC1PbiBSb2FkIENvc3QgKEluY2x1c2l2ZSBvZiBHU1QpZGQCBQ8PFgIfAGVkZAINDw8WAh8FaGRkAg4PDxYCHwVoZGQYAgUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgEFEmN0bDAwJGltZ2J0bkxvZ091dAUnY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndk1ha2VEZXRhaWxzD2dk3YlgePW6PUhvaodNEaJPvvkpCGY=" />
+        </div>
+        <table width="1000px" border="0" align="center" cellpadding="0" cellspacing="0" class="mainbdr">
+            <tr>
+                <td align="left" valign="top">
+                    <div class="logo">
+                        <img src="images/Private_fleet_logo.jpg" alt="" width="298" height="113" /></div>
+                    <div class="banner">
+                        <img src="images/Banner.jpg" alt="" width="700" height="113" /></div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top" style="height: 53px">
+                    <div class="topnavd">
+                        <div style="float: right;">
+                            <input type="image" name="ctl00$imgbtnLogOut" id="ctl00_imgbtnLogOut" src="Images/Logout.gif"
+                                style="border-width: 0px;" />
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top">
+                    <table width="960" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"
+                        class="mainbdr">
+                        <tr>
+                            <td align="left" valign="top">
+                                <div class="maincontaint">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fafbfb"
+                                        class="mainbdr">
+                                        <tr>
+                                            <td width="21%" align="left" valign="top">
+                                                <div class="leftclmn">
+                                                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td align="left" valign="top">
+                                                                <ul id="menu">
+                                                                    <li><a href="#">Master</a>
+                                                                        <ul>
+                                                                            <li><a href="AccessoriesMaster.aspx">Accessory</a></li>
+                                                                            <li><a href="ChargeTypeMaster.aspx">Fixed Charges</a></li>
+                                                                            <li><a href="CityMaster.aspx">City</a></li>
+                                                                            <li><a href="AddConfigValues.aspx">Configuration Values</a></li>
+                                                                            <li><a href="DealerMaster.aspx">Dealer</a></li>
+                                                                            <li><a href="LocationMaster.aspx">Location</a></li>
+                                                                            <li><a href="MakeMaster.aspx">Make</a></li>
+                                                                            <li><a href="ModelMaster.aspx">Model</a></li>
+                                                                            <li><a href="SeriesMaster.aspx">Series</a></li>
+                                                                            <li><a href="StateMaster.aspx">State</a></li>
+                                                                            <li><a href="MakeDealerMaster.aspx">Make - Dealer</a></li>
+                                                                            <li><a href="SeriesAccessoriesMaster.aspx">Series - Accessories</a></li>
+                                                                            <li><a href="UserMaster.aspx">User</a></li>
+                                                                            <li><a href="ManageRoles.aspx">Role</a></li>
+                                                                            <li><a href="ManagePages.aspx">Page</a></li>
+                                                                            <li><a href="ManageActions.aspx">Action</a></li>
+                                                                            <li><a href="PageActionMapping.aspx">Page - Action</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                </ul>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                            <td width="79%" align="left" valign="top">
+                                                <div class="rghtclmn">
+                                                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td height="29" align="left" valign="middle" background="images/Nav_bg_hvr.jpg">
+                                                                <div class="bullate">
+                                                                    <img src="images/Bullate.jpg" alt="" width="19" height="21" /></div>
+                                                                <div class="header">
+                                                                    <span id="ctl00_lblHeader">Quote Request</span>
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td align="left" valign="top" height="500px">
+
+                                                                <script type="text/javascript">
+    
+            function ShowAlert()
+            {
+                var txt=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_txtValue1');
+                alert(txt.value);
+            }
+            
+            function Calculate()
+            {
+           
+                 alert('reached');
+                  var sum=0;
+                  var txtLast=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_txtValue1');
+                         txtLast.value=0;
+                     
+                for(var i=0;i<100;i++)
+                {
+                    try
+                    {
+                    if(i<=9)
+                        {
+                           var txt=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl0'+i+'_txtValue1');
+                        }
+                        else
+                        {
+                            var txt=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl'+i+'_txtValue1');
+                        }
+                        
+                         var val=parseFloat(txt.value);
+                         
+                         if(isNaN(val))
+                         {
+                              
+                         }
+                         else
+                         {
+                           
+                              sum=sum+val;
+                           
+                         }
+                         
+                    }
+                    catch(err)
+                    {
+                         continue;
+                    }
+                }
+                
+              
+                        var txtLast=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_txtValue1');
+                         txtLast.value=sum;
+                         
+            }
+            
+            function setSum()
+            {
+                var grid = window["<%= ctl00_ContentPlaceHolder1_gvMakeDetails %>"];           
+                 var totalrowcount = grid.rows.length  ;  
+                  alert(totalrowcount );
+            }
+                                                                </script>
+
+                                                                <table style="width: 100%">
+                                                                    <tr>
+                                                                        <td style="width: 50%">
+                                                                        </td>
+                                                                        <td style="width: 50%">
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 50%; height: 26px">
+                                                                            <div align="right" style="text-decoration: underline; font-weight: bold; font-size: medium;">
+                                                                                Quote Request
+                                                                            </div>
+                                                                        </td>
+                                                                        <td style="width: 50%; height: 26px">
+                                                                            <div align="center">
+                                                                                Ref :
+                                                                                <input name="ctl00$ContentPlaceHolder1$txtRef" type="text" id="ctl00_ContentPlaceHolder1_txtRef" />
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="width: 50%">
+                                                                            <table style="width: 100%; border-right: #000080 thin solid; border-top: #000080 thin solid;
+                                                                                border-left: #000080 thin solid; border-bottom: #000080 thin solid;">
+                                                                                <tr>
+                                                                                    <td class="gvlabel" style="width: 20%; padding-left: 20px; height: 21px;">
+                                                                                        To :</td>
+                                                                                    <td style="width: 80%; height: 21px;">
+                                                                                        <span id="ctl00_ContentPlaceHolder1_lblTo" class="gvLabel">Mr. Prasad raskar</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width: 20%; padding-left: 20px;">
+                                                                                        Dealer :</td>
+                                                                                    <td style="width: 80%">
+                                                                                        <span id="ctl00_ContentPlaceHolder1_lblDealer" class="gvLabel">Mr Adtiya Biral</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width: 20%; padding-left: 20px;">
+                                                                                        Fax :</td>
+                                                                                    <td style="width: 80%">
+                                                                                        <span id="ctl00_ContentPlaceHolder1_lblFax" class="gvLabel">020-26996366</span></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                        <td style="width: 50%">
+                                                                            <table style="width: 100%; border-right: #000080 thin solid; border-top: #000080 thin solid;
+                                                                                border-left: #000080 thin solid; border-bottom: #000080 thin solid;">
+                                                                                <tr>
+                                                                                    <td class="gvlabel" style="width: 23%">
+                                                                                        From :</td>
+                                                                                    <td style="width: 80%">
+                                                                                        <span id="ctl00_ContentPlaceHolder1_Label1" class="gvLabel">Mr. Prasad Raskar</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width: 23%">
+                                                                                        Fleet Code :</td>
+                                                                                    <td style="width: 80%">
+                                                                                        <span id="ctl00_ContentPlaceHolder1_Label2" class="gvLabel">Fleet -020</span></td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td style="width: 23%">
+                                                                                        Phone :</td>
+                                                                                    <td style="width: 80%">
+                                                                                        <span id="ctl00_ContentPlaceHolder1_Label3" class="gvLabel">9922433995</span></td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" width="100%" style="padding-top: 20px">
+                                                                            <table id="ctl00_ContentPlaceHolder1_DataList1" cellspacing="0" rules="all" border="1"
+                                                                                style="width: 100%; border-collapse: collapse;">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table width="100%">
+                                                                                            <tr>
+                                                                                                <td style="width: 100px" align="center" bgcolor="#eaeaea">
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_DataList1_ctl00_lblHeader" class="gvLabel">Make,Model,Series</span></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="width: 100px; height: 21px" align="center">
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_DataList1_ctl00_lblDetails" class="gvLabel">CD,DAWN,SERIES-1254</span></td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <table width="100%">
+                                                                                            <tr>
+                                                                                                <td style="width: 100px" align="center" bgcolor="#eaeaea">
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_DataList1_ctl01_lblHeader" class="gvLabel">Body
+                                                                                                        Type</span></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="width: 100px; height: 21px" align="center">
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_DataList1_ctl01_lblDetails" class="gvLabel">Metalic</span></td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <table width="100%">
+                                                                                            <tr>
+                                                                                                <td style="width: 100px" align="center" bgcolor="#eaeaea">
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_DataList1_ctl02_lblHeader" class="gvLabel">Auto/Manual</span></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="width: 100px; height: 21px" align="center">
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_DataList1_ctl02_lblDetails" class="gvLabel">Auto</span></td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                    <td>
+                                                                                        <table width="100%">
+                                                                                            <tr>
+                                                                                                <td style="width: 100px" align="center" bgcolor="#eaeaea">
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_DataList1_ctl03_lblHeader" class="gvLabel">Colur</span></td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td style="width: 100px; height: 21px" align="center">
+                                                                                                    <span id="ctl00_ContentPlaceHolder1_DataList1_ctl03_lblDetails" class="gvLabel">Metalic
+                                                                                                        Blue</span></td>
+                                                                                            </tr>
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td colspan="2" style="padding-top: 20px" width="100%">
+                                                                            <div>
+                                                                                <table cellspacing="0" cellpadding="3" rules="all" border="1" id="ctl00_ContentPlaceHolder1_gvMakeDetails"
+                                                                                    style="background-color: White; border-color: #CCCCCC; border-width: 1px; border-style: None;
+                                                                                    width: 100%; border-collapse: collapse;">
+                                                                                    <tr class="gvHeader" style="background-color: #0A73A2; font-weight: bold; height: 30px;">
+                                                                                        <th align="center" scope="col">
+                                                                                            Description</th>
+                                                                                        <th scope="col">
+                                                                                            <b>1</b></th>
+                                                                                        <th scope="col">
+                                                                                            <b>2</b></th>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <img id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_imgActive" src="Images/active_bullate.jpg"
+                                                                                                style="height: 10px; width: 10px; border-width: 0px;" />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 5px">Recommended Retail Price Exc GST</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl02$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl02$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr class="gridactiverow">
+                                                                                        <td align="left">
+                                                                                            <img id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl03_imgActive" src="Images/active_bullate.jpg"
+                                                                                                style="height: 10px; width: 10px; border-width: 0px;" />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl03_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 5px">Additional Accessories</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl03_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl04_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">Power steering</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl04_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                                this is power stearing offering most valuable service to customers</span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl04$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl04_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl04$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl04_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr class="gridactiverow">
+                                                                                        <td align="left">
+                                                                                            <img id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl05_imgActive" src="Images/active_bullate.jpg"
+                                                                                                style="height: 10px; width: 10px; border-width: 0px;" />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl05_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 5px">Fixed Charges</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl05_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl06_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">Pre-Delivery</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl06_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl06$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl06_txtValue1"  onkeypress onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl06$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl06_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl07_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">Fleet Discount</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl07_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl07$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl07_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl07$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl07_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl08_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">LCT/GST</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl08_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl08$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl08_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl08$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl08_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl09_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">Stamp Duty</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl09_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl09$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl09_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl09$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl09_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl10_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">Registration</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl10_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl10$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl10_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl10$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl10_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl11_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">Plate Fee</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl11_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl11$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl11_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl11$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl11_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl12_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">CTP</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl12_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl12$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl12_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl12$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl12_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td align="left">
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_lblMake" class="gvLabel"
+                                                                                                style="padding-left: 25px">Total-On Road Cost (Inclusive of GST)</span><br />
+                                                                                            <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_Label4" class="gvLabel" style="padding-left: 25px">
+                                                                                            </span>
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl13$txtValue1" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_txtValue1" onchange="Calculate()" /></td>
+                                                                                        <td>
+                                                                                            <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl13$txtValue2" type="text"
+                                                                                                id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_txtValue2" onchange="Calculate()" /></td>
+                                                                                    </tr>
+                                                                                </table>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="left" valign="top">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" valign="top">
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td align="left" valign="top">
+                    &nbsp;</td>
+            </tr>
+        </table>
+        <div>
+            <input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWFwKe//u1CgLMx6iMCALKmrXgAgKYh/OVAwLHy5nWBAKS9fKVAwLBuZnWBAKU5/KVAwLDq5nWBAKV7/KVAwLEs5nWBAKO1fKVAwK9mZnWBAKP3fKVAwK+oZnWBAL7r+mgBwLgxsuLDQL8t+mgBwLhzsuLDQL9nemgBwLitMuLDQL+pemgBwLjvMuLDVIjteueOhl+7T4+1TwpbRYG6ZXq" />
+        </div>
+    </form>
+</body>
+</html>

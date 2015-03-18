@@ -1,0 +1,1025 @@
+ERROR [21 Mar 2013 17:45:18][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [21 Mar 2013 18:27:13][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 10:34:48][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [22 Mar 2013 10:36:21][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 10:36:21][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 10:38:18][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [22 Mar 2013 10:54:01][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 10:54:18][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 12:01:56][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [22 Mar 2013 12:02:10][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 12:03:45][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 12:31:46][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [22 Mar 2013 14:05:47][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [22 Mar 2013 14:06:32][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:08:48][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [22 Mar 2013 14:08:48][Cls_UserMaster.GetAllActiveDealers(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\Helper\Cls_UserMaster.cs:263)]- GetAllDealers Function :Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [22 Mar 2013 14:10:03][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [22 Mar 2013 14:10:13][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:14:14][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataReader(:0)]- A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
+
+ERROR [22 Mar 2013 14:14:14][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:14:14][Cls_VDTAdminReport.get_VDTCustomerReport_PC(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\VDT\Cls_VDTAdminReport.cs:191)]- Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:14:14][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.bindData(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:381)]- bindData:Cannot find column name.
+
+ERROR [22 Mar 2013 14:14:43][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1492)]- Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+ERROR [22 Mar 2013 14:14:43][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.grdCustomer_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:196)]- Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:18:08][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [22 Mar 2013 14:18:19][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:18:53][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:20:20][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1492)]- Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+ERROR [22 Mar 2013 14:20:20][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.grdCustomer_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:196)]- Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:42:50][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1492)]- Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+ERROR [22 Mar 2013 14:42:50][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.grdCustomer_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:196)]- Object reference not set to an instance of an object.
+
+ERROR [22 Mar 2013 14:45:03][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [22 Mar 2013 14:45:03][Cls_VDTAdminReport.get_VDTCustomerReport_PC(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\VDT\Cls_VDTAdminReport.cs:191)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [22 Mar 2013 14:45:03][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.bindData(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:381)]- bindData:Cannot find column name.
+
+ERROR [23 Mar 2013 15:08:49][Index.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\Index.aspx.cs:20)]- Update Client Starts :3/23/2013 3:08:49 PM
+
+ERROR [23 Mar 2013 15:10:05][Index.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\Index.aspx.cs:20)]- Update Client Starts :23/03/2013 03:03:05
+
+ERROR [23 Mar 2013 15:12:33][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2013 15:14:30][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1261)]- Get Cust Time Starts :23/03/2013 03:03:30:1430
+
+ERROR [23 Mar 2013 15:14:40][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1263)]- Get Cust Time Ends :23/03/2013 03:03:40:1440
+
+ERROR [23 Mar 2013 15:15:00][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1261)]- Get Cust Time Starts :23/03/2013 03:03:00:150
+
+ERROR [23 Mar 2013 15:15:02][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1263)]- Get Cust Time Ends :23/03/2013 03:03:02:152
+
+ERROR [23 Mar 2013 21:20:11][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [25 Mar 2013 11:36:00][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [25 Mar 2013 12:31:08][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [25 Mar 2013 12:31:09][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [04 Apr 2013 09:31:00][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [04 Apr 2013 09:31:07][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 09:31:49][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 09:34:26][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 09:41:34][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:11:23][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [04 Apr 2013 10:11:44][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:11:52][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:11:57][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:11:59][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:12:01][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:12:01][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:12:03][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:12:05][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:12:54][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:12:58][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:12:59][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:13:02][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:13:04][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:13:05][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:13:06][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:13:11][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:28:45][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [04 Apr 2013 10:29:03][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:29:10][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:29:12][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:29:35][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:32:00][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:32:03][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:32:05][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:32:07][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [04 Apr 2013 10:32:08][SendSMS.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\SendSMS.aspx.cs:20)]- SMS page load starts
+
+ERROR [05 Apr 2013 10:10:18][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [05 Apr 2013 10:11:50][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [16 Apr 2013 09:49:20][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [16 Apr 2013 09:49:28][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [16 Apr 2013 09:49:29][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :16/04/2013 09:04:29:4929
+
+ERROR [16 Apr 2013 09:49:29][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :16/04/2013 09:04:29:4929
+
+ERROR [16 Apr 2013 09:52:02][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [16 Apr 2013 09:52:03][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [16 Apr 2013 09:52:20][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [16 Apr 2013 09:52:29][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [16 Apr 2013 09:52:29][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :16/04/2013 09:04:29:5229
+
+ERROR [16 Apr 2013 09:52:30][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :16/04/2013 09:04:30:5230
+
+ERROR [16 Apr 2013 09:52:44][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :16/04/2013 09:04:44:5244
+
+ERROR [16 Apr 2013 09:52:46][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :16/04/2013 09:04:46:5246
+
+ERROR [16 Apr 2013 09:52:46][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1529)]- Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+ERROR [16 Apr 2013 09:52:46][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.grdCustomer_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:196)]- Object reference not set to an instance of an object.
+
+ERROR [16 Apr 2013 09:54:34][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :16/04/2013 09:04:34:5434
+
+ERROR [16 Apr 2013 09:54:35][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :16/04/2013 09:04:35:5435
+
+ERROR [16 Apr 2013 09:54:35][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1529)]- Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+ERROR [16 Apr 2013 09:54:56][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.grdCustomer_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:196)]- Object reference not set to an instance of an object.
+
+ERROR [16 Apr 2013 09:55:14][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :16/04/2013 09:04:14:5514
+
+ERROR [16 Apr 2013 09:55:17][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :16/04/2013 09:04:17:5517
+
+ERROR [16 Apr 2013 09:56:19][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1529)]- Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+ERROR [16 Apr 2013 09:56:19][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.grdCustomer_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:196)]- Object reference not set to an instance of an object.
+
+ERROR [16 Apr 2013 09:57:49][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :16/04/2013 09:04:49:5749
+
+ERROR [16 Apr 2013 09:57:51][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :16/04/2013 09:04:51:5751
+
+ERROR [16 Apr 2013 10:07:45][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :16/04/2013 10:04:45:745
+
+ERROR [16 Apr 2013 10:07:45][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1529)]- Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+
+ERROR [16 Apr 2013 10:07:45][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.grdCustomer_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:196)]- Object reference not set to an instance of an object.
+
+ERROR [16 Apr 2013 10:12:00][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :16/04/2013 10:04:00:120
+
+ERROR [16 Apr 2013 10:12:02][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :16/04/2013 10:04:02:122
+
+ERROR [16 Apr 2013 10:12:14][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :16/04/2013 10:04:14:1214
+
+ERROR [16 Apr 2013 10:12:16][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :16/04/2013 10:04:16:1216
+
+ERROR [16 Apr 2013 10:16:50][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :16/04/2013 10:04:50:1650
+
+ERROR [16 Apr 2013 10:16:53][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :16/04/2013 10:04:53:1653
+
+ERROR [16 Apr 2013 10:31:11][Mechsoft.GeneralUtilities.Cls_DataAccess.ExecuteScaler(:0)]- A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
+
+ERROR [16 Apr 2013 10:33:13][Mechsoft.GeneralUtilities.Cls_DataAccess.ExecuteScaler(:0)]- A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+ERROR [16 Apr 2013 10:34:33][Mechsoft.GeneralUtilities.Cls_DataAccess.ExecuteScaler(:0)]- A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+ERROR [18 Apr 2013 10:35:08][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [18 Apr 2013 10:35:31][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 10:04:31:3531
+
+ERROR [18 Apr 2013 10:35:32][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 10:04:32:3532
+
+ERROR [18 Apr 2013 10:36:39][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 10:04:39:3639
+
+ERROR [18 Apr 2013 10:36:40][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 10:04:40:3640
+
+ERROR [18 Apr 2013 10:37:16][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 10:04:16:3716
+
+ERROR [18 Apr 2013 10:39:53][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 10:04:53:3953
+
+ERROR [18 Apr 2013 10:40:25][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 10:04:25:4025
+
+ERROR [18 Apr 2013 10:40:26][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 10:04:26:4026
+
+ERROR [18 Apr 2013 10:48:20][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 10:04:20:4820
+
+ERROR [18 Apr 2013 10:48:22][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 10:04:22:4822
+
+ERROR [18 Apr 2013 10:49:03][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [18 Apr 2013 10:49:11][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [18 Apr 2013 10:49:13][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 10:04:13:4913
+
+ERROR [18 Apr 2013 10:49:13][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 10:04:13:4913
+
+ERROR [18 Apr 2013 10:49:51][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :18/04/2013 10:04:51:4951
+
+ERROR [18 Apr 2013 10:49:58][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :18/04/2013 10:04:58:4958
+
+ERROR [18 Apr 2013 10:50:26][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [18 Apr 2013 10:50:28][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 10:04:28:5028
+
+ERROR [18 Apr 2013 10:50:29][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 10:04:29:5029
+
+ERROR [18 Apr 2013 10:54:33][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [18 Apr 2013 10:54:38][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 10:04:38:5438
+
+ERROR [18 Apr 2013 10:54:40][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 10:04:40:5440
+
+ERROR [18 Apr 2013 11:09:18][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [18 Apr 2013 11:09:55][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [18 Apr 2013 11:09:55][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :18/04/2013 11:04:55:955
+
+ERROR [18 Apr 2013 11:09:56][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :18/04/2013 11:04:56:956
+
+ERROR [18 Apr 2013 11:10:22][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :18/04/2013 11:04:22:1022
+
+ERROR [18 Apr 2013 11:10:32][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :18/04/2013 11:04:32:1032
+
+ERROR [18 Apr 2013 11:12:15][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :18/04/2013 11:04:15:1215
+
+ERROR [18 Apr 2013 11:12:28][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :18/04/2013 11:04:28:1228
+
+ERROR [18 Apr 2013 11:13:49][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :18/04/2013 11:04:49:1349
+
+ERROR [18 Apr 2013 11:14:00][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :18/04/2013 11:04:00:140
+
+ERROR [18 Apr 2013 11:14:27][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1500)]- binddata1 Starts :18/04/2013 11:04:27:1427
+
+ERROR [18 Apr 2013 11:14:36][User_Controls_UCDealers_ClientList.binddata1(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1502)]- binddata1 Ends :18/04/2013 11:04:36:1436
+
+ERROR [19 Apr 2013 14:20:35][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [19 Apr 2013 14:21:52][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [19 Apr 2013 14:23:31][User_Controls_ucTradeInData.htmlToPdf(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\ucTradeInData.ascx.cs:285)]- To pdf and send it err - The remote server returned an error: (404) Not Found.. Error   at System.Net.HttpWebRequest.GetResponse()
+   at iTextSharp.text.Image.GetInstance(Uri url)
+   at iTextSharp.text.Image.GetInstance(String filename)
+   at iTextSharp.text.html.simpleparser.HTMLWorker.StartElement(String tag, Hashtable h)
+   at iTextSharp.text.xml.simpleparser.SimpleXMLParser.ProcessTag(Boolean start)
+   at iTextSharp.text.xml.simpleparser.SimpleXMLParser.Go(TextReader reader)
+   at iTextSharp.text.xml.simpleparser.SimpleXMLParser.Parse(ISimpleXMLDocHandler doc, ISimpleXMLDocHandlerComment comment, TextReader r, Boolean html)
+   at iTextSharp.text.html.simpleparser.HTMLWorker.Parse(TextReader reader)
+   at iTextSharp.text.html.simpleparser.HTMLWorker.ParseToList(TextReader reader, StyleSheet style, Hashtable interfaceProps)
+   at iTextSharp.text.html.simpleparser.HTMLWorker.ParseToList(TextReader reader, StyleSheet style)
+   at Mechsoft.GeneralUtilities.HtmlToPdfBuilder.RenderPdf() in d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\HtmlToPdfBuilder2.cs:line 255
+   at User_Controls_ucTradeInData.htmlToPdf(DataTable dt, String mode) in d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\ucTradeInData.ascx.cs:line 275
+
+ERROR [22 Apr 2013 09:47:12][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [22 Apr 2013 09:47:13][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [24 Apr 2013 13:03:26][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [24 Apr 2013 14:04:12][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [24 Apr 2013 14:04:17][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [25 Apr 2013 11:37:12][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [25 Apr 2013 11:37:23][ViewSentRequests.gvRequests_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\ViewSentRequests.aspx.cs:247)]- gvRequests_RowCommand Event : Thread was being aborted.
+
+ERROR [25 Apr 2013 11:37:23][QuoteComparison.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\QuoteComparison.aspx.cs:31)]- Page load event Quote Comparison Starts
+
+ERROR [25 Apr 2013 11:37:33][QuoteComparison.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\QuoteComparison.aspx.cs:68)]- Page load event Quote Comparison Ends 
+
+ERROR [25 Apr 2013 11:37:41][QuoteComparison.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\QuoteComparison.aspx.cs:31)]- Page load event Quote Comparison Starts
+
+ERROR [25 Apr 2013 11:37:48][QuoteComparison.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\QuoteComparison.aspx.cs:68)]- Page load event Quote Comparison Ends 
+
+ERROR [25 Apr 2013 11:37:56][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [25 Apr 2013 11:37:56][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :25/04/2013 11:04:56:3756
+
+ERROR [25 Apr 2013 11:37:59][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :25/04/2013 11:04:59:3759
+
+ERROR [25 Apr 2013 11:38:40][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataReader(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [25 Apr 2013 11:38:40][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Object reference not set to an instance of an object.
+
+ERROR [25 Apr 2013 14:36:20][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [25 Apr 2013 14:37:18][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:440)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [25 Apr 2013 14:37:18][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:441)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [25 Apr 2013 14:37:42][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:453)]- Email Sending Catch -Mailbox unavailable. The server response was: 5.7.1 Unable to relay
+
+ERROR [06 May 2013 13:58:11][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [06 May 2013 13:59:33][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 13:59:33][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 14:00:56][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 14:01:13][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 14:01:13][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 14:01:13][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 14:02:31][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [06 May 2013 14:03:45][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 14:04:00][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 14:06:02][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 14:06:14][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 14:32:12][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [06 May 2013 14:33:56][Mechsoft.GeneralUtilities.Cls_DataAccess.ExecuteScaler(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:40:35][Mechsoft.GeneralUtilities.Cls_DataAccess.ExecuteScaler(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:43:45][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:43:45][Mechsoft.GeneralUtilities.Cls_General.GetServey(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:376)]- Survey Rep Error - Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:43:45][SurveyReport.btnGenerateReport_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:947)]- Generate survey report error - DataTable must be set prior to using DataView.
+
+ERROR [06 May 2013 14:44:31][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataReader(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:44:31][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 14:44:31][Mechsoft.GeneralUtilities.Cls_General.GetServey(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:376)]- Survey Rep Error - Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 14:44:31][SurveyReport.btnGenerateReport_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:947)]- Generate survey report error - DataTable must be set prior to using DataView.
+
+ERROR [06 May 2013 14:44:33][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataReader(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:44:33][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 14:44:33][Mechsoft.GeneralUtilities.Cls_General.GetServey(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:376)]- Survey Rep Error - Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 14:44:33][SurveyReport.btnGenerateReport_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:947)]- Generate survey report error - DataTable must be set prior to using DataView.
+
+ERROR [06 May 2013 14:44:34][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:44:34][Mechsoft.GeneralUtilities.Cls_General.GET_Servay_By_Customerid(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:305)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:44:39][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. lnk30Days_Click ErrorTimeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ::    at Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(DbCommand objCmd)
+   at Mechsoft.GeneralUtilities.Cls_General.GET_Servay_By_Customerid() in d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:line 306
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 700
+
+ERROR [06 May 2013 14:44:42][Mechsoft.GeneralUtilities.Cls_DataAccess.ExecuteScaler(:0)]- A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+ERROR [06 May 2013 14:47:20][Mechsoft.GeneralUtilities.Cls_DataAccess.ExecuteScaler(:0)]- A transport-level error has occurred when sending the request to the server. (provider: TCP Provider, error: 0 - An existing connection was forcibly closed by the remote host.)
+
+ERROR [06 May 2013 14:48:03][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:48:03][Mechsoft.GeneralUtilities.Cls_General.GET_Servay_By_Customerid(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:305)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:48:07][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. lnk30Days_Click ErrorTimeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ::    at Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(DbCommand objCmd)
+   at Mechsoft.GeneralUtilities.Cls_General.GET_Servay_By_Customerid() in d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:line 306
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 700
+
+ERROR [06 May 2013 14:50:25][Mechsoft.GeneralUtilities.Cls_DataAccess.ExecuteScaler(:0)]- A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+
+ERROR [06 May 2013 14:52:22][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:52:22][Mechsoft.GeneralUtilities.Cls_General.GET_Servay_By_Customerid(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:305)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+ERROR [06 May 2013 14:52:31][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. lnk30Days_Click ErrorTimeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding. ::    at Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(DbCommand objCmd)
+   at Mechsoft.GeneralUtilities.Cls_General.GET_Servay_By_Customerid() in d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_General.cs:line 306
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 700
+
+ERROR [06 May 2013 14:56:56][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 14:57:02][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 14:58:49][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 14:58:54][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 15:00:59][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 15:01:03][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 15:03:02][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 15:03:10][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 15:04:37][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Exception from HRESULT: 0x800AC472 ExportToExcelsheet_new ErrorException from HRESULT: 0x800AC472 ::    at System.RuntimeType.ForwardCallToInvokeMember(String memberName, BindingFlags flags, Object target, Int32[] aWrapperTypes, MessageData& msgData)
+   at Microsoft.Office.Interop.Excel.Range.set__Default(Object RowIndex, Object ColumnIndex, Object )
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 604
+
+ERROR [06 May 2013 15:06:33][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 15:06:39][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 15:22:36][SurveyReport.ExportToExcelsheet(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:380)]- Thread was being aborted. ExportToExcelsheet. Error   at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet(DataTable dtTemp, String CName) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 373
+
+ERROR [06 May 2013 15:22:36][SurveyReport.grdSearchReport1_2_RowCommand(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:1314)]- Thread was being aborted.
+
+ERROR [06 May 2013 15:24:23][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 15:24:29][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 15:26:20][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 15:26:24][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 15:26:59][SurveyReport.ExportToExcelsheet30Days_new(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:643)]- Thread was being aborted. ExportToExcelsheet_new ErrorThread was being aborted. ::    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.End()
+   at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 633
+
+ERROR [06 May 2013 15:27:00][SurveyReport.lnk30Days_Click(d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:708)]- Thread was being aborted. lnk30Days_Click ErrorThread was being aborted. ::    at SurveyReport.ExportToExcelsheet30Days_new(DataTable dt) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 644
+   at SurveyReport.lnk30Days_Click(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\SurveyReport.aspx.cs:line 704
+
+ERROR [06 May 2013 15:31:36][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 15:31:48][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 15:32:06][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [06 May 2013 16:15:56][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [06 May 2013 16:15:56][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :06/05/2013 04:05:56:1556
+
+ERROR [06 May 2013 16:15:57][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :06/05/2013 04:05:57:1557
+
+ERROR [06 May 2013 16:16:21][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :06/05/2013 04:05:21:1621
+
+ERROR [06 May 2013 16:16:21][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :06/05/2013 04:05:21:1621
+
+ERROR [06 May 2013 16:16:44][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :06/05/2013 04:05:44:1644
+
+ERROR [06 May 2013 16:16:44][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :06/05/2013 04:05:44:1644
+
+ERROR [07 May 2013 12:44:26][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 12:45:23][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:440)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [07 May 2013 12:45:23][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:441)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [07 May 2013 12:45:31][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:453)]- Email Sending Catch -Mailbox unavailable. The server response was: 5.7.1 Unable to relay
+
+ERROR [07 May 2013 12:54:05][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 12:55:24][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:440)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [07 May 2013 12:55:24][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:441)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [07 May 2013 12:55:28][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:448)]- EMail sent successfully
+
+ERROR [07 May 2013 13:00:45][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 13:01:10][User_Controls_UserRoleAccess_ucRoleAccess.ibtnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UserRoleAccess\ucRoleAccess.ascx.cs:299)]- ibtnSubmit_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 13:02:02][AdminFinanceAlert.BindReportData(d:\Projects\PrivateFeet\PrivateFleet.New\AdminFinanceAlert.aspx.cs:165)]- AdminFinanceAlert BindReportData Error - DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'custrName'. ::    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.adminfinancealert_aspx.__DataBinding__control20(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\AdminFinanceAlert.aspx:line 37
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at AdminFinanceAlert.BindReportData() in d:\Projects\PrivateFeet\PrivateFleet.New\AdminFinanceAlert.aspx.cs:line 155
+
+ERROR [07 May 2013 13:02:51][AdminFinanceAlert.BindReportData(d:\Projects\PrivateFeet\PrivateFleet.New\AdminFinanceAlert.aspx.cs:165)]- AdminFinanceAlert BindReportData Error - DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ETA'. ::    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at System.Web.UI.TemplateControl.Eval(String expression)
+   at ASP.adminfinancealert_aspx.__DataBinding__control34(Object sender, EventArgs e) in d:\Projects\PrivateFeet\PrivateFleet.New\AdminFinanceAlert.aspx:line 62
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at AdminFinanceAlert.BindReportData() in d:\Projects\PrivateFeet\PrivateFleet.New\AdminFinanceAlert.aspx.cs:line 155
+
+ERROR [07 May 2013 13:04:15][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 13:04:15][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:03:12][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 14:04:17][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:04:17][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:07:47][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:07:48][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:09:46][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:09:47][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:11:29][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 14:17:24][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:17:24][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:19:54][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:19:54][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:23:28][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 14:25:01][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:25:01][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:35:54][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 14:37:38][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:37:38][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:39:16][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 14:41:21][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:440)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [07 May 2013 14:41:21][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:441)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [07 May 2013 14:41:25][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:448)]- EMail sent successfully
+
+ERROR [07 May 2013 14:41:34][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:41:34][Mechsoft.GeneralUtilities.PreLoad.LoadModel(:0)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:47:31][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 14:48:26][Cls_DealAging.SendUpcomingDeliveryWithAMOrderDate(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_DealAging.cs:814)]- Deal Aging SendUpcomingDeliveryWithAMOrderDate error -  Cannot perform '<>' operation on System.DateTime and System.String.
+
+ERROR [07 May 2013 14:48:33][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:48:33][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 14:49:00][Cls_DealAging.SendUpcomingDeliveryWithAMOrderDate(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_DealAging.cs:814)]- Deal Aging SendUpcomingDeliveryWithAMOrderDate error -  Cannot perform '<>' operation on System.DateTime and System.String.
+
+ERROR [07 May 2013 15:01:17][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 15:01:17][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 15:02:09][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 18:10:20][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [07 May 2013 18:11:35][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [07 May 2013 18:11:35][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :07/05/2013 06:05:35:1135
+
+ERROR [07 May 2013 18:11:37][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :07/05/2013 06:05:37:1137
+
+ERROR [07 May 2013 18:11:43][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :07/05/2013 06:05:43:1143
+
+ERROR [07 May 2013 18:11:45][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :07/05/2013 06:05:45:1145
+
+ERROR [07 May 2013 18:12:16][User_Controls_UCDealers_ClientList.btnNoChangeETA_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:641)]- No ETA Change Starts :07/05/2013 06:05:16:1216
+
+ERROR [07 May 2013 18:12:19][User_Controls_UCDealers_ClientList.btnNoChangeETA_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:643)]- No ETA Change Ends :07/05/2013 06:05:19:1219
+
+ERROR [07 May 2013 18:12:29][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :07/05/2013 06:05:29:1229
+
+ERROR [07 May 2013 18:12:32][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :07/05/2013 06:05:32:1232
+
+ERROR [07 May 2013 18:17:04][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:440)]- EMail From - test Dealer<manoj.mahagaonkar@mechsoftgroup.com>
+
+ERROR [07 May 2013 18:17:04][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:441)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [07 May 2013 18:17:07][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:448)]- EMail sent successfully
+
+ERROR [07 May 2013 18:17:18][User_Controls_UCDealers_ClientList.SendMail_CatherineOnOldETAUpdate(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1745)]- Send Email to Catherine Starts. ETA less than todays
+
+ERROR [07 May 2013 18:17:55][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:440)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [07 May 2013 18:17:55][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:441)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [07 May 2013 18:17:58][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:448)]- EMail sent successfully
+
+ERROR [07 May 2013 18:19:19][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :07/05/2013 06:05:19:1919
+
+ERROR [07 May 2013 18:19:30][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :07/05/2013 06:05:30:1930
+
+ERROR [07 May 2013 18:19:36][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :07/05/2013 06:05:36:1936
+
+ERROR [07 May 2013 18:19:39][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :07/05/2013 06:05:39:1939
+
+ERROR [07 May 2013 18:21:52][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :07/05/2013 06:05:52:2152
+
+ERROR [07 May 2013 18:21:53][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :07/05/2013 06:05:53:2153
+
+ERROR [07 May 2013 18:22:22][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:238)]- Client Update Manually Startss.
+
+ERROR [07 May 2013 18:22:31][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:268)]- Update Client Starts :07/05/2013 06:05:31:2231
+
+ERROR [07 May 2013 18:22:32][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:270)]- Update Client Ends :07/05/2013 06:05:32:2232
+
+ERROR [07 May 2013 18:22:38][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1260)]- Get Cust Time Starts :07/05/2013 06:05:38:2238
+
+ERROR [07 May 2013 18:22:40][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1262)]- Get Cust Time Ends :07/05/2013 06:05:40:2240
+
+ERROR [07 May 2013 18:23:15][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:347)]- Update Client Drastic Email Starts :07/05/2013 06:05:15:2315
+
+ERROR [07 May 2013 18:23:37][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:440)]- EMail From - Private Fleet<catherineheyes@privatefleet.com.au>
+
+ERROR [07 May 2013 18:23:37][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:441)]- EMail To - Admin<manoj.mahagaonkar@mechsoftgroup.com>; catherineheyes@privatefleet.com.au
+
+ERROR [07 May 2013 18:23:41][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:448)]- EMail sent successfully
+
+ERROR [07 May 2013 18:24:08][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:349)]- Update Client Drastic Email Ends :07/05/2013 06:05:08:248
+
+ERROR [07 May 2013 18:24:38][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:403)]- Update Client Email On Repeat Status Starts :07/05/2013 06:05:38:2438
+
+ERROR [07 May 2013 18:24:47][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:405)]- Update Client Email On Repeat Status Ends:07/05/2013 06:05:47:2447
+
+ERROR [07 May 2013 18:24:48][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:413)]- Client Update Manually Ends.
+
+ERROR [08 May 2013 09:14:22][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [08 May 2013 09:14:23][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:23:1423
+
+ERROR [08 May 2013 09:14:24][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:24:1424
+
+ERROR [08 May 2013 09:14:45][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:45:1445
+
+ERROR [08 May 2013 09:14:47][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:47:1447
+
+ERROR [08 May 2013 09:15:10][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:10:1510
+
+ERROR [08 May 2013 09:15:27][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:27:1527
+
+ERROR [08 May 2013 09:16:00][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - test Dealer<manoj.mahagaonkar@mechsoftgroup.com>
+
+ERROR [08 May 2013 09:16:01][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:16:08][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:16:17][User_Controls_UCDealers_ClientList.SendMail_CatherineOnOldETAUpdate(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1688)]- Send Email to Catherine Starts. ETA less than todays
+
+ERROR [08 May 2013 09:16:25][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 09:16:26][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:16:31][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:17:20][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 09:17:20][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:17:24][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:17:30][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 09:17:30][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:17:35][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:17:57][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:57:1757
+
+ERROR [08 May 2013 09:18:08][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:08:188
+
+ERROR [08 May 2013 09:18:47][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:47:1847
+
+ERROR [08 May 2013 09:18:48][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:48:1848
+
+ERROR [08 May 2013 09:18:53][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:53:1853
+
+ERROR [08 May 2013 09:18:54][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:54:1854
+
+ERROR [08 May 2013 09:19:19][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:238)]- Client Update Manually Startss.
+
+ERROR [08 May 2013 09:19:29][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:29:1929
+
+ERROR [08 May 2013 09:19:30][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:30:1930
+
+ERROR [08 May 2013 09:19:49][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - Private Fleet<catherineheyes@privatefleet.com.au>
+
+ERROR [08 May 2013 09:19:49][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:19:52][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:19:52][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:370)]- Client Update Manually Ends.
+
+ERROR [08 May 2013 09:20:07][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:07:207
+
+ERROR [08 May 2013 09:20:18][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:18:2018
+
+ERROR [08 May 2013 09:20:25][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:25:2025
+
+ERROR [08 May 2013 09:20:25][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:25:2025
+
+ERROR [08 May 2013 09:20:37][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:37:2037
+
+ERROR [08 May 2013 09:20:37][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:37:2037
+
+ERROR [08 May 2013 09:20:48][User_Controls_UcLogin.imgbtnAdd_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UcLogin.ascx.cs:425)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [08 May 2013 09:20:53][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 09:20:53][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:53:2053
+
+ERROR [08 May 2013 09:20:53][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:53:2053
+
+ERROR [08 May 2013 09:20:59][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:59:2059
+
+ERROR [08 May 2013 09:21:00][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:00:210
+
+ERROR [08 May 2013 09:21:29][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:238)]- Client Update Manually Startss.
+
+ERROR [08 May 2013 09:21:35][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:35:2135
+
+ERROR [08 May 2013 09:21:37][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:37:2137
+
+ERROR [08 May 2013 09:26:37][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - test Dealer<manoj.mahagaonkar@mechsoftgroup.com>
+
+ERROR [08 May 2013 09:26:37][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:26:42][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:27:02][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 09:27:02][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:27:05][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:27:05][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:370)]- Client Update Manually Ends.
+
+ERROR [08 May 2013 09:27:10][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:10:2710
+
+ERROR [08 May 2013 09:27:11][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:11:2711
+
+ERROR [08 May 2013 09:27:31][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:238)]- Client Update Manually Startss.
+
+ERROR [08 May 2013 09:27:32][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:32:2732
+
+ERROR [08 May 2013 09:27:34][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:34:2734
+
+ERROR [08 May 2013 09:27:35][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - test Dealer<manoj.mahagaonkar@mechsoftgroup.com>
+
+ERROR [08 May 2013 09:27:35][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:27:38][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:27:40][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 09:27:40][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:27:44][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:27:44][User_Controls_UCDealers_ClientList.btnSubmit_Click(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:370)]- Client Update Manually Ends.
+
+ERROR [08 May 2013 09:27:44][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:44:2744
+
+ERROR [08 May 2013 09:27:44][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:44:2744
+
+ERROR [08 May 2013 09:27:52][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:52:2752
+
+ERROR [08 May 2013 09:27:53][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:53:2753
+
+ERROR [08 May 2013 09:27:59][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:59:2759
+
+ERROR [08 May 2013 09:28:04][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:04:284
+
+ERROR [08 May 2013 09:28:05][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - test Dealer<manoj.mahagaonkar@mechsoftgroup.com>
+
+ERROR [08 May 2013 09:28:05][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:28:09][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:28:10][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 09:28:10][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:28:13][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:28:13][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1203)]- Get Cust Time Starts :08/05/2013 09:05:13:2813
+
+ERROR [08 May 2013 09:28:13][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1205)]- Get Cust Time Ends :08/05/2013 09:05:13:2813
+
+ERROR [08 May 2013 09:30:26][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 09:30:26][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1204)]- Get Cust Time Starts :08/05/2013 09:05:26:3026
+
+ERROR [08 May 2013 09:30:31][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1206)]- Get Cust Time Ends :08/05/2013 09:05:31:3031
+
+ERROR [08 May 2013 09:30:33][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 09:30:33][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1204)]- Get Cust Time Starts :08/05/2013 09:05:33:3033
+
+ERROR [08 May 2013 09:30:34][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1206)]- Get Cust Time Ends :08/05/2013 09:05:34:3034
+
+ERROR [08 May 2013 09:30:36][VDT_Customer_User_Controls_UC_VDTCustomerReport_PC.Page_Load(d:\Projects\PrivateFeet\PrivateFleet.New\VDT_Customer\User Controls\UC_VDTCustomerReport_PC.ascx.cs:70)]- Page_Load:Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 09:30:36][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1204)]- Get Cust Time Starts :08/05/2013 09:05:36:3036
+
+ERROR [08 May 2013 09:30:37][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1206)]- Get Cust Time Ends :08/05/2013 09:05:37:3037
+
+ERROR [08 May 2013 09:30:37][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1204)]- Get Cust Time Starts :08/05/2013 09:05:37:3037
+
+ERROR [08 May 2013 09:30:38][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1206)]- Get Cust Time Ends :08/05/2013 09:05:38:3038
+
+ERROR [08 May 2013 09:30:42][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1204)]- Get Cust Time Starts :08/05/2013 09:05:42:3042
+
+ERROR [08 May 2013 09:30:42][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1206)]- Get Cust Time Ends :08/05/2013 09:05:42:3042
+
+ERROR [08 May 2013 09:30:52][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1204)]- Get Cust Time Starts :08/05/2013 09:05:52:3052
+
+ERROR [08 May 2013 09:30:53][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1206)]- Get Cust Time Ends :08/05/2013 09:05:53:3053
+
+ERROR [08 May 2013 09:30:54][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - test Dealer<manoj.mahagaonkar@mechsoftgroup.com>
+
+ERROR [08 May 2013 09:30:54][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:30:58][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:31:04][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 09:31:04][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:31:08][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:31:09][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 09:31:09][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:444)]- EMail To - manoj.mahagaonkar@mechsoftgroup.com
+
+ERROR [08 May 2013 09:31:12][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:451)]- EMail sent successfully
+
+ERROR [08 May 2013 09:31:12][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1204)]- Get Cust Time Starts :08/05/2013 09:05:12:3112
+
+ERROR [08 May 2013 09:31:14][User_Controls_UCDealers_ClientList.binddata(d:\Projects\PrivateFeet\PrivateFleet.New\User Controls\UCDealers_ClientList.ascx.cs:1206)]- Get Cust Time Ends :08/05/2013 09:05:14:3114
+
+ERROR [08 May 2013 09:31:59][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 09:32:00][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 10:09:30][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 10:09:31][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 11:15:55][Mechsoft.GeneralUtilities.PreLoad.LoadMake(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 11:15:55][Mechsoft.GeneralUtilities.PreLoad.LoadModel(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [08 May 2013 11:18:07][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:442)]- EMail From - Alison  Johnstone<ajohnstone@rockdalemazda.com.au>
+
+ERROR [08 May 2013 11:18:07][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail To - petiemcg@hotmail.com
+
+ERROR [08 May 2013 11:18:11][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:450)]- EMail sent successfully
+
+ERROR [08 May 2013 11:18:12][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:442)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 11:18:12][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail To - annamears@privatefleet.com.au
+
+ERROR [08 May 2013 11:18:16][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:450)]- EMail sent successfully
+
+ERROR [08 May 2013 11:18:16][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:442)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 11:18:16][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail To - customerservice@privatefleet.com.au
+
+ERROR [08 May 2013 11:18:20][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:450)]- EMail sent successfully
+
+ERROR [08 May 2013 11:18:20][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:442)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 11:18:20][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail To - laurenwhite@privatefleet.com.au
+
+ERROR [08 May 2013 11:18:24][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:450)]- EMail sent successfully
+
+ERROR [08 May 2013 11:18:24][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:442)]- EMail From - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 11:18:24][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:443)]- EMail To - catherineheyes@privatefleet.com.au
+
+ERROR [08 May 2013 11:18:27][Mechsoft.GeneralUtilities.Cls_GenericEmailHelper.SendEmail(d:\Projects\PrivateFeet\PrivateFleet.New\App_Code\General Utilities\Cls_GenericEmailHelper.cs:450)]- EMail sent successfully
+
+ERROR [08 May 2013 11:22:54][Mechsoft.GeneralUtilities.PreLoad.LoadMake(:0)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+

@@ -1,0 +1,321 @@
+using System;
+using System.Data;
+using System.Configuration;
+using System.Collections;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Web.UI.HtmlControls;
+using AccessControlUnit;
+using Mechsoft.GeneralUtilities;
+using System.Data.Common;
+
+
+public partial class User_Controls_UCUserRoleDetails : System.Web.UI.UserControl
+{
+
+    Cls_UserRoleDetails objRole = null;
+    
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+            BindDropDown();
+        }
+    }
+
+    private void BindDropDown()
+    {
+        Cls_User objUser = new Cls_User();
+        DataTable dtActiveUsers = objUser.GetAllActiveUsers();
+        ddlUser.DataSource = dtActiveUsers;
+        ddlUser.DataBind();
+
+        if (ddlUser.Items.Count == 0)
+            ddlUser.Items.Insert(0, new ListItem("-No User Found-", "-Select-"));
+        else
+            ddlUser.Items.Insert(0, new ListItem("-Select User-", "-Select-"));
+
+
+
+    }
+    protected void ddlUser_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            ddlRole.Items.Clear();
+            Cls_Role objRole = new Cls_Role();
+            objRole.Id = Convert.ToInt16(ddlUser.SelectedValue.ToString());
+            DataTable dtActiveAllocatableRoles = objRole.GetActiveAllocatableRolesForUser();
+            ddlRole.DataSource = dtActiveAllocatableRoles;
+            ddlRole.DataBind();
+
+            if (ddlRole.Items.Count == 0)
+                ddlRole.Items.Insert(0, new ListItem("-No Role Found-", "-Select-"));
+            else
+                ddlRole.Items.Insert(0, new ListItem("-Select Role-", "-Select-"));
+
+
+
+            BindData(1);
+        }
+        catch (Exception ex)
+        {
+            ddlRole.Items.Insert(0, new ListItem("-Please Select User -", "-Select-"));
+            BindData(0);
+        }
+
+
+    }
+
+    private void BindData(int Choice)
+    {
+        objRole = new Cls_UserRoleDetails();
+        if (Choice == 0)
+            objRole.UserId = 0;
+        else
+            objRole.UserId = Convert.ToInt16(ddlUser.SelectedValue.ToString());
+        DataTable dtUserRole = objRole.GetRolesOfUser();
+        gvUserRoleDetails.DataSource = dtUserRole;
+        gvUserRoleDetails.DataBind();
+    }
+
+
+
+
+
+
+
+
+    private void RemoveConstraints(DataTable dt)
+    {
+        foreach (DataColumn Dc in dt.Columns)
+        {
+            Dc.ReadOnly = false;
+            Dc.AllowDBNull = true;
+        }
+    }
+
+
+
+
+
+    protected void gvUserDetails_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+
+            Image imgBtnActive = ((Image)e.Row.FindControl("imgbtnActivate"));
+            LinkButton lnkbtnActivate = ((LinkButton)e.Row.FindControl("lnkbtnActiveness"));
+            if (imgBtnActive != null)
+            {
+                if (Convert.ToBoolean(DataBinder.Eval(e.Row.DataItem, "IsActive")))
+                {
+
+                    imgBtnActive.ImageUrl = "~/Images/Active.png";
+                }
+                else
+                {
+                    imgBtnActive.ImageUrl = "~/Images/Inactive.ico";
+                }
+            }
+            if (lnkbtnActivate != null)
+            {
+                if (Convert.ToBoolean(DataBinder.Eval(e.Row.DataItem, "IsActive")))
+                {
+
+                    lnkbtnActivate.Text = "Deactivate";
+                }
+                else
+                {
+                    lnkbtnActivate.Text = "Activate";
+                }
+            }
+        }
+    }
+    protected void imgbtnActivate_Click(object sender, ImageClickEventArgs e)
+    {
+
+    }
+
+    protected void gvUserRoleDetails_RowCommand(object sender, GridViewCommandEventArgs e)
+    {
+
+
+
+
+        if (e.CommandName == "Activeness")
+        {
+
+
+            Cls_Utilities objUtility = new Cls_Utilities();
+            int RowIndex = Convert.ToInt16(e.CommandArgument.ToString());
+            bool IsActive = Convert.ToBoolean(((HiddenField)gvUserRoleDetails.Rows[RowIndex].FindControl("hdfIsActive")).Value);
+            int ID = Convert.ToInt16(gvUserRoleDetails.DataKeys[RowIndex][0].ToString());
+
+            bool Result = false;
+
+            if (IsActive)
+            {
+                Result = objUtility.DeActivate(ID, "ACU_UserRoleDetails");
+            }
+            else
+            {
+                Result = objUtility.Actiavte(ID, "ACU_UserRoleDetails");
+            }
+            if (IsActive)
+            {
+                if (Result)
+                    lblResult.Text = "Record Deactivated successfully";
+                else
+                    lblResult.Text = "Failed to Deactivate the Record";
+            }
+            else
+            {
+                if (Result)
+                    lblResult.Text = "Record Activated Successfully";
+                else
+                    lblResult.Text = "Failed to Activate the Record";
+            }
+
+            BindData(1);
+        }
+    }
+
+
+    protected void gvUserRoleDetails_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            try
+            {
+
+                Image imgBtnActive = ((Image)e.Row.FindControl("imgbtnActivate"));
+                LinkButton lnkbtnActivate = ((LinkButton)e.Row.FindControl("lnkbtnActiveness"));
+                if (imgBtnActive != null)
+                {
+                    if (Convert.ToBoolean(DataBinder.Eval(e.Row.DataItem, "IsActive")))
+                    {
+
+                        imgBtnActive.ImageUrl = "~/Images/Active.png";
+                    }
+                    else
+                    {
+                        imgBtnActive.ImageUrl = "~/Images/Inactive.ico";
+                    }
+                }
+                if (lnkbtnActivate != null)
+                {
+                    if (Convert.ToBoolean(DataBinder.Eval(e.Row.DataItem, "IsActive")))
+                    {
+
+                        lnkbtnActivate.Text = "Deactivate";
+                    }
+                    else
+                    {
+                        lnkbtnActivate.Text = "Activate";
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+            }
+        }
+    }
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
+        objRole = new Cls_UserRoleDetails();
+        objRole.UserId = Convert.ToInt16(ddlUser.SelectedValue.ToString());
+        objRole.RoleId = Convert.ToInt16(ddlRole.SelectedValue.ToString());
+        objRole.IsActive = true;
+        int Result = 0;
+
+        Result = objRole.Save();
+        if (Result == 1)
+        {
+            lblResult.Text = "Record Added Successfully";
+            BindData(1);
+
+            ddlUser_SelectedIndexChanged(null, null);
+
+        }
+        else
+        {
+            lblResult.Text = "failed to save the record";
+        }
+
+    }
+
+    public int Save()
+    {
+        DbCommand objCmd = null;
+        try
+        {
+            //Get command object
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "sp_acu_saveUserRoleDetails");
+
+            //Add Parameters
+            //Cls_DataAccess.getInstance().AddInParameter(objCmd, "userId", DbType.Int32, _userId);
+            //Cls_DataAccess.getInstance().AddInParameter(objCmd, "roleId", DbType.Int32, _roleId);
+            //Cls_DataAccess.getInstance().AddInParameter(objCmd, "isActive", DbType.Boolean, _isActive);
+
+            //Execute command
+            int lastInsertId = (int)Cls_DataAccess.getInstance().ExecuteScaler(objCmd, null);
+
+            //return last inserted id
+            return lastInsertId;
+        }
+        catch
+        {
+            throw;
+        }
+        finally
+        {
+          //  logger.Debug("Method End: Save");
+            objCmd = null;
+        }
+        return 0;
+    }
+
+    private void ClearFields()
+    {
+        btnSubmit.Text = "Add";
+
+        // if (ddlUser.Items.Count > 0)
+        //  ddlUser.SelectedIndex = 0;
+
+        if (ddlUser.SelectedIndex != 0)
+        {
+            ddlUser.SelectedIndex = 0;
+            ddlUser_SelectedIndexChanged(null, null);
+        }
+        else
+            ddlRole.Items.Insert(0, new ListItem("Please select the User", "-Select-"));
+
+
+        if (ddlRole.Items.Count > 0)
+            ddlRole.SelectedIndex = 0;
+
+
+    }
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        ClearFields();
+    }
+    protected void gvUserRoleDetails_RowEditing(object sender, GridViewEditEventArgs e)
+    {
+
+    }
+    protected void gvUserRoleDetails_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+    {
+
+    }
+    protected void gvUserRoleDetails_PageIndexChanging(object sender, GridViewPageEventArgs e)
+    {
+        gvUserRoleDetails.PageIndex = e.NewPageIndex;
+        BindData(1);
+    }
+}

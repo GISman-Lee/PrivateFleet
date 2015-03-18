@@ -1,0 +1,238 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Untitled Page</title>
+
+    <script type="text/javascript">
+    
+            function ShowAlert()
+            {
+                var txt=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_txtValue1');
+                alert(txt.value);
+            }
+            
+            function Calculate()
+            {
+           
+                  var sum=0;
+                  var txtLast=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_txtValue1');
+                         txtLast.value=0;
+                     
+                for(var i=0;i<100;i++)
+                {
+                    try
+                    {
+                    if(i<=9)
+                        {
+                           var txt=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl0'+i+'_txtValue1');
+                        }
+                        else
+                        {
+                            var txt=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl'+i+'_txtValue1');
+                        }
+                        
+                         var val=parseFloat(txt.value);
+                         
+                         if(isNaN(val))
+                         {
+                              
+                         }
+                         else
+                         {
+                           
+                              sum=sum+val;
+                           
+                         }
+                         
+                    }
+                    catch(err)
+                    {
+                         continue;
+                    }
+                }
+                
+                        var txtLast=document.getElementById('ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_txtValue1');
+                         txtLast.value=sum;
+                         
+            }
+            
+    </script>
+
+</head>
+<body >
+    <table cellspacing="0" cellpadding="3" rules="all" border="1" id="ctl00_ContentPlaceHolder1_gvMakeDetails"
+        style="background-color: White; border-color: #CCCCCC; border-width: 1px; border-style: None;
+        width: 100%; border-collapse: collapse;">
+        <tr class="gvHeader" style="background-color: #0A73A2; font-weight: bold; height: 30px;">
+            <th align="center" scope="col">
+                Description</th>
+            <th scope="col">
+                <b>1</b></th>
+            <th scope="col">
+                <b>2</b></th>
+        </tr>
+        <tr>
+            <td align="left">
+                <img id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_imgActive" src="Images/active_bullate.jpg"
+                    style="height: 10px; width: 10px; border-width: 0px;" />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_lblMake" class="gvLabel"
+                    style="padding-left: 5px">Recommended Retail Price Exc GST</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl02$txtValue1" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_txtValue1" onchange="Calculate()" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl02$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl02_txtValue2" /></td>
+        </tr>
+        <tr class="gridactiverow">
+            <td align="left">
+                <img id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl03_imgActive" src="Images/active_bullate.jpg"
+                    style="height: 10px; width: 10px; border-width: 0px;" />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl03_lblMake" class="gvLabel"
+                    style="padding-left: 5px">Additional Accessories</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl03_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl04_lblMake" class="gvLabel"
+                    style="padding-left: 25px">Power steering</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl04_Label4" class="gvLabel" style="padding-left: 25px">
+                    this is power stearing offering most valuable service to customers</span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl04$txtValue1" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl04_txtValue1" onchange="Calculate()" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl04$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl04_txtValue2" /></td>
+        </tr>
+        <tr class="gridactiverow">
+            <td align="left">
+                <img id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl05_imgActive" src="Images/active_bullate.jpg"
+                    style="height: 10px; width: 10px; border-width: 0px;" />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl05_lblMake" class="gvLabel"
+                    style="padding-left: 5px">Fixed Charges</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl05_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl06_lblMake" class="gvLabel"
+                    style="padding-left: 25px">Pre-Delivery</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl06_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl06$txtValue1" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl06_txtValue1"  onchange="Calculate()"/></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl06$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl06_txtValue2" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl07_lblMake" class="gvLabel"
+                    style="padding-left: 25px">Fleet Discount</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl07_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl07$txtValue1" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl07_txtValue1" onchange="Calculate()" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl07$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl07_txtValue2" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl08_lblMake" class="gvLabel"
+                    style="padding-left: 25px">LCT/GST</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl08_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl08$txtValue1" onchange="Calculate()" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl08_txtValue1" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl08$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl08_txtValue2" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl09_lblMake" class="gvLabel"
+                    style="padding-left: 25px">Stamp Duty</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl09_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl09$txtValue1" onchange="Calculate()" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl09_txtValue1" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl09$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl09_txtValue2" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl10_lblMake" class="gvLabel"
+                    style="padding-left: 25px">Registration</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl10_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl10$txtValue1"  onchange="Calculate()"type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl10_txtValue1" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl10$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl10_txtValue2" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl11_lblMake" class="gvLabel"
+                    style="padding-left: 25px">Plate Fee</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl11_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl11$txtValue1"  onchange="Calculate()"type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl11_txtValue1" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl11$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl11_txtValue2" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl12_lblMake" class="gvLabel"
+                    style="padding-left: 25px">CTP</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl12_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl12$txtValue1" onchange="Calculate()" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl12_txtValue1" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl12$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl12_txtValue2" /></td>
+        </tr>
+        <tr>
+            <td align="left">
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_lblMake" class="gvLabel"
+                    style="padding-left: 25px">Total-On Road Cost (Inclusive of GST)</span><br />
+                <span id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_Label4" class="gvLabel" style="padding-left: 25px">
+                </span>
+            </td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl13$txtValue1" onchange="Calculate()" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_txtValue1" /></td>
+            <td>
+                <input name="ctl00$ContentPlaceHolder1$gvMakeDetails$ctl13$txtValue2" type="text"
+                    id="ctl00_ContentPlaceHolder1_gvMakeDetails_ctl13_txtValue2" /></td>
+        </tr>
+    </table>
+</body>
+</html>

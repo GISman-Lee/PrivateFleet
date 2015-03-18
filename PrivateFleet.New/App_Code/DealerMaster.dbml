@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="privatefleet_staging" Class="DealerMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=122.99.112.75;Initial Catalog=privatefleet_staging;Persist Security Info=True;User ID=priv1000" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="privatefleet_stagingConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblDealerMaster" Member="tblDealerMasters">
+    <Type Name="tblDealerMaster">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="[Key]" Member="Key" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Company" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="SecondaryEmail" Type="System.String" DbType="VarChar(350)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="City_1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="StateId" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PCode" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SecondaryState" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="SecondaryStateId" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsHotDealer" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsColdDealer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,18 @@
+the new column AccIDorChagreTypeID is added to get the no of charges and accessories were present in that request it will helpfull at time of populating the values when the dealer will see the already made quotation because when the  request is created at that the no of charge types will be diff. and after that the charge type might be increased in numbers so value population will create evac so to get only those (charge type) which are related to the request against which the quotation eas created
+
+
+=============================================++++++++++++++++++++++++++++++++++++==========================
+
+
+
+Database Changes:
+
+1.	Added column IsInternalLink(bit, not null) in ACU_PageMaster table
+2.	Added column SortNo(int, null) in tblChargesTypesMaster table
+
+
+Prasad Changes:
+
+1.	Added column RequestID(FK, int, not null) in tblDealerPoints
+2.	Added column DealerID (FK, int, not null) in tblDealerPoints
+3.	Removed column RequestDealerID from tblDealerPoints

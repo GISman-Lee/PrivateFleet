@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="PrivateFleet.New">
+</Property><Property Name="Solution File" Value="E:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New.sln">
+</Property><Property Name="Date" Value="Wednesday, 18 March 2015">
+</Property><Property Name="Time" Value="16:17 PM">
+</Property></Properties><Event ErrorLevel="2" Project="PrivateFleet.New" Source="PrivateFleet.New" Description="The Web site 'E:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\' is already open in the current solution.">
+</Event><Event ErrorLevel="0" Project="" Source="PrivateFleet.New.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="PrivateFleet.New.sln" Description="Converted">
+</Event></UpgradeLog>
