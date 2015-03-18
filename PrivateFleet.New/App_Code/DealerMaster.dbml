@@ -25,4 +25,14 @@
       <Column Name="IsColdDealer" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="" Member="DealersInfos">
+    <Type Name="DealersInfo">
+      <Column Member="ID" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Member="Name" Type="System.String" CanBeNull="false" />
+      <Column Member="Company" Type="System.String" CanBeNull="false" />
+      <Column Member="Email" Type="System.String" CanBeNull="false" />
+      <Column Member="Phone" Type="System.String" CanBeNull="false" />
+      <Column Member="IsActive" Type="System.Boolean" CanBeNull="false" />
+    </Type>
+  </Table>
 </Database>

@@ -32,6 +32,9 @@ public partial class DealerMasterDataContext : System.Data.Linq.DataContext
   partial void InserttblDealerMaster(tblDealerMaster instance);
   partial void UpdatetblDealerMaster(tblDealerMaster instance);
   partial void DeletetblDealerMaster(tblDealerMaster instance);
+  partial void InsertDealersInfo(DealersInfo instance);
+  partial void UpdateDealersInfo(DealersInfo instance);
+  partial void DeleteDealersInfo(DealersInfo instance);
   #endregion
 	
 	public DealerMasterDataContext() : 
@@ -69,6 +72,14 @@ public partial class DealerMasterDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<tblDealerMaster>();
+		}
+	}
+	
+	public System.Data.Linq.Table<DealersInfo> DealersInfos
+	{
+		get
+		{
+			return this.GetTable<DealersInfo>();
 		}
 	}
 }
@@ -590,6 +601,188 @@ public partial class tblDealerMaster : INotifyPropertyChanging, INotifyPropertyC
 				this._IsColdDealer = value;
 				this.SendPropertyChanged("IsColdDealer");
 				this.OnIsColdDealerChanged();
+			}
+		}
+	}
+	
+	public event PropertyChangingEventHandler PropertyChanging;
+	
+	public event PropertyChangedEventHandler PropertyChanged;
+	
+	protected virtual void SendPropertyChanging()
+	{
+		if ((this.PropertyChanging != null))
+		{
+			this.PropertyChanging(this, emptyChangingEventArgs);
+		}
+	}
+	
+	protected virtual void SendPropertyChanged(String propertyName)
+	{
+		if ((this.PropertyChanged != null))
+		{
+			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		}
+	}
+}
+
+[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
+public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChanged
+{
+	
+	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+	
+	private int _ID;
+	
+	private string _Name;
+	
+	private string _Company;
+	
+	private string _Email;
+	
+	private string _Phone;
+	
+	private bool _IsActive;
+	
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnIDChanging(int value);
+    partial void OnIDChanged();
+    partial void OnNameChanging(string value);
+    partial void OnNameChanged();
+    partial void OnCompanyChanging(string value);
+    partial void OnCompanyChanged();
+    partial void OnEmailChanging(string value);
+    partial void OnEmailChanged();
+    partial void OnPhoneChanging(string value);
+    partial void OnPhoneChanged();
+    partial void OnIsActiveChanging(bool value);
+    partial void OnIsActiveChanged();
+    #endregion
+	
+	public DealersInfo()
+	{
+		OnCreated();
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", IsPrimaryKey=true)]
+	public int ID
+	{
+		get
+		{
+			return this._ID;
+		}
+		set
+		{
+			if ((this._ID != value))
+			{
+				this.OnIDChanging(value);
+				this.SendPropertyChanging();
+				this._ID = value;
+				this.SendPropertyChanged("ID");
+				this.OnIDChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", CanBeNull=false)]
+	public string Name
+	{
+		get
+		{
+			return this._Name;
+		}
+		set
+		{
+			if ((this._Name != value))
+			{
+				this.OnNameChanging(value);
+				this.SendPropertyChanging();
+				this._Name = value;
+				this.SendPropertyChanged("Name");
+				this.OnNameChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Company", CanBeNull=false)]
+	public string Company
+	{
+		get
+		{
+			return this._Company;
+		}
+		set
+		{
+			if ((this._Company != value))
+			{
+				this.OnCompanyChanging(value);
+				this.SendPropertyChanging();
+				this._Company = value;
+				this.SendPropertyChanged("Company");
+				this.OnCompanyChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", CanBeNull=false)]
+	public string Email
+	{
+		get
+		{
+			return this._Email;
+		}
+		set
+		{
+			if ((this._Email != value))
+			{
+				this.OnEmailChanging(value);
+				this.SendPropertyChanging();
+				this._Email = value;
+				this.SendPropertyChanged("Email");
+				this.OnEmailChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", CanBeNull=false)]
+	public string Phone
+	{
+		get
+		{
+			return this._Phone;
+		}
+		set
+		{
+			if ((this._Phone != value))
+			{
+				this.OnPhoneChanging(value);
+				this.SendPropertyChanging();
+				this._Phone = value;
+				this.SendPropertyChanged("Phone");
+				this.OnPhoneChanged();
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive")]
+	public bool IsActive
+	{
+		get
+		{
+			return this._IsActive;
+		}
+		set
+		{
+			if ((this._IsActive != value))
+			{
+				this.OnIsActiveChanging(value);
+				this.SendPropertyChanging();
+				this._IsActive = value;
+				this.SendPropertyChanged("IsActive");
+				this.OnIsActiveChanged();
 			}
 		}
 	}
