@@ -220,7 +220,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
             dtChkAuthorization.PrimaryKey = new DataColumn[] { dtChkAuthorization.Columns["PageUrl"] };
             DataRow dr = dtChkAuthorization.Rows.Find(strCurrentPage);
-
+            //Miles Modification
+            /*
             if (dr == null)
             {
                 logger.Error("No Access :-");
@@ -229,6 +230,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 trContent.Visible = false;
                 divNoAccess.Visible = true;
             }
+             * */
+
             //end
 
             //if(Convert .ToString (Request .QueryString .ToString())!="")

@@ -5898,3 +5898,29 @@ ERROR [18 Mar 2015 16:54:42][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New S
 
 ERROR [18 Mar 2015 16:54:42][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
 
+ERROR [18 Mar 2015 18:04:25][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [18 Mar 2015 18:04:34][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:226)]- No Access :-
+
+ERROR [18 Mar 2015 18:04:34][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:227)]- ID - 1 :: User Name - admin
+
+ERROR [18 Mar 2015 18:04:34][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:228)]- Name - David Lye:: Page - DealerManager.aspx :: Role ID - 1
+
+ERROR [18 Mar 2015 18:10:31][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:226)]- No Access :-
+
+ERROR [18 Mar 2015 18:10:31][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:227)]- ID - 1 :: User Name - admin
+
+ERROR [18 Mar 2015 18:10:31][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:228)]- Name - David Lye:: Page - DealerManager.aspx :: Role ID - 1
+
+ERROR [18 Mar 2015 18:13:42][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:226)]- No Access :-
+
+ERROR [18 Mar 2015 18:13:42][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:227)]- ID - 1 :: User Name - admin
+
+ERROR [18 Mar 2015 18:13:42][MasterPage.GenerateMenu(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\MasterPage.master.cs:228)]- Name - David Lye:: Page - DealerManager.aspx :: Role ID - 1
+
+ERROR [18 Mar 2015 18:23:40][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [18 Mar 2015 18:23:40][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [18 Mar 2015 18:24:17][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+

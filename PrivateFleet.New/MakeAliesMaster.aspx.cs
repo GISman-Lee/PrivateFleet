@@ -31,7 +31,7 @@ public partial class MakeAliesMaster : System.Web.UI.Page
         if (lblHeader != null)
            // lblHeader.Text = "Completed quotation Report";
         BindData();
-
+        
     }
 
 
