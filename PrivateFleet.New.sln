@@ -25,30 +25,6 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PrivateFleet.New", "Private
 		VWDPort = "2540"
 	EndProjectSection
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PrivateFleet.New", "PrivateFleet.New", "{DF0843B0-6508-43EE-8274-CB6F2F4398F2}"
-	ProjectSection(WebsiteProperties) = preProject
-		SccProjectName = ""
-		SccAuxPath = ""
-		SccLocalPath = ""
-		SccProvider = ""
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
-		Debug.AspNetCompiler.VirtualPath = "/PrivateFleet.New"
-		Debug.AspNetCompiler.PhysicalPath = "PrivateFleet.New\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PrivateFleet.New\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/PrivateFleet.New"
-		Release.AspNetCompiler.PhysicalPath = "PrivateFleet.New\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\PrivateFleet.New\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "2540"
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
