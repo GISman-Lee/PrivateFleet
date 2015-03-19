@@ -5976,3 +5976,9 @@ ERROR [19 Mar 2015 10:43:00][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New 
 
 ERROR [19 Mar 2015 11:10:32][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
 
+ERROR [19 Mar 2015 11:40:37][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [19 Mar 2015 11:40:37][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [19 Mar 2015 11:42:29][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+

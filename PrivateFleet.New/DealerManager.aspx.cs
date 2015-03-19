@@ -36,4 +36,33 @@ public partial class DealerManager : System.Web.UI.Page
             
         }
     }
+
+    protected void GridDealer_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            try
+            {
+                Image imgBtnActive = ((Image)e.Row.FindControl("imgbtnActivate"));
+                if (imgBtnActive != null)
+                {
+                    if (Convert.ToBoolean(DataBinder.Eval(e.Row.DataItem, "IsActive")))
+                    {
+                        imgBtnActive.ImageUrl = "~/Images/Active.png";
+                        e.Row.CssClass = "gridactiverow";
+                    }
+                    else
+                    {
+                        imgBtnActive.ImageUrl = "~/Images/Inactive.ico";
+                        e.Row.CssClass = "griddeactiverow";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+        
+    }
 }

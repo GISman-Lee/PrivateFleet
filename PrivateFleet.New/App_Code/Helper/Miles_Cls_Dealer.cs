@@ -48,6 +48,7 @@ public class Miles_Cls_Dealer
                         Company = m.Company,
                         Email = m.Email,
                         Phone = m.Phone,
+                        City = m.City,
                         IsActive = m.IsActive
                     };
         GridDealer.DataSource = query;

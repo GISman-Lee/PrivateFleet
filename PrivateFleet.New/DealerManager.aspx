@@ -16,7 +16,8 @@
     </tr>
         <asp:GridView ID="GridDealer" runat="server" Width="100%" AllowPaging="True" 
         BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3"
-        PageSize="10" DataKeyNames="ID" AllowSorting="True" OnPageIndexChanging="GridDealer_PageIndexChanged">
+        PageSize="10" DataKeyNames="ID" AllowSorting="True" OnPageIndexChanging="GridDealer_PageIndexChanged"
+        AutoGenerateColumns="False" OnRowDataBound="GridDealer_RowDataBound">
         <Columns>
                    <asp:TemplateField HeaderText="Dealer">
                         <ItemTemplate>
@@ -29,11 +30,23 @@
                             </table>
                         </ItemTemplate>
                     </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Active">
+                        <ItemTemplate>
+                           <asp:Image ID="imgbtnActivate" runat="server" /> 
+                        </ItemTemplate>
+                        <ItemStyle HorizontalAlign="Center" />
+                        <HeaderStyle HorizontalAlign="Center" />
+                    </asp:TemplateField>
+
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" />
-                    <asp:BoundField DataField="Email" HeaderText="Email" />
+                    <asp:BoundField DataField="Email" HeaderText="Email" Visible="true"/>
                     <asp:BoundField DataField="Fax" HeaderText="Fax" Visible="False" />
-                    <asp:BoundField DataField="Phone" HeaderText="Phone" />
+                    <asp:BoundField DataField="Phone" HeaderText="Phone" Visible=true/>
                     <asp:BoundField DataField="PCode" HeaderText="PCode" Visible="False" />
+                    <asp:BoundField DataField="City" HeaderText="City" Visible="true" />
+
+
         </Columns>
                 <FooterStyle CssClass="gvFooterrow" />
                 <SelectedRowStyle BackColor="#669999" Font-Bold="True" ForeColor="White" />
