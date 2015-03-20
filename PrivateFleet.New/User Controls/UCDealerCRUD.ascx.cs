@@ -117,10 +117,6 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 
     public DataTable SearchDealer2()
     {
-        GridView gvDealerDetails = (GridView)this.Parent.FindControl("gvDealerDetails");
-        Miles_Cls_Dealer MobjDealer = new Miles_Cls_Dealer();
-        gvDealerDetails.DataSource = MobjDealer.GetDealers();
-        gvDealerDetails.DataBind();
         return null;
     }
 

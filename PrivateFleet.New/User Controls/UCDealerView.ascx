@@ -50,6 +50,30 @@
                             </table>
                         </ItemTemplate>
                     </asp:TemplateField>
+
+                    <asp:TemplateField HeaderText="Contact Info">
+                        <ItemTemplate>
+                            Company&nbsp;&nbsp:&nbsp;
+                            <asp:Label ID="Company" runat="server" Text='<%#Bind("Company") %>'></asp:Label>
+                            <br />
+                            Email&nbsp-&nbsp;
+                            <a href='<%# "mailto:"+ Eval("Email") %>' style="color: Blue;">
+                                <asp:Label ID="Email" runat="server" Text='<%#Bind("Email") %>'></asp:Label></a>
+                            <br />
+                 
+                            Mobile&nbsp;&nbsp;&nbsp;:&nbsp;
+                            <asp:Label ID="lblMobile" runat="server" Font-Size="14px" Text='<%#Bind("Mobile") %>' EnableViewState="True"></asp:Label>
+                            <br />
+                      
+                            Phone&nbsp;&nbsp;&nbsp;:&nbsp;
+                            <asp:Label ID="Phone" runat="server" Font-Size="14px" Text='<%#Bind("Phone") %>'></asp:Label>
+                            <%-- <asp:HiddenField ID="hdfIsHotDealer" runat="server" Value='<%# Eval("IsHotDealer") %>' />  --%>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+
+                    <asp:BoundField DataField="Make" HeaderText="Make" />
+
+                    <%--
                     <asp:BoundField DataField="Company" HeaderText="Company" SortExpression="Company" />
                     <asp:BoundField DataField="Email" HeaderText="Email" />
                     <asp:BoundField DataField="Fax" HeaderText="Fax" Visible="False" />
@@ -61,6 +85,7 @@
                             <asp:HiddenField ID="hdfStateID" runat="server" Value='<%# Bind("StateID") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
+                    --%>
                     <%--<asp:TemplateField HeaderText="City" SortExpression="City">
                                 <ItemTemplate>
                                     <asp:Label ID="lblCity" runat="server" Text='<%# Bind("City") %>'></asp:Label><asp:HiddenField
@@ -75,7 +100,7 @@
                             </asp:TemplateField>--%>
                     <asp:TemplateField HeaderText="Active">
                         <ItemTemplate>
-                           <asp:Image ID="imgbtnActivate" runat="server" /> 
+                            <asp:Image ID="imgbtnActivate" runat="server" />
                         </ItemTemplate>
                         <ItemStyle HorizontalAlign="Center" />
                         <HeaderStyle HorizontalAlign="Center" />

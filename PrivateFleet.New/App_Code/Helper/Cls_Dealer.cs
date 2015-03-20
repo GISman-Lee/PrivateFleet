@@ -102,6 +102,13 @@ public class Cls_Dealer : Cls_CommonProperties
         get { return _strPhone; }
         set { _strPhone = value; }
     }
+    private string _strMobile;
+    public string Mobile
+    {
+        get { return _strMobile; }
+        set { _strMobile = value; }
+    }
+
     private int _intLocation;
 
     public int Location
@@ -247,7 +254,7 @@ public class Cls_Dealer : Cls_CommonProperties
         {
             DbCommand objCmd = null;
 
-            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpGetAllDealers");
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpGetAllDealers");  //SpGetAllDealers
 
             return Cls_DataAccess.getInstance().GetDataTable(objCmd);
         }
@@ -887,6 +894,7 @@ public class Cls_Dealer : Cls_CommonProperties
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Location", DbType.String, values[7].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Pcode", DbType.String, values[8].Trim());
             dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            Console.WriteLine("dddd");
             return dt;
 
         }

@@ -226,11 +226,11 @@ public partial class User_Controls_UCDealerView : System.Web.UI.UserControl
 
                 dtDealers = ctrlAddDealer.SearchDealer();
            
-
+            
             DataView dv = dtDealers.DefaultView;
             dv.Sort = string.Format("{0} {1}", ViewState[Cls_Constants.VIEWSTATE_SORTEXPRESSION].ToString(), ViewState[Cls_Constants.VIEWSTATE_SORTDIRECTION].ToString());
             dtDealers = dv.ToTable();
-
+            
             gvDealerDetails.DataSource = dtDealers;
             gvDealerDetails.DataBind();
         }
