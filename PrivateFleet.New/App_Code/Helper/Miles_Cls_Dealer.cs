@@ -18,24 +18,6 @@ public class Miles_Cls_Dealer
 		//
 	}
 
-    public IQueryable<DealersInfo> GetDealers()
-    {
-        DealerMasterDataContext Db = new DealerMasterDataContext();
-        var query = from m in Db.tblDealerMasters
-                    where m.City != ""
-                    select new DealersInfo
-                    {
-                       ID = m.ID,
-                       Name = m.Name,
-                       Company = m.Company,
-                       Email = m.Email,
-                       Phone = m.Phone,
-                       IsActive = m.IsActive
-                    };
-
-        return query;
-    }
-
     public void GetDealers2(ref GridView GridDealer)
     {
         DealerMasterDataContext Db = new DealerMasterDataContext();
@@ -48,6 +30,7 @@ public class Miles_Cls_Dealer
                         Company = m.Company,
                         Email = m.Email,
                         Phone = m.Phone,
+                        Mobile = m.Mobile,
                         City = m.City,
                         IsActive = m.IsActive
                     };

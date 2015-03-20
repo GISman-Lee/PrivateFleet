@@ -32,9 +32,6 @@ public partial class DealerMasterDataContext : System.Data.Linq.DataContext
   partial void InserttblDealerMaster(tblDealerMaster instance);
   partial void UpdatetblDealerMaster(tblDealerMaster instance);
   partial void DeletetblDealerMaster(tblDealerMaster instance);
-  partial void InsertDealersInfo(DealersInfo instance);
-  partial void UpdateDealersInfo(DealersInfo instance);
-  partial void DeleteDealersInfo(DealersInfo instance);
   #endregion
 	
 	public DealerMasterDataContext() : 
@@ -75,12 +72,11 @@ public partial class DealerMasterDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
-	public System.Data.Linq.Table<DealersInfo> DealersInfos
+	[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.SpSearchDealersForMake")]
+	public ISingleResult<SpSearchDealersForMakeResult> SpSearchDealersForMake([global::System.Data.Linq.Mapping.ParameterAttribute(Name="MakeID", DbType="Int")] System.Nullable<int> makeID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PostalCode", DbType="VarChar(MAX)")] string postalCode)
 	{
-		get
-		{
-			return this.GetTable<DealersInfo>();
-		}
+		IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), makeID, postalCode);
+		return ((ISingleResult<SpSearchDealersForMakeResult>)(result.ReturnValue));
 	}
 }
 
@@ -626,11 +622,8 @@ public partial class tblDealerMaster : INotifyPropertyChanging, INotifyPropertyC
 	}
 }
 
-[global::System.Data.Linq.Mapping.TableAttribute(Name="")]
-public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChanged
+public partial class SpSearchDealersForMakeResult
 {
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 	
 	private int _ID;
 	
@@ -640,34 +633,53 @@ public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChang
 	
 	private string _Email;
 	
+	private string _Fax;
+	
+	private string _State;
+	
 	private string _Phone;
+	
+	private string _PCode;
+	
+	private System.Nullable<int> _LocationID;
+	
+	private string _CityID;
+	
+	private string _StateID;
 	
 	private bool _IsActive;
 	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnIDChanging(int value);
-    partial void OnIDChanged();
-    partial void OnNameChanging(string value);
-    partial void OnNameChanged();
-    partial void OnCompanyChanging(string value);
-    partial void OnCompanyChanged();
-    partial void OnEmailChanging(string value);
-    partial void OnEmailChanged();
-    partial void OnPhoneChanging(string value);
-    partial void OnPhoneChanged();
-    partial void OnIsActiveChanging(bool value);
-    partial void OnIsActiveChanged();
-    #endregion
+	private bool _IsHotDealer;
 	
-	public DealersInfo()
+	private string _TotalPoints;
+	
+	private string _ShowSelectButton;
+	
+	private string _IsOutSideDealer;
+	
+	private System.Nullable<double> _kms;
+	
+	private string _Mobile;
+	
+	private string _Lati;
+	
+	private string _Longi;
+	
+	private System.Nullable<decimal> _Rating;
+	
+	private System.Nullable<int> _Total;
+	
+	private System.Nullable<int> _TotalPoints1;
+	
+	private string _kmsState;
+	
+	private System.Nullable<bool> _IsColdDealer;
+	
+	public SpSearchDealersForMakeResult()
 	{
-		OnCreated();
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", IsPrimaryKey=true)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID", DbType="Int NOT NULL")]
 	public int ID
 	{
 		get
@@ -678,16 +690,12 @@ public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChang
 		{
 			if ((this._ID != value))
 			{
-				this.OnIDChanging(value);
-				this.SendPropertyChanging();
 				this._ID = value;
-				this.SendPropertyChanged("ID");
-				this.OnIDChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Name", DbType="VarChar(200)")]
 	public string Name
 	{
 		get
@@ -698,16 +706,12 @@ public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChang
 		{
 			if ((this._Name != value))
 			{
-				this.OnNameChanging(value);
-				this.SendPropertyChanging();
 				this._Name = value;
-				this.SendPropertyChanged("Name");
-				this.OnNameChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Company", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Company", DbType="VarChar(200)")]
 	public string Company
 	{
 		get
@@ -718,16 +722,12 @@ public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChang
 		{
 			if ((this._Company != value))
 			{
-				this.OnCompanyChanging(value);
-				this.SendPropertyChanging();
 				this._Company = value;
-				this.SendPropertyChanged("Company");
-				this.OnCompanyChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="VarChar(350)")]
 	public string Email
 	{
 		get
@@ -738,16 +738,44 @@ public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChang
 		{
 			if ((this._Email != value))
 			{
-				this.OnEmailChanging(value);
-				this.SendPropertyChanging();
 				this._Email = value;
-				this.SendPropertyChanged("Email");
-				this.OnEmailChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", CanBeNull=false)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fax", DbType="VarChar(50)")]
+	public string Fax
+	{
+		get
+		{
+			return this._Fax;
+		}
+		set
+		{
+			if ((this._Fax != value))
+			{
+				this._Fax = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_State", DbType="VarChar(MAX)")]
+	public string State
+	{
+		get
+		{
+			return this._State;
+		}
+		set
+		{
+			if ((this._State != value))
+			{
+				this._State = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Phone", DbType="VarChar(50)")]
 	public string Phone
 	{
 		get
@@ -758,16 +786,76 @@ public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChang
 		{
 			if ((this._Phone != value))
 			{
-				this.OnPhoneChanging(value);
-				this.SendPropertyChanging();
 				this._Phone = value;
-				this.SendPropertyChanged("Phone");
-				this.OnPhoneChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive")]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PCode", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+	public string PCode
+	{
+		get
+		{
+			return this._PCode;
+		}
+		set
+		{
+			if ((this._PCode != value))
+			{
+				this._PCode = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LocationID", DbType="Int")]
+	public System.Nullable<int> LocationID
+	{
+		get
+		{
+			return this._LocationID;
+		}
+		set
+		{
+			if ((this._LocationID != value))
+			{
+				this._LocationID = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CityID", DbType="VarChar(MAX)")]
+	public string CityID
+	{
+		get
+		{
+			return this._CityID;
+		}
+		set
+		{
+			if ((this._CityID != value))
+			{
+				this._CityID = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_StateID", DbType="VarChar(50)")]
+	public string StateID
+	{
+		get
+		{
+			return this._StateID;
+		}
+		set
+		{
+			if ((this._StateID != value))
+			{
+				this._StateID = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActive", DbType="Bit NOT NULL")]
 	public bool IsActive
 	{
 		get
@@ -778,32 +866,216 @@ public partial class DealersInfo : INotifyPropertyChanging, INotifyPropertyChang
 		{
 			if ((this._IsActive != value))
 			{
-				this.OnIsActiveChanging(value);
-				this.SendPropertyChanging();
 				this._IsActive = value;
-				this.SendPropertyChanged("IsActive");
-				this.OnIsActiveChanged();
 			}
 		}
 	}
 	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsHotDealer", DbType="Bit NOT NULL")]
+	public bool IsHotDealer
 	{
-		if ((this.PropertyChanging != null))
+		get
 		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
+			return this._IsHotDealer;
+		}
+		set
+		{
+			if ((this._IsHotDealer != value))
+			{
+				this._IsHotDealer = value;
+			}
 		}
 	}
 	
-	protected virtual void SendPropertyChanged(String propertyName)
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalPoints", DbType="VarChar(MAX)")]
+	public string TotalPoints
 	{
-		if ((this.PropertyChanged != null))
+		get
 		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			return this._TotalPoints;
+		}
+		set
+		{
+			if ((this._TotalPoints != value))
+			{
+				this._TotalPoints = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ShowSelectButton", DbType="VarChar(4) NOT NULL", CanBeNull=false)]
+	public string ShowSelectButton
+	{
+		get
+		{
+			return this._ShowSelectButton;
+		}
+		set
+		{
+			if ((this._ShowSelectButton != value))
+			{
+				this._ShowSelectButton = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsOutSideDealer", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+	public string IsOutSideDealer
+	{
+		get
+		{
+			return this._IsOutSideDealer;
+		}
+		set
+		{
+			if ((this._IsOutSideDealer != value))
+			{
+				this._IsOutSideDealer = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_kms", DbType="Float")]
+	public System.Nullable<double> kms
+	{
+		get
+		{
+			return this._kms;
+		}
+		set
+		{
+			if ((this._kms != value))
+			{
+				this._kms = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="VarChar(50)")]
+	public string Mobile
+	{
+		get
+		{
+			return this._Mobile;
+		}
+		set
+		{
+			if ((this._Mobile != value))
+			{
+				this._Mobile = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Lati", DbType="VarChar(50)")]
+	public string Lati
+	{
+		get
+		{
+			return this._Lati;
+		}
+		set
+		{
+			if ((this._Lati != value))
+			{
+				this._Lati = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Longi", DbType="VarChar(50)")]
+	public string Longi
+	{
+		get
+		{
+			return this._Longi;
+		}
+		set
+		{
+			if ((this._Longi != value))
+			{
+				this._Longi = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Rating", DbType="Decimal(31,13)")]
+	public System.Nullable<decimal> Rating
+	{
+		get
+		{
+			return this._Rating;
+		}
+		set
+		{
+			if ((this._Rating != value))
+			{
+				this._Rating = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Total", DbType="Int")]
+	public System.Nullable<int> Total
+	{
+		get
+		{
+			return this._Total;
+		}
+		set
+		{
+			if ((this._Total != value))
+			{
+				this._Total = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TotalPoints1", DbType="Int")]
+	public System.Nullable<int> TotalPoints1
+	{
+		get
+		{
+			return this._TotalPoints1;
+		}
+		set
+		{
+			if ((this._TotalPoints1 != value))
+			{
+				this._TotalPoints1 = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_kmsState", DbType="VarChar(MAX)")]
+	public string kmsState
+	{
+		get
+		{
+			return this._kmsState;
+		}
+		set
+		{
+			if ((this._kmsState != value))
+			{
+				this._kmsState = value;
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsColdDealer", DbType="Bit")]
+	public System.Nullable<bool> IsColdDealer
+	{
+		get
+		{
+			return this._IsColdDealer;
+		}
+		set
+		{
+			if ((this._IsColdDealer != value))
+			{
+				this._IsColdDealer = value;
+			}
 		}
 	}
 }

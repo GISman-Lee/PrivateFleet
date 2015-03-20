@@ -876,7 +876,7 @@ public class Cls_Dealer : Cls_CommonProperties
         try
         {
             DbCommand objcmd = null;
-            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "sptest");
+            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "MilesTest"); //sptest
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@name", DbType.String, values[0].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Company", DbType.String, values[1].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Email", DbType.String, values[2].Trim());
