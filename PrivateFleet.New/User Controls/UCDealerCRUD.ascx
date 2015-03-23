@@ -108,17 +108,23 @@
         </tr>
         <tr>
             <td style="width: 108px" visible="false">
-                <asp:Label ID="Label4" runat="server" CssClass="label" Visible="false"><span style="color:Red">*</span>City :</asp:Label>
+                <asp:Label ID="CarMake" runat="server" CssClass="label"><span style="color:Red">*</span>Car Make :</asp:Label>
             </td>
             <td style="width: 100px" visible="false">
-                <asp:DropDownList ID="ddlCity" runat="server" AppendDataBoundItems="True" DataTextField="City"
-                    DataValueField="ID" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" Width="217px"
-                    Visible="false">
+                <asp:DropDownList ID="ddlCarMake" runat="server" Height="16px"
+                 width="217px" DataTextField="Make" DataValueField="ID" CssClass="gvtextbox" AppendDataBoundItems="True" AutoPostBack="false" >
                 </asp:DropDownList>
             </td>
             <td style="width: 76px">
+                <asp:Label ID="Label4" runat="server" CssClass="label" Visible="false"><span 
+                    style="color:Red">*</span>City :</asp:Label>
             </td>
             <td style="width: 100px">
+                <asp:DropDownList ID="ddlCity" runat="server" AppendDataBoundItems="True" 
+                    DataTextField="City" DataValueField="ID" 
+                    OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" Visible="false" 
+                    Width="217px">
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>

@@ -48,6 +48,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 ImagebtnSearch.Enabled = true;
                 ImagebtnSearch.ImageUrl = "~/Images/Search_dealer.gif";
                 BindStates();
+                BindCarMakes();
                 lbtGetLocations_Click(null, null);
             }
             DealerMasterPanel.DefaultButton = "ImagebtnSearch";
@@ -313,7 +314,27 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         { logger.Error("BindStates Function :" + ex.Message); }
     }
 
+    private void BindCarMakes()
+    {
+        try
+        {
+            ddlCarMake.Items.Clear();
+            Miles_Cls_CarMake objCarMake = new Miles_Cls_CarMake();
+            DataTable dtCarMakes = objCarMake.GetAllCarMakes();
+            ddlCarMake.DataSource = dtCarMakes;
+            ddlCarMake.DataBind();
 
+            if (ddlCarMake.Items.Count == 0)
+                ddlCarMake.Items.Insert(0, new ListItem("No Car Makes Found", "-Select-"));
+            else
+                ddlCarMake.Items.Insert(0, new ListItem("-Select Car Make-", "-Select-"));
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
 
     private void ClearFields()
     {

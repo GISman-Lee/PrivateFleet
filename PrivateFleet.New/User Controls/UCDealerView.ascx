@@ -56,11 +56,7 @@
                             Company&nbsp;&nbsp:&nbsp;
                             <asp:Label ID="Company" runat="server" Text='<%#Bind("Company") %>'></asp:Label>
                             <br />
-                            Email&nbsp-&nbsp;
-                            <a href='<%# "mailto:"+ Eval("Email") %>' style="color: Blue;">
-                                <asp:Label ID="Email" runat="server" Text='<%#Bind("Email") %>'></asp:Label></a>
-                            <br />
-                 
+                            
                             Mobile&nbsp;&nbsp;&nbsp;:&nbsp;
                             <asp:Label ID="lblMobile" runat="server" Font-Size="14px" Text='<%#Bind("Mobile") %>' EnableViewState="True"></asp:Label>
                             <br />
@@ -68,6 +64,11 @@
                             Phone&nbsp;&nbsp;&nbsp;:&nbsp;
                             <asp:Label ID="Phone" runat="server" Font-Size="14px" Text='<%#Bind("Phone") %>'></asp:Label>
                             <%-- <asp:HiddenField ID="hdfIsHotDealer" runat="server" Value='<%# Eval("IsHotDealer") %>' />  --%>
+
+                            <br />
+                            <a href='<%# "mailto:"+ Eval("Email") %>' style="color: Blue;">
+                                <asp:Label ID="Email" runat="server" Text='<%#Bind("Email") %>'></asp:Label></a>
+                            <br />
                         </ItemTemplate>
                     </asp:TemplateField>
 
