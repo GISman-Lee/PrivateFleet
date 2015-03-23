@@ -792,3 +792,335 @@ ERROR [23 Mar 2015 11:13:52][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New S
 
 ERROR [23 Mar 2015 11:13:52][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
 
+ERROR [23 Mar 2015 11:37:37][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 11:37:37][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 11:41:03][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 11:41:03][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 11:46:30][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 11:46:30][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 11:46:30][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 11:46:30][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 11:46:54][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 12:16:26][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 12:16:26][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 12:16:26][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 12:16:26][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 12:16:41][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:458)]- PopulateFileds Function :Input string was not in a correct format.
+
+ERROR [23 Mar 2015 12:16:50][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:458)]- PopulateFileds Function :Input string was not in a correct format.
+
+ERROR [23 Mar 2015 12:16:52][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:458)]- PopulateFileds Function :Input string was not in a correct format.
+
+ERROR [23 Mar 2015 12:16:54][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:458)]- PopulateFileds Function :Input string was not in a correct format.
+
+ERROR [23 Mar 2015 12:17:32][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 12:17:32][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 12:18:46][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 12:18:46][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 12:18:46][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 12:18:46][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 12:18:55][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 12:19:07][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataReader(:0)]- Failed to convert parameter value from a String to a Int16.
+
+ERROR [23 Mar 2015 12:19:07][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 12:19:07][Cls_Dealer.GetAllCitiesOfState(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\Helper\Cls_Dealer.cs:410)]- GetAllCitiesOfState Function :Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 12:22:26][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 12:22:26][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 12:23:00][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 12:23:00][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 12:23:00][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 12:23:00][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 12:23:08][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 12:23:59][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:459)]- PopulateFileds Function :Input string was not in a correct format.
+
+ERROR [23 Mar 2015 12:29:10][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 12:29:10][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 12:33:28][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 12:33:28][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 12:33:28][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 12:33:28][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 12:34:23][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 12:34:28][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:458)]- PopulateFileds Function :'ddlCarMake' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+ERROR [23 Mar 2015 12:34:47][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:458)]- PopulateFileds Function :'ddlCarMake' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+ERROR [23 Mar 2015 12:37:32][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 12:37:32][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 12:37:32][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 12:37:32][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 12:38:45][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:458)]- PopulateFileds Function :'ddlCarMake' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+ERROR [23 Mar 2015 12:39:36][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 12:39:36][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 12:39:36][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 12:39:36][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 12:40:23][User_Controls_UCDealerCRUD.PopulateFileds(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UCDealerCRUD.ascx.cs:458)]- PopulateFileds Function :'ddlCarMake' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+
+ERROR [23 Mar 2015 12:48:41][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 12:48:41][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 12:48:41][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 12:48:41][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 12:49:24][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 12:49:24][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 12:49:24][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 12:49:24][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:03:26][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 13:03:26][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 13:05:29][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 13:05:29][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 13:05:29][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 13:05:29][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:05:38][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 13:09:47][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 13:09:47][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 13:09:47][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 13:09:47][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:10:43][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 13:10:43][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 13:10:43][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 13:10:43][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:12:14][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 13:12:14][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 13:12:14][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 13:12:14][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:19:08][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 13:19:08][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 13:19:08][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 13:19:08][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:30:18][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 13:30:18][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 13:30:18][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 13:30:18][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:36:03][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 13:36:03][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 13:36:03][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 13:36:03][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:37:36][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 13:37:36][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 13:37:44][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 13:37:44][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 13:37:44][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 13:37:44][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 13:38:00][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 14:06:15][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 14:06:15][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 14:34:29][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 14:39:32][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 14:39:32][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 14:39:32][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 14:39:32][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 16:01:48][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 16:01:48][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:22:41][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:22:41][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:22:41][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:22:41][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:22:44][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 17:23:01][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataReader(:0)]- Failed to convert parameter value from a String to a Int16.
+
+ERROR [23 Mar 2015 17:23:01][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:23:01][Cls_Dealer.GetAllCitiesOfState(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\Helper\Cls_Dealer.cs:410)]- GetAllCitiesOfState Function :Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:32:57][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:32:57][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:32:57][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:32:57][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:33:18][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:33:18][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:33:18][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:33:18][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:33:50][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:33:50][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:33:50][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:33:50][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:35:42][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:35:42][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:35:52][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:35:52][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:35:52][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:35:52][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:36:05][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 17:36:23][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataReader(:0)]- Failed to convert parameter value from a String to a Int16.
+
+ERROR [23 Mar 2015 17:36:23][Mechsoft.GeneralUtilities.Cls_DataAccess.GetDataTable(:0)]- Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:36:23][Cls_Dealer.GetAllCitiesOfState(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\Helper\Cls_Dealer.cs:410)]- GetAllCitiesOfState Function :Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:37:07][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:37:07][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:37:07][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:37:07][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:39:07][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:39:07][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:39:07][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:39:07][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:39:42][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:39:42][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:40:56][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:40:56][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:40:56][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:40:56][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:41:09][User_Controls_UcLogin.imgbtnAdd_Click(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\User Controls\UcLogin.ascx.cs:441)]- imgbtnAdd_Click Event : Thread was being aborted.
+
+ERROR [23 Mar 2015 17:41:37][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:41:37][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:41:37][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:41:37][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:51:04][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:28)]- Quotation fill Javascript Error -  ::
+
+ERROR [23 Mar 2015 17:51:04][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:29)]- BrowserName -  :: BrowserVersion - 
+
+ERROR [23 Mar 2015 17:51:04][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:30)]- BrowserCookieEnable -  :: Platform - 
+
+ERROR [23 Mar 2015 17:51:04][_Default.Page_Load(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\Default.aspx.cs:31)]- UserAgent - 
+
+ERROR [23 Mar 2015 17:57:46][Mechsoft.GeneralUtilities.PreLoad.LoadMake(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:35)]- Load Make(Pre load) Error =Object reference not set to an instance of an object.
+
+ERROR [23 Mar 2015 17:57:46][Mechsoft.GeneralUtilities.PreLoad.LoadModel(e:\New Source Code\Source Code\PrivateFleet.New\PrivateFleet.New\App_Code\General Utilities\PreLoad.cs:57)]- Load Model(pre load) Error =Object reference not set to an instance of an object.
+

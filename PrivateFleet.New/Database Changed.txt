@@ -10,3 +10,14 @@
     INNER JOIN tblMakeMaster as MM ON MM.ID = MD.MakeID  -- Miles Modification 
 	Add a sub clause within select clause as follow:
     DM.Mobile, MM.Make
+
+5.  Add a conditional sub clause in Storage Procedure "MilesTest" within {where} clause as follow:
+    if @Make<>''
+       begin
+       if @count1='Y'
+          set @sqlQuery=@sqlQuery+ ' and MM.Make like ''%'+@Make+'%'''
+       else
+          set @sqlQuery=@sqlQuery+ ' MM.Make like ''%'+@Make+'%'''
+       set @count1='Y'
+    end
+	Add a variable at the beginning, @Make varchar (10)
