@@ -894,7 +894,6 @@ public class Cls_Dealer : Cls_CommonProperties
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Location", DbType.String, values[7].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Pcode", DbType.String, values[8].Trim());
             dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
-            Console.WriteLine("dddd");
             return dt;
 
         }
