@@ -57,7 +57,6 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         { logger.Error("Page_Load Event :" + ex.Message); }
     }
 
-
     protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
     {
         try
@@ -412,6 +411,19 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                         this.ddlState.SelectedIndex = (Convert.ToInt32(dtDealerDetails.Rows[0]["StateId"].ToString()));
                     }
 
+
+                    this.BindCarMakes();
+
+                    if (dtDealerDetails.Rows[0]["Make"].ToString() == "")
+                    {
+                        this.ddlCarMake.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        this.ddlCarMake.SelectedIndex = this.ddlCarMake.Items.IndexOf(this.ddlCarMake.Items.FindByText(dtDealerDetails.Rows[0]["Make"].ToString()));
+                    }
+
+                    #region previousdeveloper
                     //if (ddlState.SelectedIndex == 0)
                     //{
                     //    ddlState.Items.Clear();
@@ -438,6 +450,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                     //   //   //  this.ddlLocation.SelectedIndex = this.ddlLocation.Items.IndexOf(this.ddlLocation.Items.FindByValue(dtDealerDetails.Rows[0]["CityID"].ToString()));
                     //   // }
                     //}
+                    #endregion
 
                 }
             }

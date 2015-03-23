@@ -112,7 +112,8 @@
             </td>
             <td style="width: 100px" visible="false">
                 <asp:DropDownList ID="ddlCarMake" runat="server" Height="16px"
-                 width="217px" DataTextField="Make" DataValueField="ID" CssClass="gvtextbox" AppendDataBoundItems="True" AutoPostBack="false" >
+                 width="217px" DataTextField="Make" DataValueField="ID" CssClass="gvtextbox" AppendDataBoundItems="True" AutoPostBack="false" 
+                 >
                 </asp:DropDownList>
             </td>
             <td style="width: 76px">
@@ -159,3 +160,5 @@
         HighlightCssClass="validatorCalloutHighlight" TargetControlID="revForSubmit">
     </ajaxToolkit:ValidatorCalloutExtender>
 </asp:Panel>
+<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+

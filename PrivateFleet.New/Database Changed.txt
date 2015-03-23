@@ -1,0 +1,12 @@
+﻿1.  Add a sub clause in Storage Procedure "SpGetDealerDetails" within {select} clause as follow:
+    (select Make from tblDealerMaster as DM INNER JOIN tblMakeDealer as MD on DM.ID = MD.DealerID INNER JOIN tblMakeMaster as MM on MD.MakeID = MM.ID where DM.ID=@ID) as Make 
+
+2.  Add a whole new Storage Procedure "SpGetAllActiveCarMakes"
+
+3.  Add a whole new Storage Procedure "MilesTest"
+
+4.  Add a sub clause in Storage Procedure "SpGetAllDealers" after {from clause} as follow:
+    INNER JOIN tblMakeDealer as MD ON MD.DealerID = DM.ID -- Miles Modification
+    INNER JOIN tblMakeMaster as MM ON MM.ID = MD.MakeID  -- Miles Modification 
+	Add a sub clause within select clause as follow:
+    DM.Mobile, MM.Make
