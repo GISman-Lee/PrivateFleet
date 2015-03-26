@@ -21,9 +21,12 @@
        set @count1='Y'
     end
 	Add a variable at the beginning, @Make varchar (10)
+	Add a sub clause in select clause : MM.Make,
 
 6.  Modify the select sub clause by deleting ,ID in Storage Procedure "SpGetCitiesOfState"
     Append the where conditional sub clause as follow:
 	and DM.City != '' and DM.City != '0'
 
 7. Add a whole new Storage Procedure "SpGetAllCities"
+
+8. Add a sub clause in select clause in Storage Procedure : DM.City,

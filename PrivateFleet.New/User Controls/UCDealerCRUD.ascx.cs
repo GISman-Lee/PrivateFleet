@@ -129,7 +129,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             GridView gvDealerDetails = (GridView)this.Parent.FindControl("gvDealerDetails");
 
             int int_count = 0;
-            string[] values = new string[10];  //When Add a enabled control in this page, number should be added one
+            string[] values = new string[11];  //When Add a enabled control in this page, number should be added one
 
             objDealer = new Cls_Dealer();
             objDealer.Name = txtName.Text.Replace('.', ' ');
@@ -183,6 +183,14 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             {
                 values[9] = ddlCarMake.SelectedItem.ToString();
             }
+            if(ddlCity.SelectedValue.ToString() == "-Select-" || ddlCity.SelectedValue.ToString() == "" || ddlCity.SelectedValue.ToString() == "-Select")
+            {
+                values[10] = "";
+            }
+            else
+            {
+                values[10] = ddlCity.SelectedItem.ToString();
+            }
             for (int i = 0; i < values.Length; i++)
             {
                 if (values[i].ToString() == "")
@@ -190,7 +198,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                     int_count++;
                 }
             }
-            if (int_count == 10)   //When Add a enabled control in this page, number should be added one
+            if (int_count == 11)   //When Add a enabled control in this page, number should be added one
             {
                 objDealer = new Cls_Dealer();
                 dt = objDealer.GetAllDealers();
