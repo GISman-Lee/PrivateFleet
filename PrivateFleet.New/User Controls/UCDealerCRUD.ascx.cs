@@ -49,6 +49,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 ImagebtnSearch.ImageUrl = "~/Images/Search_dealer.gif";
                 BindStates();
                 BindCarMakes();
+                BindCities();
                 lbtGetLocations_Click(null, null);
             }
             DealerMasterPanel.DefaultButton = "ImagebtnSearch";
@@ -66,7 +67,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 ddlCity.Items.Clear();
 
                 Cls_Dealer objDealer = new Cls_Dealer();
-                objDealer.State = ddlState.SelectedItem.ToString();
+                objDealer.State = ddlState.SelectedItem.Value.ToString();
                 DataTable dtCities = objDealer.GetAllCitiesOfState();
                 ddlCity.DataSource = dtCities;
                 ddlCity.DataBind();
@@ -343,6 +344,28 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         }
     }
 
+    private void BindCities()
+    {
+        try
+        {
+            ddlCity.Items.Clear();
+            Miles_Cls_City objCity = new Miles_Cls_City();
+            DataTable dtCities = objCity.GetAllCities();
+            ddlCity.DataSource = dtCities;
+            ddlCity.DataBind();
+
+            if (ddlCity.Items.Count == 0)
+                ddlCity.Items.Insert(0, new ListItem("No Cities Found", "-Select-"));
+            else
+                ddlCity.Items.Insert(0, new ListItem("-Select Cities-", "-Select-"));
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
     private void ClearFields()
     {
         try
@@ -356,8 +379,14 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 
             ddlState_SelectedIndexChanged(null, null);
 
-            ddlCity.Items.Clear();
-            ddlCity.Items.Insert(0, new ListItem("- Please select the state -", "-Select"));
+            if (ddlCarMake.Items.Count > 0)
+                ddlCarMake.SelectedIndex = 0;
+
+            if (ddlCity.Items.Count > 0)
+                ddlCity.SelectedIndex = 0;
+
+            //ddlCity.Items.Clear();
+            //ddlCity.Items.Insert(0, new ListItem("- Please select the state -", "-Select"));
             ddlLocation.Items.Clear();
             ddlLocation.Items.Insert(0, new ListItem("- Please Enter Postal Code To get Locations -", "-Select"));
 
@@ -431,6 +460,16 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                         this.ddlCarMake.SelectedIndex = this.ddlCarMake.Items.IndexOf(this.ddlCarMake.Items.FindByText(dtDealerDetails.Rows[0]["Make"].ToString()));
                     }
 
+                    this.BindCities();
+
+                    if (dtDealerDetails.Rows[0]["CityId"].ToString() == "")
+                    {
+                        this.ddlCity.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        this.ddlCity.SelectedIndex = this.ddlCity.Items.IndexOf(this.ddlCity.Items.FindByText(dtDealerDetails.Rows[0]["CityId"].ToString()));
+                    }
                     #region previousdeveloper
                     //if (ddlState.SelectedIndex == 0)
                     //{

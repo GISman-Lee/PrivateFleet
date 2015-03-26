@@ -117,13 +117,14 @@
                 </asp:DropDownList>
             </td>
             <td style="width: 76px">
-                <asp:Label ID="Label4" runat="server" CssClass="label" Visible="false"><span 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label4" runat="server" CssClass="label" Visible="true"><span 
                     style="color:Red">*</span>City :</asp:Label>
             </td>
             <td style="width: 100px">
                 <asp:DropDownList ID="ddlCity" runat="server" AppendDataBoundItems="True" 
-                    DataTextField="City" DataValueField="ID" 
-                    OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" Visible="false" 
+                    DataTextField="City" DataValueField="City" 
+                    OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" Visible="true" 
                     Width="217px">
                 </asp:DropDownList>
             </td>
