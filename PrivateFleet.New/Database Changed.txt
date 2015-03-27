@@ -30,3 +30,7 @@
 7. Add a whole new Storage Procedure "SpGetAllCities"
 
 8. Add a sub clause in select clause in Storage Procedure : DM.City,
+
+9. Change the variable intakes in 2 storagte procedures:
+   *1*: In SpUpdateDealer, Change @City int to @City varhchar(50)=' '
+   *2*: In SpCheckIfDealerExists, Change @City int to @City Varchar(50)=' '

@@ -116,12 +116,21 @@ public class Cls_Dealer : Cls_CommonProperties
         get { return _intLocation; }
         set { _intLocation = value; }
     }
+    /*
     private int _intCity;
 
     public int City
     {
         get { return _intCity; }
         set { _intCity = value; }
+    }
+     */
+    private string _stringCity;
+
+    public string City
+    {
+        get { return _stringCity; }
+        set { _stringCity = value; }
     }
     private string _intState;
 
@@ -374,7 +383,7 @@ public class Cls_Dealer : Cls_CommonProperties
                 DataAccess.AddInParameter(objCmd, "Fax", DbType.String, Fax);
                 DataAccess.AddInParameter(objCmd, "Phone", DbType.String, Phone);
                 DataAccess.AddInParameter(objCmd, "Location", DbType.Int16, Location);
-                DataAccess.AddInParameter(objCmd, "City", DbType.Int16, City);
+                DataAccess.AddInParameter(objCmd, "City", DbType.String, City);
                 DataAccess.AddInParameter(objCmd, "State", DbType.String, State);
                 DataAccess.AddInParameter(objCmd, "StateId", DbType.String, StateId);
                 DataAccess.AddInParameter(objCmd, "PCode", DbType.String, Pcode);

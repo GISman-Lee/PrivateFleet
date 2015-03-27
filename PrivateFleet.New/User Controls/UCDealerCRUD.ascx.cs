@@ -235,6 +235,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 objDealer.Fax = txtFax.Text;
                 objDealer.State = ddlState.SelectedItem.ToString();
                 objDealer.StateId = ddlState.SelectedValue.ToString();
+                objDealer.City = ddlCity.SelectedValue.ToString();
                 //objDealer.City = Convert.ToInt16(ddlCity.SelectedValue.ToString());
                 //objDealer.Location = Convert.ToInt16(ddlLocation.SelectedValue.ToString());
                 objDealer.Pcode = Convert.ToInt16(txtPCode.Text).ToString();
