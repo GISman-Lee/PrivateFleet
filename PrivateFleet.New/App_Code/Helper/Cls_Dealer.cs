@@ -387,6 +387,7 @@ public class Cls_Dealer : Cls_CommonProperties
                 DataAccess.AddInParameter(objCmd, "State", DbType.String, State);
                 DataAccess.AddInParameter(objCmd, "StateId", DbType.String, StateId);
                 DataAccess.AddInParameter(objCmd, "PCode", DbType.String, Pcode);
+                DataAccess.AddInParameter(objCmd, "Mobile", DbType.String, Mobile);
 
 
                 if (DbOperations.UPDATE.Equals(DBOperation))
@@ -903,6 +904,7 @@ public class Cls_Dealer : Cls_CommonProperties
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Location", DbType.String, values[7].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Pcode", DbType.String, values[8].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Make", DbType.String, values[9].Trim());
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Mobile", DbType.String, values[10].Trim());
             dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
             return dt;
 

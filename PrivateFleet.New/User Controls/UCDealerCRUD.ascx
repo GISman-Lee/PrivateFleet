@@ -60,20 +60,11 @@
             <td style="width: 100px">
                 <asp:TextBox ID="txtPhone" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
             </td>
-            <td style="width: 76px; padding-left: 20px;">
-                <asp:Label ID="Label7" runat="server" CssClass="label"><span style="color:Red">*</span>State :</asp:Label>
+            <td style="width: 108px; padding-left: 20px;">
+                <asp:Label ID="Label10" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Mobile :</asp:Label>
             </td>
-            <td style="width: 100px">
-                <asp:DropDownList ID="ddlState" runat="server" AppendDataBoundItems="True" AutoPostBack="false"
-                    DataTextField="State" DataValueField="ID" OnSelectedIndexChanged="ddlState_SelectedIndexChanged"
-                    Width="217px" CssClass="gvtextbox">
-                </asp:DropDownList>
-                <asp:RequiredFieldValidator ID="ddlStateReq" runat="server" ControlToValidate="ddlState"
-                    Display="None" ErrorMessage="Please Select the State" InitialValue="-Select-"
-                    ValidationGroup="VGSubmit" Width="203px" CssClass="gvValidationError" SetFocusOnError="True"></asp:RequiredFieldValidator>
-                <ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender4" runat="server"
-                    HighlightCssClass="validatorCalloutHighlight" TargetControlID="ddlStateReq">
-                </ajaxToolkit:ValidatorCalloutExtender>
+            <td>
+                <asp:TextBox ID="txtMobile" runat="server" CssClass="gvtextbox" Width="217px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -97,13 +88,21 @@
                     HighlightCssClass="validatorCalloutHighlight" TargetControlID="rfvPostalCode">
                 </ajaxToolkit:ValidatorCalloutExtender>
             </td>
+            
             <td style="width: 76px; padding-left: 20px;">
-                <asp:Label ID="Label6" runat="server" CssClass="label" Visible="false"><span>&nbsp;&nbsp;Location :</span></asp:Label>
+                <asp:Label ID="Label7" runat="server" CssClass="label"><span style="color:Red">*</span>State :</asp:Label>
             </td>
             <td style="width: 100px">
-                <asp:DropDownList ID="ddlLocation" runat="server" AppendDataBoundItems="True" DataTextField="Suburb"
-                    DataValueField="ID" Width="217px" Visible="false">
+                <asp:DropDownList ID="ddlState" runat="server" AppendDataBoundItems="True" AutoPostBack="false"
+                    DataTextField="State" DataValueField="ID" OnSelectedIndexChanged="ddlState_SelectedIndexChanged"
+                    Width="217px" CssClass="gvtextbox">
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="ddlStateReq" runat="server" ControlToValidate="ddlState"
+                    Display="None" ErrorMessage="Please Select the State" InitialValue="-Select-"
+                    ValidationGroup="VGSubmit" Width="203px" CssClass="gvValidationError" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                <ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender4" runat="server"
+                    HighlightCssClass="validatorCalloutHighlight" TargetControlID="ddlStateReq">
+                </ajaxToolkit:ValidatorCalloutExtender>
             </td>
         </tr>
         <tr>
@@ -129,6 +128,19 @@
                 </asp:DropDownList>
             </td>
         </tr>
+
+        <tr>
+            <td style="width: 76px; padding-left: 20px;">
+                <asp:Label ID="Label6" runat="server" CssClass="label" Visible="false"><span>&nbsp;&nbsp;Location :</span></asp:Label>
+            </td>
+            <td style="width: 100px">
+                <asp:DropDownList ID="ddlLocation" runat="server" AppendDataBoundItems="True" DataTextField="Suburb"
+                    DataValueField="ID" Width="217px" Visible="false">
+                </asp:DropDownList>
+            </td>
+            <td></td><td></td>
+        </tr>
+
         <tr>
           <!--  <td style="width: 108px">
                 &nbsp;
@@ -161,5 +173,5 @@
         HighlightCssClass="validatorCalloutHighlight" TargetControlID="revForSubmit">
     </ajaxToolkit:ValidatorCalloutExtender>
 </asp:Panel>
-<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+
 

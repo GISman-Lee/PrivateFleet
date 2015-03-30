@@ -137,11 +137,13 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             objDealer.Email = txtEmail.Text;
             objDealer.Phone = txtPhone.Text;
             objDealer.Fax = txtFax.Text;
+            objDealer.Mobile = txtMobile.Text;
             values[0] = objDealer.Name;
             values[1] = objDealer.Company;
             values[2] = objDealer.Email;
             values[3] = objDealer.Phone;
             values[4] = objDealer.Fax;
+            values[10] = objDealer.Mobile;
 
             if (ddlState.SelectedValue.ToString() == "-Select-" || ddlState.SelectedValue.ToString() == "" || ddlState.SelectedValue.ToString() == "-Select")
             {
@@ -183,6 +185,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             {
                 values[9] = ddlCarMake.SelectedItem.ToString();
             }
+            /*
             if(ddlCity.SelectedValue.ToString() == "-Select-" || ddlCity.SelectedValue.ToString() == "" || ddlCity.SelectedValue.ToString() == "-Select")
             {
                 values[10] = "";
@@ -191,6 +194,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             {
                 values[10] = ddlCity.SelectedItem.ToString();
             }
+             * */
             for (int i = 0; i < values.Length; i++)
             {
                 if (values[i].ToString() == "")
@@ -239,6 +243,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 //objDealer.City = Convert.ToInt16(ddlCity.SelectedValue.ToString());
                 //objDealer.Location = Convert.ToInt16(ddlLocation.SelectedValue.ToString());
                 objDealer.Pcode = Convert.ToInt16(txtPCode.Text).ToString();
+                objDealer.Mobile = txtMobile.Text;
 
                 int Result = 0;
                 if (objDealer.CheckIFDealerExist().Rows.Count == 0)
@@ -381,7 +386,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         {
             ImagebtnSearch.Enabled = true;
             ImagebtnSearch.ImageUrl = "~/Images/Search_dealer.gif";
-            txtCompany.Text = txtEmail.Text = txtFax.Text = txtName.Text = txtPCode.Text = txtPhone.Text = "";
+            txtCompany.Text = txtEmail.Text = txtFax.Text = txtName.Text = txtPCode.Text = txtPhone.Text = txtMobile.Text = "";
 
             if (ddlState.Items.Count > 0)
                 ddlState.SelectedIndex = 0;
@@ -440,6 +445,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                     this.txtFax.Text = dtDealerDetails.Rows[0]["Fax"].ToString();
                     this.txtName.Text = dtDealerDetails.Rows[0]["Name"].ToString();
                     this.txtPCode.Text = dtDealerDetails.Rows[0]["PCode"].ToString();
+                    this.txtMobile.Text = dtDealerDetails.Rows[0]["Mobile"].ToString();
                     if (this.txtPCode.Text.Length == 3)
                         this.txtPCode.Text = this.txtPCode.Text.PadLeft(4, '0');
                     lbtGetLocations_Click(null, null);

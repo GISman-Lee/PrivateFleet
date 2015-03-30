@@ -34,3 +34,9 @@
 9. Change the variable intakes in 2 storagte procedures:
    *1*: In SpUpdateDealer, Change @City int to @City varhchar(50)=' '
    *2*: In SpCheckIfDealerExists, Change @City int to @City Varchar(50)=' '
+
+10. Add a sub clause oin select clause in Storage Procedure "SpGetDealerDetails": ,DM.Moble
+
+11. Add a parameter ,@Mobile varchar(50) and a sub clause ,[Mobile]=@Mobile  in Storage Procedure SpUpdateDealer
+
+12. Add a parameter ,@Mobile varchar(50) and a sub clause ,[Mobile]=@Mobile in Storage Procedure SpCheckIfDealerExists
