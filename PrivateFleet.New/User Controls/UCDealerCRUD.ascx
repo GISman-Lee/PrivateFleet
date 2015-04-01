@@ -111,8 +111,8 @@
             </td>
             <td style="width: 100px" visible="false">
                 <asp:DropDownList ID="ddlCarMake" runat="server" Height="16px"
-                 width="217px" DataTextField="Make" DataValueField="ID" CssClass="gvtextbox" AppendDataBoundItems="True" AutoPostBack="false" 
-                 >
+                 width="217px" DataTextField="Make" DataValueField="ID" CssClass="gvtextbox" AppendDataBoundItems="True" AutoPostBack="true" 
+                 OnSelectedIndexChanged="ddlCarMake_SelectedIndexChanged" >
                 </asp:DropDownList>
             </td>
             <td style="width: 76px">
@@ -163,6 +163,8 @@
             </td>
             <td style="width: 100px">
                 <asp:HiddenField ID="hdfID" runat="server" />
+                <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Visible="false"></asp:TextBox>
             </td>
         </tr>
     </table>

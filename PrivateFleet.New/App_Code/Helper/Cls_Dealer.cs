@@ -65,6 +65,23 @@ public class Cls_Dealer : Cls_CommonProperties
         get { return _intMakeID; }
         set { _intMakeID = value; }
     }
+
+    private string _Make;
+
+    public string Make
+    {
+        get { return _Make; }
+        set { _Make = value;  }
+    }
+
+    private string _OldMake;
+
+    public string OldMake
+    {
+        get { return _OldMake; }
+        set { _OldMake = value; }
+    }
+
     private string _strDealer;
 
     private string _strName;
@@ -388,6 +405,8 @@ public class Cls_Dealer : Cls_CommonProperties
                 DataAccess.AddInParameter(objCmd, "StateId", DbType.String, StateId);
                 DataAccess.AddInParameter(objCmd, "PCode", DbType.String, Pcode);
                 DataAccess.AddInParameter(objCmd, "Mobile", DbType.String, Mobile);
+                DataAccess.AddInParameter(objCmd, "Make", DbType.String, Make);
+                DataAccess.AddInParameter(objCmd, "OldMake", DbType.String, OldMake);
 
 
                 if (DbOperations.UPDATE.Equals(DBOperation))

@@ -15,6 +15,17 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 {
 
     #region Properties
+
+    /*
+    private string _OldMake;
+
+    public string OldMake
+    {
+        get { return _OldMake; }
+        set { _OldMake = OldMake; }
+    }
+    */ 
+
     private int _DealerID;
 
     public int DealerID
@@ -34,6 +45,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 
     #endregion
 
+    public string OldMake = "AUDI"; 
     public bool lblFlag = true;
     Cls_Dealer objDealer = null;
     ILog logger = LogManager.GetLogger(typeof(User_Controls_UCDealerCRUD));
@@ -83,6 +95,36 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             logger.Error("ddlState_SelectedIndexChanged Event :" + ex.Message);
         }
     }
+
+    protected void ddlCarMake_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        ddlCarMakeStorageFunction();
+    }
+
+    private void ddlCarMakeStorageFunction()
+    {
+        try
+        {
+            if (ddlCarMake.SelectedIndex > 0)
+            {
+                if (this.TextBox1.Text != "")
+                {
+                    this.TextBox2.Text = this.TextBox1.Text.ToString();
+                    this.TextBox1.Text = ddlCarMake.SelectedItem.ToString();
+                }
+                else
+                {
+                    this.TextBox1.Text = ddlCarMake.SelectedItem.ToString();
+                    this.TextBox2.Text = this.TextBox1.Text.ToString();
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
     protected void ddlCity_SelectedIndexChanged(object sender, EventArgs e)
     {
         //try
@@ -244,6 +286,8 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 //objDealer.Location = Convert.ToInt16(ddlLocation.SelectedValue.ToString());
                 objDealer.Pcode = Convert.ToInt16(txtPCode.Text).ToString();
                 objDealer.Mobile = txtMobile.Text;
+                objDealer.Make = ddlCarMake.SelectedItem.ToString();
+                objDealer.OldMake = this.TextBox2.Text;
 
                 int Result = 0;
                 if (objDealer.CheckIFDealerExist().Rows.Count == 0)
@@ -263,7 +307,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 
 
 
-                    if (Result == 1)
+                    if (Result == 1 || Result == 2)
                     {
                         if (hdfDBOperation.Value.ToString().Equals(DbOperations.INSERT) || String.IsNullOrEmpty(hdfDBOperation.Value.ToString()))
                             lblResult.Text = "Dealer Added Successfully";
@@ -473,6 +517,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                     else
                     {
                         this.ddlCarMake.SelectedIndex = this.ddlCarMake.Items.IndexOf(this.ddlCarMake.Items.FindByText(dtDealerDetails.Rows[0]["Make"].ToString()));
+                        ddlCarMakeStorageFunction();
                     }
 
                     this.BindCities();

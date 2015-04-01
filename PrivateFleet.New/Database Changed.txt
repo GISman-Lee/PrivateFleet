@@ -40,3 +40,14 @@
 11. Add a parameter ,@Mobile varchar(50) and a sub clause ,[Mobile]=@Mobile  in Storage Procedure SpUpdateDealer
 
 12. Add a parameter ,@Mobile varchar(50) and a sub clause ,[Mobile]=@Mobile in Storage Procedure SpCheckIfDealerExists
+
+13. In Storage procedure SpAddDealer:
+    Add a parameter @Make;
+	Add an Insert clause Insert into [dbo].[tblMakeDealer] at the end after Insert into [dbo].[tblDealerMaster]
+
+14. In Storage Procedure SpCheckIfDealerExists:
+    Add 2 new parameters: @Make, @OldMake
+
+15. In Storage Procudure SpUpdateDealer:
+    Add 2 new parameters: @Make, @ OldMake
+	Add an update clause update [dbo].[tblMakeDealer] at the end after update [dbo].[tblDealerMaster]
