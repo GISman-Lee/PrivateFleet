@@ -9,7 +9,7 @@
     INNER JOIN tblMakeDealer as MD ON MD.DealerID = DM.ID -- Miles Modification
     INNER JOIN tblMakeMaster as MM ON MM.ID = MD.MakeID  -- Miles Modification 
 	Add a sub clause within select clause as follow:
-    DM.Mobile, MM.Make
+    DM.Mobile, MM.Make, MM.ID as MakeID (??)
 
 5.  Add a conditional sub clause in Storage Procedure "MilesTest" within {where} clause as follow:
     if @Make<>''
@@ -42,7 +42,7 @@
 12. Add a parameter ,@Mobile varchar(50) and a sub clause ,[Mobile]=@Mobile in Storage Procedure SpCheckIfDealerExists
 
 13. In Storage procedure SpAddDealer:
-    Add a parameter @Make;
+    Add 2 parameters @Make, @OldMake, @Mobile
 	Add an Insert clause Insert into [dbo].[tblMakeDealer] at the end after Insert into [dbo].[tblDealerMaster]
 
 14. In Storage Procedure SpCheckIfDealerExists:

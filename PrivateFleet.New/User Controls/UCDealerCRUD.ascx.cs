@@ -16,16 +16,6 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 
     #region Properties
 
-    /*
-    private string _OldMake;
-
-    public string OldMake
-    {
-        get { return _OldMake; }
-        set { _OldMake = OldMake; }
-    }
-    */ 
-
     private int _DealerID;
 
     public int DealerID

@@ -209,7 +209,6 @@ public class Cls_CustomerMaster : Cls_CommonProperties
             }
             else
             {
-
                 DataAccess.AddInParameter(objCmd, "FirstName", DbType.String, FirstName);
                 DataAccess.AddInParameter(objCmd, "MiddleName", DbType.String, MiddleName);
                 DataAccess.AddInParameter(objCmd, "LastName", DbType.String, LastName);

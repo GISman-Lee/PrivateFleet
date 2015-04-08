@@ -99,6 +99,14 @@
                                     <asp:HiddenField ID="hdfLocationID" runat="server" Value='<%# Bind("LocationID") %>' />
                                 </ItemTemplate>
                             </asp:TemplateField>--%>
+                    
+                    <asp:TemplateField HeaderText="Is Hot ?">
+                        <ItemTemplate>
+                            <asp:Image ID="imgbtnIsHotDealer" runat="server" />
+                        </ItemTemplate>
+                        <ItemStyle HorizontalAlign="Center" />
+                    </asp:TemplateField>
+
                     <asp:TemplateField HeaderText="Active">
                         <ItemTemplate>
                             <asp:Image ID="imgbtnActivate" runat="server" />
@@ -125,6 +133,7 @@
                             <asp:LinkButton ID="lnkbtnActiveness" runat="server" CommandArgument="<%# Container.DataItemIndex %>"
                                 CommandName="Activeness" Style="padding-left: 10px" CssClass="activatelink">Activate</asp:LinkButton>&nbsp;
                             <asp:HiddenField ID="hdfIsActive" runat="server" Value='<%# Bind("IsActive") %>' />
+                            <asp:HiddenField ID="hdfIsHotDealer" runat="server" Value='<%# Bind("IsHotDealer") %>' />
                         </ItemTemplate>
                         <ItemStyle HorizontalAlign="Left" />
                     </asp:TemplateField>
