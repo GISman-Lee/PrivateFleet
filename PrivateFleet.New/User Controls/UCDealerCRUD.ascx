@@ -10,7 +10,7 @@
         </tr>
         <tr>
             <td style="width: 108px">
-                <asp:Label ID="Label1" runat="server" CssClass="label"><span style="color:Red">*</span>Dealer Name :</asp:Label>
+                <asp:Label ID="Label1" runat="server" CssClass="label" ><span style="color:Red">*</span>Dealer :</asp:Label>
             </td>
             <td style="width: 100px">
                 <asp:TextBox ID="txtName" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox><br />
@@ -74,7 +74,7 @@
             <td style="width: 100px">
                 <asp:TextBox ID="txtPCode" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
                 <asp:LinkButton ID="lbtGetLocations" runat="server" OnClick="lbtGetLocations_Click"
-                    ValidationGroup="VGForLocation" Width="103px">Get Location's</asp:LinkButton>
+                    ValidationGroup="VGForLocation" Width="103px" Visible="false">Get Location's</asp:LinkButton>
                 <asp:RequiredFieldValidator ID="rfvPostalCode" runat="server" ControlToValidate="txtPCode"
                     CssClass="gvValidationError" Display="None" ErrorMessage="Postal Code  Required"
                     SetFocusOnError="True" ValidationGroup="VGSubmit"></asp:RequiredFieldValidator>
