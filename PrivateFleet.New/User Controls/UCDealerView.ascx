@@ -69,6 +69,10 @@
                             <a href='<%# "mailto:"+ Eval("Email") %>' style="color: Blue;">
                                 <asp:Label ID="Email" runat="server" Text='<%#Bind("Email") %>'></asp:Label></a>
                             <br />
+
+                            Address&nbsp;&nbsp;&nbsp;:&nbsp;
+                            <asp:Label ID="lblAddress" runat="server" Font-Size="14px" Text='<%#Bind("Address") %>' EnableViewState="True"></asp:Label>
+                            <br />
                         </ItemTemplate>
                     </asp:TemplateField>
 

@@ -269,6 +269,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 objDealer.Email = txtEmail.Text;
                 objDealer.Phone = txtPhone.Text;
                 objDealer.Fax = txtFax.Text;
+                objDealer.Address = txtLocation.Text;
                 objDealer.State = ddlState.SelectedItem.ToString();
                 objDealer.StateId = ddlState.SelectedValue.ToString();
                 objDealer.City = ddlCity.SelectedValue.ToString();
@@ -420,7 +421,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         {
             ImagebtnSearch.Enabled = true;
             ImagebtnSearch.ImageUrl = "~/Images/Search_dealer.gif";
-            txtCompany.Text = txtEmail.Text = txtFax.Text = txtName.Text = txtPCode.Text = txtPhone.Text = txtMobile.Text = "";
+            txtCompany.Text = txtEmail.Text = txtFax.Text = txtName.Text = txtPCode.Text = txtPhone.Text = txtMobile.Text = txtLocation.Text= "";
 
             if (ddlState.Items.Count > 0)
                 ddlState.SelectedIndex = 0;

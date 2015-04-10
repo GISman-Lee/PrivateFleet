@@ -138,7 +138,13 @@
                     DataValueField="ID" Width="217px" Visible="false">
                 </asp:DropDownList>
             </td>
-            <td></td><td></td>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label11" runat="server" CssClass="label" Visible="true"><span>Address :</span></asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtLocation" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+            </td>
         </tr>
 
         <tr>

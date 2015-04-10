@@ -163,6 +163,13 @@ public class Cls_Dealer : Cls_CommonProperties
         get { return _strPcode; }
         set { _strPcode = value; }
     }
+    private string _strAddress;
+
+    public string Address
+    {
+        get { return _strAddress; }
+        set { _strAddress = value; }
+    }
 
     private int _SuburbID;
 
@@ -407,6 +414,7 @@ public class Cls_Dealer : Cls_CommonProperties
                 DataAccess.AddInParameter(objCmd, "Mobile", DbType.String, Mobile);
                 DataAccess.AddInParameter(objCmd, "Make", DbType.String, Make);
                 DataAccess.AddInParameter(objCmd, "OldMake", DbType.String, OldMake);
+                DataAccess.AddInParameter(objCmd, "Address", DbType.String, Address);
 
 
                 if (DbOperations.UPDATE.Equals(DBOperation))

@@ -51,3 +51,25 @@
 15. In Storage Procudure SpUpdateDealer:
     Add 2 new parameters: @Make, @ OldMake
 	Add an update clause update [dbo].[tblMakeDealer] at the end after update [dbo].[tblDealerMaster]
+
+16. Change the database table ACU_Access ID 163, ACU_PageMaster ID 4;  --> Change it in final stage
+
+17. Add a field [Address] in table tblDealerMaster.
+
+18. In Storage Procedure SpAddDealer:
+    Add a parameter @Address varchar(255)
+	In subclause "INSERT TO", add a variable [Address] = @Address
+	In subclause "VALUES", add a variable @Address
+
+19. In Storage Procedure SpUpdateDealer:
+    Add a parameter @Address varchar(255)
+	In Subclause "UPDATE", add a variable [Address] = @Address
+
+20. In Storage Procedure "SpCheckIfDealerExists":
+    Add a parameter @Address varchar(255)
+
+21. In Storage Procedure "SpGetAllDealers":
+    In Subclause "SELECT", add a variable (Case when DM.Address IS NULL THEN 'no record' ELSE DM.Address END) as Address
+
+22. In Storage Procedure "MilesTest":
+    In Subclause "set @sqlQuery", add a variable (Case when DM.Address IS NULL THEN ''No Record'' ELSE DM.Address END) as Address
