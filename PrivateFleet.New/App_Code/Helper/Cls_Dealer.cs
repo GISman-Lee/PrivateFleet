@@ -65,6 +65,23 @@ public class Cls_Dealer : Cls_CommonProperties
         get { return _intMakeID; }
         set { _intMakeID = value; }
     }
+
+    private string _Make;
+
+    public string Make
+    {
+        get { return _Make; }
+        set { _Make = value;  }
+    }
+
+    private string _OldMake;
+
+    public string OldMake
+    {
+        get { return _OldMake; }
+        set { _OldMake = value; }
+    }
+
     private string _strDealer;
 
     private string _strName;
@@ -102,6 +119,13 @@ public class Cls_Dealer : Cls_CommonProperties
         get { return _strPhone; }
         set { _strPhone = value; }
     }
+    private string _strMobile;
+    public string Mobile
+    {
+        get { return _strMobile; }
+        set { _strMobile = value; }
+    }
+
     private int _intLocation;
 
     public int Location
@@ -109,12 +133,21 @@ public class Cls_Dealer : Cls_CommonProperties
         get { return _intLocation; }
         set { _intLocation = value; }
     }
+    /*
     private int _intCity;
 
     public int City
     {
         get { return _intCity; }
         set { _intCity = value; }
+    }
+     */
+    private string _stringCity;
+
+    public string City
+    {
+        get { return _stringCity; }
+        set { _stringCity = value; }
     }
     private string _intState;
 
@@ -129,6 +162,13 @@ public class Cls_Dealer : Cls_CommonProperties
     {
         get { return _strPcode; }
         set { _strPcode = value; }
+    }
+    private string _strAddress;
+
+    public string Address
+    {
+        get { return _strAddress; }
+        set { _strAddress = value; }
     }
 
     private int _SuburbID;
@@ -247,7 +287,7 @@ public class Cls_Dealer : Cls_CommonProperties
         {
             DbCommand objCmd = null;
 
-            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpGetAllDealers");
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpGetAllDealers");  //SpGetAllDealers
 
             return Cls_DataAccess.getInstance().GetDataTable(objCmd);
         }
@@ -367,10 +407,14 @@ public class Cls_Dealer : Cls_CommonProperties
                 DataAccess.AddInParameter(objCmd, "Fax", DbType.String, Fax);
                 DataAccess.AddInParameter(objCmd, "Phone", DbType.String, Phone);
                 DataAccess.AddInParameter(objCmd, "Location", DbType.Int16, Location);
-                DataAccess.AddInParameter(objCmd, "City", DbType.Int16, City);
+                DataAccess.AddInParameter(objCmd, "City", DbType.String, City);
                 DataAccess.AddInParameter(objCmd, "State", DbType.String, State);
                 DataAccess.AddInParameter(objCmd, "StateId", DbType.String, StateId);
                 DataAccess.AddInParameter(objCmd, "PCode", DbType.String, Pcode);
+                DataAccess.AddInParameter(objCmd, "Mobile", DbType.String, Mobile);
+                DataAccess.AddInParameter(objCmd, "Make", DbType.String, Make);
+                DataAccess.AddInParameter(objCmd, "OldMake", DbType.String, OldMake);
+                DataAccess.AddInParameter(objCmd, "Address", DbType.String, Address);
 
 
                 if (DbOperations.UPDATE.Equals(DBOperation))
@@ -876,7 +920,7 @@ public class Cls_Dealer : Cls_CommonProperties
         try
         {
             DbCommand objcmd = null;
-            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "sptest");
+            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "MilesTest"); //sptest
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@name", DbType.String, values[0].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Company", DbType.String, values[1].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Email", DbType.String, values[2].Trim());
@@ -886,6 +930,8 @@ public class Cls_Dealer : Cls_CommonProperties
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@City", DbType.String, values[6].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Location", DbType.String, values[7].Trim());
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Pcode", DbType.String, values[8].Trim());
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Make", DbType.String, values[9].Trim());
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Mobile", DbType.String, values[10].Trim());
             dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
             return dt;
 

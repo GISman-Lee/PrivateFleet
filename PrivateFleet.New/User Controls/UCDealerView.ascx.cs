@@ -127,6 +127,22 @@ public partial class User_Controls_UCDealerView : System.Web.UI.UserControl
         {
             try
             {
+                Image imgbtnIsHotDealer = ((Image)e.Row.FindControl("imgbtnIsHotDealer"));
+                if(imgbtnIsHotDealer != null)
+                {
+                    if (Convert.ToBoolean(DataBinder.Eval(e.Row.DataItem, "IsHotDealer")))
+                    {
+                        imgbtnIsHotDealer.ImageUrl = "~/Images/Active.png";
+                        imgbtnIsHotDealer.ToolTip = "Make it Cold";
+                    }
+                    else
+                    {
+                        imgbtnIsHotDealer.ImageUrl = "~/Images/Inactive.ico";
+                        imgbtnIsHotDealer.ToolTip = "Make it Hot";
+                    }
+                }
+
+
                 Image imgBtnActive = ((Image)e.Row.FindControl("imgbtnActivate"));
                 Image imgActive = ((Image)e.Row.FindControl("imgActive"));
                 LinkButton lnkbtnActivate = ((LinkButton)e.Row.FindControl("lnkbtnActiveness"));
@@ -134,14 +150,11 @@ public partial class User_Controls_UCDealerView : System.Web.UI.UserControl
                 {
                     if (Convert.ToBoolean(DataBinder.Eval(e.Row.DataItem, "IsActive")))
                     {
-
-
                         imgBtnActive.ImageUrl = "~/Images/Active.png";
                         imgActive.ImageUrl = "~/Images/active_bullate.jpg";
                         imgActive.ToolTip = "Deactivate This Record";
 
                          e.Row.CssClass = "gridactiverow";
-
 
                     }
                     else
@@ -226,11 +239,11 @@ public partial class User_Controls_UCDealerView : System.Web.UI.UserControl
 
                 dtDealers = ctrlAddDealer.SearchDealer();
            
-
+            
             DataView dv = dtDealers.DefaultView;
             dv.Sort = string.Format("{0} {1}", ViewState[Cls_Constants.VIEWSTATE_SORTEXPRESSION].ToString(), ViewState[Cls_Constants.VIEWSTATE_SORTDIRECTION].ToString());
             dtDealers = dv.ToTable();
-
+            
             gvDealerDetails.DataSource = dtDealers;
             gvDealerDetails.DataBind();
         }

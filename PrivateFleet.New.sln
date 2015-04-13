@@ -1,13 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PrivateFleet.New", "PrivateFleet.New\", "{5FB3A449-6FDA-4E24-9820-C9E1D9D66CC7}"
 	ProjectSection(WebsiteProperties) = preProject
 		SccProjectName = ""
 		SccAuxPath = ""
 		SccLocalPath = ""
 		SccProvider = ""
-		TargetFramework = "3.5"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
 		Debug.AspNetCompiler.VirtualPath = "/PrivateFleet.New"
 		Debug.AspNetCompiler.PhysicalPath = "PrivateFleet.New\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PrivateFleet.New\"
@@ -31,7 +31,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "PrivateFleet.New", "Private
 		SccAuxPath = ""
 		SccLocalPath = ""
 		SccProvider = ""
-		TargetFramework = "3.5"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
 		Debug.AspNetCompiler.VirtualPath = "/PrivateFleet.New"
 		Debug.AspNetCompiler.PhysicalPath = "PrivateFleet.New\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\PrivateFleet.New\"

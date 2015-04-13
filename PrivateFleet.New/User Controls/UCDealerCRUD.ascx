@@ -10,7 +10,7 @@
         </tr>
         <tr>
             <td style="width: 108px">
-                <asp:Label ID="Label1" runat="server" CssClass="label"><span style="color:Red">*</span>Dealer Name :</asp:Label>
+                <asp:Label ID="Label1" runat="server" CssClass="label" ><span style="color:Red">*</span>Dealer :</asp:Label>
             </td>
             <td style="width: 100px">
                 <asp:TextBox ID="txtName" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox><br />
@@ -60,6 +60,35 @@
             <td style="width: 100px">
                 <asp:TextBox ID="txtPhone" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
             </td>
+            <td style="width: 108px; padding-left: 20px;">
+                <asp:Label ID="Label10" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Mobile :</asp:Label>
+            </td>
+            <td>
+                <asp:TextBox ID="txtMobile" runat="server" CssClass="gvtextbox" Width="217px"></asp:TextBox>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 108px">
+                <asp:Label ID="Label5" runat="server" CssClass="label"><span>&nbsp;&nbsp;Postal Code :</span></asp:Label>
+            </td>
+            <td style="width: 100px">
+                <asp:TextBox ID="txtPCode" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+                <asp:LinkButton ID="lbtGetLocations" runat="server" OnClick="lbtGetLocations_Click"
+                    ValidationGroup="VGForLocation" Width="103px" Visible="false">Get Location's</asp:LinkButton>
+                <asp:RequiredFieldValidator ID="rfvPostalCode" runat="server" ControlToValidate="txtPCode"
+                    CssClass="gvValidationError" Display="None" ErrorMessage="Postal Code  Required"
+                    SetFocusOnError="True" ValidationGroup="VGSubmit"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="revPostalCode" runat="server" ControlToValidate="txtPcode"
+                    Display="None" ErrorMessage="Enter Correct Postal Code" ValidationExpression="^(0[289][0-9]{2})|([1345689][0-9]{3})|(2[0-8][0-9]{2})|(290[0-9])|(291[0-4])|(7[0-4][0-9]{2})|(7[8-9][0-9]{2})$"
+                    ValidationGroup="VGSubmit">
+                </asp:RegularExpressionValidator><ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender9"
+                    runat="server" HighlightCssClass="validatorCalloutHighlight" TargetControlID="revPostalCode">
+                </ajaxToolkit:ValidatorCalloutExtender>
+                <ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender7" runat="server"
+                    HighlightCssClass="validatorCalloutHighlight" TargetControlID="rfvPostalCode">
+                </ajaxToolkit:ValidatorCalloutExtender>
+            </td>
+            
             <td style="width: 76px; padding-left: 20px;">
                 <asp:Label ID="Label7" runat="server" CssClass="label"><span style="color:Red">*</span>State :</asp:Label>
             </td>
@@ -77,26 +106,30 @@
             </td>
         </tr>
         <tr>
-            <td style="width: 108px">
-                <asp:Label ID="Label5" runat="server" CssClass="label"><span>&nbsp;&nbsp;Postal Code :</span></asp:Label>
+            <td style="width: 108px" visible="false">
+                <asp:Label ID="CarMake" runat="server" CssClass="label"><span style="color:Red">*</span>Car Make :</asp:Label>
+            </td>
+            <td style="width: 100px" visible="false">
+                <asp:DropDownList ID="ddlCarMake" runat="server" Height="16px"
+                 width="217px" DataTextField="Make" DataValueField="ID" CssClass="gvtextbox" AppendDataBoundItems="True" AutoPostBack="true" 
+                 OnSelectedIndexChanged="ddlCarMake_SelectedIndexChanged" >
+                </asp:DropDownList>
+            </td>
+            <td style="width: 76px">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label4" runat="server" CssClass="label" Visible="true"><span 
+                    style="color:Red">*</span>City :</asp:Label>
             </td>
             <td style="width: 100px">
-                <asp:TextBox ID="txtPCode" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                <asp:LinkButton ID="lbtGetLocations" runat="server" OnClick="lbtGetLocations_Click"
-                    ValidationGroup="VGForLocation" Width="103px">Get Location's</asp:LinkButton>
-                <asp:RequiredFieldValidator ID="rfvPostalCode" runat="server" ControlToValidate="txtPCode"
-                    CssClass="gvValidationError" Display="None" ErrorMessage="Postal Code  Required"
-                    SetFocusOnError="True" ValidationGroup="VGSubmit"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="revPostalCode" runat="server" ControlToValidate="txtPcode"
-                    Display="None" ErrorMessage="Enter Correct Postal Code" ValidationExpression="^(0[289][0-9]{2})|([1345689][0-9]{3})|(2[0-8][0-9]{2})|(290[0-9])|(291[0-4])|(7[0-4][0-9]{2})|(7[8-9][0-9]{2})$"
-                    ValidationGroup="VGSubmit">
-                </asp:RegularExpressionValidator><ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender9"
-                    runat="server" HighlightCssClass="validatorCalloutHighlight" TargetControlID="revPostalCode">
-                </ajaxToolkit:ValidatorCalloutExtender>
-                <ajaxToolkit:ValidatorCalloutExtender ID="ValidatorCalloutExtender7" runat="server"
-                    HighlightCssClass="validatorCalloutHighlight" TargetControlID="rfvPostalCode">
-                </ajaxToolkit:ValidatorCalloutExtender>
+                <asp:DropDownList ID="ddlCity" runat="server" AppendDataBoundItems="True" 
+                    DataTextField="City" DataValueField="City" 
+                    OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" Visible="true" 
+                    Width="217px">
+                </asp:DropDownList>
             </td>
+        </tr>
+
+        <tr>
             <td style="width: 76px; padding-left: 20px;">
                 <asp:Label ID="Label6" runat="server" CssClass="label" Visible="false"><span>&nbsp;&nbsp;Location :</span></asp:Label>
             </td>
@@ -105,22 +138,15 @@
                     DataValueField="ID" Width="217px" Visible="false">
                 </asp:DropDownList>
             </td>
-        </tr>
-        <tr>
-            <td style="width: 108px" visible="false">
-                <asp:Label ID="Label4" runat="server" CssClass="label" Visible="false"><span style="color:Red">*</span>City :</asp:Label>
+            <td>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label11" runat="server" CssClass="label" Visible="true"><span>Address :</span></asp:Label>
             </td>
-            <td style="width: 100px" visible="false">
-                <asp:DropDownList ID="ddlCity" runat="server" AppendDataBoundItems="True" DataTextField="City"
-                    DataValueField="ID" OnSelectedIndexChanged="ddlCity_SelectedIndexChanged" Width="217px"
-                    Visible="false">
-                </asp:DropDownList>
-            </td>
-            <td style="width: 76px">
-            </td>
-            <td style="width: 100px">
+            <td>
+                <asp:TextBox ID="txtLocation" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
             </td>
         </tr>
+
         <tr>
           <!--  <td style="width: 108px">
                 &nbsp;
@@ -143,6 +169,8 @@
             </td>
             <td style="width: 100px">
                 <asp:HiddenField ID="hdfID" runat="server" />
+                <asp:TextBox ID="TextBox1" runat="server" Visible="false"></asp:TextBox>
+                <asp:TextBox ID="TextBox2" runat="server" Visible="false"></asp:TextBox>
             </td>
         </tr>
     </table>
@@ -153,3 +181,5 @@
         HighlightCssClass="validatorCalloutHighlight" TargetControlID="revForSubmit">
     </ajaxToolkit:ValidatorCalloutExtender>
 </asp:Panel>
+
+

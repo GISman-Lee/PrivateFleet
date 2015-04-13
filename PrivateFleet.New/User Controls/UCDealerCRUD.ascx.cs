@@ -15,6 +15,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 {
 
     #region Properties
+
     private int _DealerID;
 
     public int DealerID
@@ -34,6 +35,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 
     #endregion
 
+    public string OldMake = "AUDI"; 
     public bool lblFlag = true;
     Cls_Dealer objDealer = null;
     ILog logger = LogManager.GetLogger(typeof(User_Controls_UCDealerCRUD));
@@ -48,6 +50,8 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 ImagebtnSearch.Enabled = true;
                 ImagebtnSearch.ImageUrl = "~/Images/Search_dealer.gif";
                 BindStates();
+                BindCarMakes();
+                BindCities();
                 lbtGetLocations_Click(null, null);
             }
             DealerMasterPanel.DefaultButton = "ImagebtnSearch";
@@ -55,7 +59,6 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         catch (Exception ex)
         { logger.Error("Page_Load Event :" + ex.Message); }
     }
-
 
     protected void ddlState_SelectedIndexChanged(object sender, EventArgs e)
     {
@@ -66,7 +69,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 ddlCity.Items.Clear();
 
                 Cls_Dealer objDealer = new Cls_Dealer();
-                objDealer.State = ddlState.SelectedItem.ToString();
+                objDealer.State = ddlState.SelectedItem.Value.ToString();
                 DataTable dtCities = objDealer.GetAllCitiesOfState();
                 ddlCity.DataSource = dtCities;
                 ddlCity.DataBind();
@@ -82,6 +85,36 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             logger.Error("ddlState_SelectedIndexChanged Event :" + ex.Message);
         }
     }
+
+    protected void ddlCarMake_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        ddlCarMakeStorageFunction();
+    }
+
+    private void ddlCarMakeStorageFunction()
+    {
+        try
+        {
+            if (ddlCarMake.SelectedIndex > 0)
+            {
+                if (this.TextBox1.Text != "")
+                {
+                    this.TextBox2.Text = this.TextBox1.Text.ToString();
+                    this.TextBox1.Text = ddlCarMake.SelectedItem.ToString();
+                }
+                else
+                {
+                    this.TextBox1.Text = ddlCarMake.SelectedItem.ToString();
+                    this.TextBox2.Text = this.TextBox1.Text.ToString();
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
     protected void ddlCity_SelectedIndexChanged(object sender, EventArgs e)
     {
         //try
@@ -114,6 +147,12 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         lblFlag = false;
         SearchDealer();
     }
+
+    public DataTable SearchDealer2()
+    {
+        return null;
+    }
+
     public DataTable SearchDealer()
     {
         DataTable dt = new DataTable();
@@ -122,7 +161,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             GridView gvDealerDetails = (GridView)this.Parent.FindControl("gvDealerDetails");
 
             int int_count = 0;
-            string[] values = new string[9];
+            string[] values = new string[11];  //When Add a enabled control in this page, number should be added one
 
             objDealer = new Cls_Dealer();
             objDealer.Name = txtName.Text.Replace('.', ' ');
@@ -130,11 +169,13 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             objDealer.Email = txtEmail.Text;
             objDealer.Phone = txtPhone.Text;
             objDealer.Fax = txtFax.Text;
+            objDealer.Mobile = txtMobile.Text;
             values[0] = objDealer.Name;
             values[1] = objDealer.Company;
             values[2] = objDealer.Email;
             values[3] = objDealer.Phone;
             values[4] = objDealer.Fax;
+            values[10] = objDealer.Mobile;
 
             if (ddlState.SelectedValue.ToString() == "-Select-" || ddlState.SelectedValue.ToString() == "" || ddlState.SelectedValue.ToString() == "-Select")
             {
@@ -168,6 +209,24 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
             {
                 values[8] = txtPCode.Text.ToString();
             }
+            if (ddlCarMake.SelectedValue.ToString() == "-Select-" || ddlCarMake.SelectedValue.ToString() == "" || ddlCarMake.SelectedValue.ToString() == "-Select")
+            {
+                values[9] = "";
+            }
+            else
+            {
+                values[9] = ddlCarMake.SelectedItem.ToString();
+            }
+            /*
+            if(ddlCity.SelectedValue.ToString() == "-Select-" || ddlCity.SelectedValue.ToString() == "" || ddlCity.SelectedValue.ToString() == "-Select")
+            {
+                values[10] = "";
+            }
+            else
+            {
+                values[10] = ddlCity.SelectedItem.ToString();
+            }
+             * */
             for (int i = 0; i < values.Length; i++)
             {
                 if (values[i].ToString() == "")
@@ -175,7 +234,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                     int_count++;
                 }
             }
-            if (int_count == 9)
+            if (int_count == 11)   //When Add a enabled control in this page, number should be added one
             {
                 objDealer = new Cls_Dealer();
                 dt = objDealer.GetAllDealers();
@@ -210,11 +269,16 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                 objDealer.Email = txtEmail.Text;
                 objDealer.Phone = txtPhone.Text;
                 objDealer.Fax = txtFax.Text;
+                objDealer.Address = txtLocation.Text;
                 objDealer.State = ddlState.SelectedItem.ToString();
                 objDealer.StateId = ddlState.SelectedValue.ToString();
+                objDealer.City = ddlCity.SelectedValue.ToString();
                 //objDealer.City = Convert.ToInt16(ddlCity.SelectedValue.ToString());
                 //objDealer.Location = Convert.ToInt16(ddlLocation.SelectedValue.ToString());
                 objDealer.Pcode = Convert.ToInt16(txtPCode.Text).ToString();
+                objDealer.Mobile = txtMobile.Text;
+                objDealer.Make = ddlCarMake.SelectedItem.ToString();
+                objDealer.OldMake = this.TextBox2.Text;
 
                 int Result = 0;
                 if (objDealer.CheckIFDealerExist().Rows.Count == 0)
@@ -234,7 +298,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
 
 
 
-                    if (Result == 1)
+                    if (Result == 1 || Result == 2)
                     {
                         if (hdfDBOperation.Value.ToString().Equals(DbOperations.INSERT) || String.IsNullOrEmpty(hdfDBOperation.Value.ToString()))
                             lblResult.Text = "Dealer Added Successfully";
@@ -307,7 +371,49 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         { logger.Error("BindStates Function :" + ex.Message); }
     }
 
+    private void BindCarMakes()
+    {
+        try
+        {
+            ddlCarMake.Items.Clear();
+            Miles_Cls_CarMake objCarMake = new Miles_Cls_CarMake();
+            DataTable dtCarMakes = objCarMake.GetAllCarMakes();
+            ddlCarMake.DataSource = dtCarMakes;
+            ddlCarMake.DataBind();
 
+            if (ddlCarMake.Items.Count == 0)
+                ddlCarMake.Items.Insert(0, new ListItem("No Car Makes Found", "-Select-"));
+            else
+                ddlCarMake.Items.Insert(0, new ListItem("-Select Car Make-", "-Select-"));
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
+    private void BindCities()
+    {
+        try
+        {
+            ddlCity.Items.Clear();
+            Miles_Cls_City objCity = new Miles_Cls_City();
+            DataTable dtCities = objCity.GetAllCities();
+            ddlCity.DataSource = dtCities;
+            ddlCity.DataBind();
+
+            if (ddlCity.Items.Count == 0)
+                ddlCity.Items.Insert(0, new ListItem("No Cities Found", "-Select-"));
+            else
+                ddlCity.Items.Insert(0, new ListItem("-Select Cities-", "-Select-"));
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
 
     private void ClearFields()
     {
@@ -315,15 +421,21 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         {
             ImagebtnSearch.Enabled = true;
             ImagebtnSearch.ImageUrl = "~/Images/Search_dealer.gif";
-            txtCompany.Text = txtEmail.Text = txtFax.Text = txtName.Text = txtPCode.Text = txtPhone.Text = "";
+            txtCompany.Text = txtEmail.Text = txtFax.Text = txtName.Text = txtPCode.Text = txtPhone.Text = txtMobile.Text = txtLocation.Text= "";
 
             if (ddlState.Items.Count > 0)
                 ddlState.SelectedIndex = 0;
 
             ddlState_SelectedIndexChanged(null, null);
 
-            ddlCity.Items.Clear();
-            ddlCity.Items.Insert(0, new ListItem("- Please select the state -", "-Select"));
+            if (ddlCarMake.Items.Count > 0)
+                ddlCarMake.SelectedIndex = 0;
+
+            if (ddlCity.Items.Count > 0)
+                ddlCity.SelectedIndex = 0;
+
+            //ddlCity.Items.Clear();
+            //ddlCity.Items.Insert(0, new ListItem("- Please select the state -", "-Select"));
             ddlLocation.Items.Clear();
             ddlLocation.Items.Insert(0, new ListItem("- Please Enter Postal Code To get Locations -", "-Select"));
 
@@ -368,6 +480,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                     this.txtFax.Text = dtDealerDetails.Rows[0]["Fax"].ToString();
                     this.txtName.Text = dtDealerDetails.Rows[0]["Name"].ToString();
                     this.txtPCode.Text = dtDealerDetails.Rows[0]["PCode"].ToString();
+                    this.txtMobile.Text = dtDealerDetails.Rows[0]["Mobile"].ToString();
                     if (this.txtPCode.Text.Length == 3)
                         this.txtPCode.Text = this.txtPCode.Text.PadLeft(4, '0');
                     lbtGetLocations_Click(null, null);
@@ -385,6 +498,30 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                         this.ddlState.SelectedIndex = (Convert.ToInt32(dtDealerDetails.Rows[0]["StateId"].ToString()));
                     }
 
+
+                    this.BindCarMakes();
+
+                    if (dtDealerDetails.Rows[0]["Make"].ToString() == "")
+                    {
+                        this.ddlCarMake.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        this.ddlCarMake.SelectedIndex = this.ddlCarMake.Items.IndexOf(this.ddlCarMake.Items.FindByText(dtDealerDetails.Rows[0]["Make"].ToString()));
+                        ddlCarMakeStorageFunction();
+                    }
+
+                    this.BindCities();
+
+                    if (dtDealerDetails.Rows[0]["CityId"].ToString() == "")
+                    {
+                        this.ddlCity.SelectedIndex = 0;
+                    }
+                    else
+                    {
+                        this.ddlCity.SelectedIndex = this.ddlCity.Items.IndexOf(this.ddlCity.Items.FindByText(dtDealerDetails.Rows[0]["CityId"].ToString()));
+                    }
+                    #region previousdeveloper
                     //if (ddlState.SelectedIndex == 0)
                     //{
                     //    ddlState.Items.Clear();
@@ -411,6 +548,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                     //   //   //  this.ddlLocation.SelectedIndex = this.ddlLocation.Items.IndexOf(this.ddlLocation.Items.FindByValue(dtDealerDetails.Rows[0]["CityID"].ToString()));
                     //   // }
                     //}
+                    #endregion
 
                 }
             }
