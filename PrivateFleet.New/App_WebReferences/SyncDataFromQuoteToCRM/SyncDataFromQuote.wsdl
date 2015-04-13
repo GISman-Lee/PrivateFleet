@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDealerFromQuote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="company" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MakeId" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="CityId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="StateId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedById" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsNew" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDealerFromQuoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveDealerFromQuoteResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDealerMakeMapFromQuote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="key" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MakeId" type="s:short" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="CreatedById" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsNew" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveDealerMakeMapFromQuoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveDealerMakeMapFromQuoteResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSendEmailDetailsFromQuote">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EmailTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailFromID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmailText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PageName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveSendEmailDetailsFromQuoteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveSendEmailDetailsFromQuoteResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDealerFromQuoteSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDealerFromQuote" />
+  </wsdl:message>
+  <wsdl:message name="SaveDealerFromQuoteSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDealerFromQuoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveDealerMakeMapFromQuoteSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveDealerMakeMapFromQuote" />
+  </wsdl:message>
+  <wsdl:message name="SaveDealerMakeMapFromQuoteSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveDealerMakeMapFromQuoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveSendEmailDetailsFromQuoteSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveSendEmailDetailsFromQuote" />
+  </wsdl:message>
+  <wsdl:message name="SaveSendEmailDetailsFromQuoteSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveSendEmailDetailsFromQuoteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SyncDataFromQuoteSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerFromQuote">
+      <wsdl:input message="tns:SaveDealerFromQuoteSoapIn" />
+      <wsdl:output message="tns:SaveDealerFromQuoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerMakeMapFromQuote">
+      <wsdl:input message="tns:SaveDealerMakeMapFromQuoteSoapIn" />
+      <wsdl:output message="tns:SaveDealerMakeMapFromQuoteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveSendEmailDetailsFromQuote">
+      <wsdl:input message="tns:SaveSendEmailDetailsFromQuoteSoapIn" />
+      <wsdl:output message="tns:SaveSendEmailDetailsFromQuoteSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SyncDataFromQuoteSoap" type="tns:SyncDataFromQuoteSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerFromQuote">
+      <soap:operation soapAction="http://tempuri.org/SaveDealerFromQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerMakeMapFromQuote">
+      <soap:operation soapAction="http://tempuri.org/SaveDealerMakeMapFromQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSendEmailDetailsFromQuote">
+      <soap:operation soapAction="http://tempuri.org/SaveSendEmailDetailsFromQuote" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SyncDataFromQuoteSoap12" type="tns:SyncDataFromQuoteSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerFromQuote">
+      <soap12:operation soapAction="http://tempuri.org/SaveDealerFromQuote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveDealerMakeMapFromQuote">
+      <soap12:operation soapAction="http://tempuri.org/SaveDealerMakeMapFromQuote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveSendEmailDetailsFromQuote">
+      <soap12:operation soapAction="http://tempuri.org/SaveSendEmailDetailsFromQuote" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SyncDataFromQuote">
+    <wsdl:port name="SyncDataFromQuoteSoap" binding="tns:SyncDataFromQuoteSoap">
+      <soap:address location="http://localhost:2831/PFSalesWeb/SyncDataFromQuote.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SyncDataFromQuoteSoap12" binding="tns:SyncDataFromQuoteSoap12">
+      <soap12:address location="http://localhost:2831/PFSalesWeb/SyncDataFromQuote.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

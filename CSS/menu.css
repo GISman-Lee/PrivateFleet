@@ -1,0 +1,63 @@
+.menumain
+{
+    width: 194px;
+}
+.menu_head
+{
+    background-image: url(../Images/navigation_bg.gif);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 24px;
+    padding: 7px 0 0 27px;
+    width: 194px;
+    color: #fff;
+}
+.menu_head_1
+{
+    background-image: url(../Images/navigation_bg.gif);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 24px;
+    padding: 7px 0 0 27px;
+    width: 194px;
+    color: #fff;
+}
+
+.menu_body
+{
+    display: none;
+}
+.menu_body a
+{
+    display: block;
+    background-image: url(../Images/submenu_bg.gif);
+    background-repeat: no-repeat;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    padding: 7px 0 0 33px;
+    height: 24px;
+    text-decoration: none;
+}
+.menu_body a:hover
+{
+    background-image: url(../Images/submenu_hvr.gif);
+    background-repeat: no-repeat;
+    text-decoration: none;
+    padding: 7px 0 0 33px;
+    height: 24px;
+}
+.selectedMenu
+{
+    font-weight: bold;
+}
+div.ajax__calendar_title
+{
+    border: none; /* Fixes the "close","previous" and "next" buttons in the popup title In IE8 browser */
+}

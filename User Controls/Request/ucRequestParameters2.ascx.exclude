@@ -1,0 +1,31 @@
+<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ucRequestParameters2.ascx.cs" Inherits="User_Controls_Request_ucRequestParameters" %>
+
+<table width="90%" align="left">
+    <tr>
+        <td class="subheading">
+            
+            <strong>Request Parameters</strong>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <asp:gridview id="gvParameters" runat="server" autogeneratecolumns="False" CellPadding="3" 
+            CellSpacing="1" Width="100%" DataKeyNames="ID" BorderColor="#ACACAC" OnDataBound="gvParameters_DataBound" OnRowDataBound="gvParameters_RowDataBound">
+                <Columns>
+                    <asp:TemplateField HeaderText="Parameter">
+                        <ItemTemplate>
+                            <asp:Label ID="lblAccessory" runat="server" Text='<%#Bind("accessoryname") %>'></asp:Label>
+                            <asp:HiddenField ID="hdfID" runat="server" Value='<%#Bind("ID") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+                <HeaderStyle ForeColor="Navy" />
+            </asp:gridview>
+        </td>
+    </tr>
+    <tr>
+        <td align="right">
+            &nbsp;<asp:ImageButton ID="ibtnSave" runat="server" ImageAlign="AbsMiddle" ImageUrl="~/Images/Submit.gif" OnClick="ibtnSave_Click" />
+        </td>
+    </tr>
+</table>

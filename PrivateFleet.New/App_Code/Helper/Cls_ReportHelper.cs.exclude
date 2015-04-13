@@ -1,0 +1,72 @@
+﻿using System;
+using System.Data;
+using System.Configuration;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Text;
+using System.Data.SqlClient;
+using Mechsoft.GeneralUtilities;
+
+/// <summary>
+/// Summary description for Cls_ReportHelper
+/// </summary>
+public class Cls_ReportHelper
+{
+	public Cls_ReportHelper()
+	{	
+	}
+    public DataTable GetMake()
+    {
+        try
+        {
+            StringBuilder query = new StringBuilder();
+            DataTable dt = new DataTable();
+            
+            SqlCommand objcmd = null;
+            query.Append("select ID,Make from tblMakeMaster where IsActive=1;");
+            objcmd =(SqlCommand)Cls_DataAccess.getInstance().GetCommand(CommandType.Text, query.ToString());
+            dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            return dt;
+        }
+        catch (Exception ex)
+        { return null; }
+    }
+
+    public DataTable GetModel(int MakeId)
+    {
+        try
+        {
+            DataTable dt = new DataTable();
+            StringBuilder queryForModel = new StringBuilder();
+            SqlCommand objcmd = null;
+            queryForModel.Append("select ID,Model from tblModelMaster where IsActive=1 AND MakeID=@id;");
+            objcmd = (SqlCommand)Cls_DataAccess.getInstance().GetCommand(CommandType.Text, queryForModel.ToString());
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@id", DbType.Int32, MakeId);
+            dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            return dt;
+        }
+        catch (Exception ex)
+        { return null; }
+    }
+
+    public DataTable GetSeries(int ModelId)
+    {
+        try
+        {
+            DataTable dt = new DataTable();
+            StringBuilder queryForSeries = new StringBuilder();
+            SqlCommand objcmd = null;
+            queryForSeries.Append("SELECT ID,Series FROM tblSeriesMaster where IsActive=1 AND ModelID=@ID;");
+            objcmd = (SqlCommand)Cls_DataAccess.getInstance().GetCommand(CommandType.TableDirect, queryForSeries.ToString());
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@ID", DbType.Int32, ModelId);
+            dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            return dt;
+        }
+        catch (Exception ex)
+        { return null; }
+    }
+}

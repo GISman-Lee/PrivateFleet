@@ -1,0 +1,507 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AccessControlUnit</name>
+    </assembly>
+    <members>
+        <member name="M:AccessControlUnit.Cls_Action.Update">
+            <summary>
+            <para>Method to update action details.</para>
+            <para>Expected Properties: Id(*), Action, Description, IsActive</para>
+            </summary> 
+            <returns>Returns true on success else returns false</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Action.Add">
+            <summary>
+            Method to add action details
+            </summary>
+            <returns>Returns last inserted id of the object on success else returns zero</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Action.Get">
+            <summary>
+            Method to retrieve all actions
+            </summary>
+            <returns>Datatable containing all actions</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Action.GetAllActiveActions">
+            <summary>
+            Method to retrieve active pages
+            </summary>
+            <returns>Datatable containing active pages</returns>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Action.Id">
+            <summary>
+            Unique identifier
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Action.IsActive">
+            <summary>
+            Status: 1->Active, 0->Inactive
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Action.Action">
+            <summary>
+            Action name for which access is defined
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Action.Description">
+            <summary>
+            Description of Action
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_AccessType.Update">
+            <summary>
+            Method to update access type details
+            </summary>
+            <returns>Returns true on success else returns false</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_AccessType.Add">
+            <summary>
+            Method to add access type details
+            </summary>
+            <returns>Returns last inserted id of the object on success else returns zero</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_AccessType.Get">
+            <summary>
+            Method to retrieve all access types
+            </summary>
+            <returns>Datatable containing all access types</returns>
+        </member>
+        <member name="P:AccessControlUnit.Cls_AccessType.Id">
+            <summary>
+            Unique identifier
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_AccessType.IsActive">
+            <summary>
+            Status: 1->Active, 0->Inactive
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_AccessType.AccessType">
+            <summary>
+            Type of access (e.g. AccessType-based, access type-based)
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_AccessType.Priority">
+            <summary>
+            Status: 1->Active, 0->Inactive
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_AccessType.Description">
+            <summary>
+            Description of access type
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Utilities.DeActivate(System.Int32,System.String)">
+            <summary>
+            Method to deactivate record (set isActive to false)
+            </summary>
+            <param name="id">unique identifier of the record being deactivated</param>
+            <param name="tableName">tablename from which record is deactivated</param>
+            <returns>Returns true on success else returns false</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Utilities.Delete(System.Int32,System.String)">
+            <summary>
+            Method to delete record (physical deletion)
+            </summary>
+            <param name="id">unique identifier of the record being deleted</param>
+            <param name="tableName">tablename from which record is deleted</param>
+            <returns>Returns true on success else returns false</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Page.Update">
+            <summary>
+            Method to update page details
+            </summary>
+            <returns>Returns true on success else returns false</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Page.Add">
+            <summary>
+            Method to add page details
+            Input properties:
+            PageName - name of the page,
+            PageUrl -  url or the page,
+            IsActive - status (true/false)
+            </summary>
+            <returns>Returns last inserted id of the object on success else returns zero</returns>
+            
+        </member>
+        <member name="M:AccessControlUnit.Cls_Page.Get">
+            <summary>
+            Method to retrieve all pages
+            </summary>
+            <returns>Datatable containing all pages</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Page.GetAllActivePages">
+            <summary>
+            Method to retrieve active pages
+            </summary>
+            <returns>Datatable containing active pages</returns>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Page.Id">
+            <summary>
+            Unique identifier
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Page.IsActive">
+            <summary>
+            Status: 1->Active, 0->Inactive
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Page.PageName">
+            <summary>
+            Name of Page
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Page.PageUrl">
+            <summary>
+            Url of page
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Page.ParentId">
+            <summary>
+            Parent Page Id
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Page.Description">
+            <summary>
+            Description for page
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Page.IsInternalLink">
+            <summary>
+            Flag indicating whether page is internal link or menuitem
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_PageActionDetails.Save">
+            <summary>
+            Method to save page-action mapping information
+            <para>Expected Properties: (*)PageId, (*)ActionIds as comma separated string</para>
+            </summary>
+            <returns>Returns last inserted id of the object on success else returns zero</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_PageActionDetails.GetPageActions">
+            <summary>
+            Method to retrieve actions associated with the page
+            <para>Expected Properties: (*)PageId</para>
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_PageActionDetails.GetActivePageActions">
+            <summary>
+            Method to retrieve actions associated with the page
+            <para>Expected Properties: (*)PageId</para>
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_PageActionDetails.Id">
+            <summary>
+            Unique identifier
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_PageActionDetails.PageId">
+            <summary>
+            Page Id
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_PageActionDetails.ActionIds">
+            <summary>
+            Action Ids as comma separated string
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_PageActionDetails.IsActive">
+            <summary>
+            Status: 1->Active, 0->Inactive
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Access.SetPageAccess">
+            <summary>
+            Method to save accessible pages for user/role
+            </summary>
+            <returns>false -> failure, true -> success</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Access.GetPageAccess">
+            <summary>
+            Method to retrieve accessible pages for user/role
+            </summary>
+            <returns>Datatable containing user/role accessible pages</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Access.HasAccess">
+            <summary>
+            Method to check whether user/role has access to the page or not
+            </summary>
+            <returns>false -> failure, true -> success</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Access.SetAccess">
+            <summary>
+            Method to save accessible pages for user/role
+            </summary>
+            <returns>false -> failure, true -> success</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Access.DeactivatePageAccessForAll">
+            <summary>
+            Method to deactivate page access for all users/roles if the page is deactivated
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Access.GetAllowedActionsOnPerticularPage">
+            <summary>
+            Method to get accessId for the user on perticular page
+            </summary>
+            <returns>AccessID if No Access ID is Returned then there is no action allowed on that page</returns>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Access.Id">
+            <summary>
+            Unique identifier for Access
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Access.AccessFor">
+            <summary>
+            User id or Role id depending upon access type
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Access.AccessTypeId">
+            <summary>
+            User based access or role based access
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Access.IsActive">
+            <summary>
+            Status: 1->active, 0->inactive
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Access.PageId">
+            <summary>
+            Page Id
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Access.PageIds">
+            <summary>
+            Comma separated string containing pageIds
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Access.PageURL">
+            <summary>
+            Url of the page
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_User.Update">
+            <summary>
+            Method to update user details
+            </summary>
+            <returns>Returns true on success else returns false</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_User.Add">
+            <summary>
+                 This Method add new user to data base
+            <![CDATA[Username]]>
+             <![CDATA[Email]]>
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_User.Get">
+            <summary>
+            Method to retrieve all users
+            </summary>
+            <returns>Datatable containing all users</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_User.GetUserDetails(System.Int32)">
+            <summary>
+            Method to retrieve details of a particular user
+            </summary>
+            <param name="UserID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_User.GetAllActiveUsers">
+            <summary>
+            Method to retrieve active users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_User.CheckUserExists">
+            <summary>
+            This method checks if the user exists with same user name
+            </summary>
+            <returns>int : Indicating the user existence</returns>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.Id">
+            <summary>
+            Unique identifier
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.IsActive">
+            <summary>
+            Status: 1->Active, 0->Inactive
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.Username">
+            <summary>
+            Name of user account in the system
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.Password">
+            <summary>
+            Passowrd for user account in the system
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.Name">
+            <summary>
+            Name of user (combination of Firstname and Lastname)
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.Email">
+            <summary>
+            Email address of User
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.Phone">
+            <summary>
+            Contact number of user
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.Address">
+            <summary>
+            Contact address of user
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_User.UsernameExpiryDate">
+            <summary>
+            Expiry date of user account in the system
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_UserRoleDetails.UpdateRoleOfUser">
+            <summary>
+            Method to update role for user
+            </summary>
+            <returns>Returns true on success else returns false</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_UserRoleDetails.Save">
+            <summary>
+            Method to save user-role mapping information
+            </summary>
+            <returns>Returns last inserted id of the object on success else returns zero</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_UserRoleDetails.GetRoleOfUser">
+            <summary>
+            Method to retrieve role id of user
+            </summary>
+            <returns>Returns role id of user</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_UserRoleDetails.GetRoleUsers">
+            <summary>
+            Method to retrieve users of specific role
+            </summary>
+            <returns>Datatable containing users having input role</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_UserRoleDetails.GetRolesOfUser">
+            <summary>
+            Method to retrieve roles of user
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AccessControlUnit.Cls_UserRoleDetails.Id">
+            <summary>
+            Unique Identifier
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_UserRoleDetails.UserId">
+            <summary>
+            User Id
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_UserRoleDetails.RoleId">
+            <summary>
+            Role Id
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_UserRoleDetails.IsActive">
+            <summary>
+            Status: 0->Inactive, 1->Active
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Role.Update">
+            <summary>
+            Method to update role details
+            <para>Expected Properties: (*)Id, (*)Role, Description</para>
+            </summary>
+            <returns>Returns true on success else returns false</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Role.Add">
+            <summary>
+            Method to add role details
+            </summary>
+            <returns>Returns last inserted id of the object on success else returns zero</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Role.Get">
+            <summary>
+            Method to retrieve all roles
+            </summary>
+            <returns>Datatable containing all roles</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_Role.GetAllActiveRoles">
+            <summary>
+            Method to retrieve all roles
+            </summary>
+            <returns>Datatable containing all roles</returns>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Role.Id">
+            <summary>
+            Unique identifier
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Role.IsActive">
+            <summary>
+            Status: 1->Active, 0->Inactive
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Role.Role">
+            <summary>
+            Role name
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_Role.Description">
+            <summary>
+            Description for role
+            </summary>
+        </member>
+        <member name="M:AccessControlUnit.Cls_ActionAccess.SetActionAccess">
+            <summary>
+            Method to save accessible actions for user/role on specific page
+            </summary>
+            <returns>false -> failure, true -> success</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_ActionAccess.GetActionAccess">
+            <summary>
+            Method to retrieve accessible actions for user/role on specific page
+            </summary>
+            <returns>Datatable containing user/role accessible actions on specific page</returns>
+        </member>
+        <member name="M:AccessControlUnit.Cls_ActionAccess.HasAccess">
+            <summary>
+            Method to check whether user/role has access to the action on the specific page or not
+            </summary>
+            <returns>false -> failure, true -> success</returns>
+        </member>
+        <member name="P:AccessControlUnit.Cls_ActionAccess.Id">
+            <summary>
+            Unique identifier for Access
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_ActionAccess.ActionId">
+            <summary>
+            Action id of the action for which access is defined
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_ActionAccess.AccessId">
+            <summary>
+            This is page access id which is unique id of Access table
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_ActionAccess.IsActive">
+            <summary>
+            Status: 1->active, 0->inactive
+            </summary>
+        </member>
+        <member name="P:AccessControlUnit.Cls_ActionAccess.ActionIds">
+            <summary>
+            Comma separated string containing actionIds
+            </summary>
+        </member>
+    </members>
+</doc>

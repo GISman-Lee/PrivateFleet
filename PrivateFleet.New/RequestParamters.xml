@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+
+<RequestParameters>
+	<BodyType>
+		<Name>Sedan</Name>
+		</BodyType>
+	<BodyType>
+		<Name>Hatch</Name>
+	</BodyType>
+	<BodyType>
+		<Name>Wagon</Name>
+	</BodyType>
+	<BodyType>
+		<Name>Coupe</Name>
+	</BodyType>
+	<BodyType>
+		<Name>Cab</Name>
+	</BodyType>
+	<BodyType>
+		<Name>Chassis</Name>
+	</BodyType>
+	<BodyType>
+		<Name>Dual</Name>
+	</BodyType>
+	<BodyType>
+		<Name>4WD</Name>
+	</BodyType>
+	<BodyType>
+		<Name>SUV</Name>
+	</BodyType>
+	<BodyType>
+		<Name>People Mover</Name>
+	</BodyType>
+
+	<BodyType>
+		<Name>Convertible</Name>
+	</BodyType>
+
+
+	<RegistrationType>
+		<Name>Private</Name>
+	</RegistrationType>
+	<RegistrationType>
+		<Name>Business</Name>
+	</RegistrationType>
+	<RegistrationType>
+		<Name>Pensioner</Name>
+	</RegistrationType>
+	<RegistrationType>
+		<Name>Primary Producer</Name>
+	</RegistrationType>
+	<RegistrationType>
+		<Name>TPI</Name>
+	</RegistrationType>
+	<RegistrationType>
+		<Name>Unregistered/Permit</Name>
+	</RegistrationType>
+	
+	
+	<Transmission>
+		<Name>Automatic</Name>
+	</Transmission>
+	<Transmission>
+		<Name>Semi-Automatic</Name>
+	</Transmission>
+	<Transmission>
+		<Name>Manual</Name>
+	</Transmission>
+	
+	
+	
+</RequestParameters>

@@ -1,0 +1,353 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+--%>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
+<head runat="server">
+    <%--25 Mar 2013 : For IE 10 Javascript issue--%>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <%--<script src="js/jquery-1.2.1.min.js" type="text/javascript"></script>
+    <script src="js/menu.js" type="text/javascript"></script>--%>
+    <link href="CSS/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/menu.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/js.js"></script>
+
+    <script src="js/SessionWarningTimer.js" type="text/javascript"></script>
+
+    <script src="js/fleetvalidation.js" type="text/javascript"></script>
+
+    <title>Private Fleet</title>
+
+    <script type="text/javascript">
+        function HideDiv() {
+            document.getElementById('LoadingDIV').style.display = "none";
+        }
+       
+    </script>
+
+    <%--<script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false&amp;key=ABQIAAAAikVqDBqsgg3Fv2G1talqfBQiETGCt7OLVOpkalZKmQkQkiVZTRReo4qMLXYo-8OD7fmjOobM8fWoSw"
+        type="text/javascript"></script>--%>
+
+    <script type="text/javascript">
+
+        function divClose() {
+            var div1 = document.getElementById("info");
+            div1.style.display = "none";
+            // return false;
+        }
+
+        function divStyle() {
+            var div1 = document.getElementById("info");
+            div1.style.position = "absolute";
+            div1.style.display = "block";
+            div1.style.opacity = "1";
+            div1.style.zIndex = "2";
+        }
+
+        function seeMap(lati, longi, name, company, email, mobile, phone) {
+            //alert("Hi");
+            // alert(lati + "_" + longi + "_" + name + "_" + company + "_" + email + "_" + mobile + "_" + phone);
+            divStyle();
+            if (GBrowserIsCompatible()) {
+                var point;
+                var map = new GMap2(document.getElementById("map1"));
+                map.addControl(new GOverviewMapControl());
+                map.enableDoubleClickZoom();
+                map.enableScrollWheelZoom();
+                map.addControl(new GMapTypeControl());
+                map.addControl(new GLargeMapControl3D());
+                if (company != '')
+                    var address = '<font size="2" align="left" face="Aeial"><b>' + name + '</b><br/>' + company + '<br/>' + email + '<br/>Mob.- ' + mobile + '/ Ph.- ' + phone + '</font>';
+                else
+                    var address = '<font size="2" align="left" face="Aeial"><b>' + name + '</b></font>';
+                //point = new GLatLng(lati, longi);
+                point = new GLatLng(lati, longi);
+                var marker = new GMarker(point);
+                map.setCenter(point, 16);
+                map.setZoom(8);
+                map.addOverlay(marker);
+                map.setMapType(G_NORMAL_MAP);
+                // map.setUIToDefault();
+
+                if (name == "") {
+                    GEvent.addListener(marker, "click", function() { });
+                    //marker.openInfoWindowHtml(address);
+                }
+                else {
+                    GEvent.addListener(marker, "click", function() { marker.openInfoWindowHtml(address); });
+                    marker.openInfoWindowHtml(address);
+                }
+                //var polyline = new GPolyline([new GLatLng(-22.712689, 144.3345877), new GLatLng(-22.912689, 144.8345877)], "#3333cc", 10);
+            }
+            //map.addOverlay(polyline);
+            return false;
+        }
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        // Move an element directly on top of another element (and optionally
+        // make it the same size)
+        function Cover(bottom, top, ignoreSize) {
+            var location = Sys.UI.DomElement.getLocation(bottom);
+            top.style.position = 'absolute';
+            top.style.top = location.y + 'px';
+            top.style.left = location.x + 'px';
+            // alert(location.x + '_' + location.y);
+            if (!ignoreSize) {
+                top.style.height = bottom.offsetHeight + 'px';
+                top.style.width = bottom.offsetWidth + 'px';
+            }
+        }
+    </script>
+
+</head>
+<body onload="HideDiv();">
+    <form id="form1" runat="server">
+    <%-- <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true">
+    </asp:ScriptManager>--%>
+    <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePartialRendering="true" AsyncPostBackTimeout="720">
+    </ajaxToolkit:ToolkitScriptManager>
+    <asp:Timer ID="Timer1" runat="server" Enabled="false">
+    </asp:Timer>
+    <div id="LoadingDIV">
+        <div class="LoadingBG">
+        </div>
+        <div class="LoadingMSG">
+            <span style="text-align: center;">
+                <img src="Images/loading1.gif" /><br />
+                Loading...Please wait...</span>
+        </div>
+    </div>
+    <table width="1000px" border="0" align="center" cellpadding="0" cellspacing="0" class="mainbdr">
+        <tr>
+            <td align="left" valign="top" style="background-color: #F7F7F7;">
+                <div class="logo">
+                    <img src="images/Private_fleet_logo.jpg" alt="" width="298" height="113" /></div>
+                <div class="banner">
+                    <img src="images/Banner.jpg" alt="" width="700" height="113" /></div>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top" style="height: 53px">
+                <div class="topnavd">
+                    <div style="float: left; margin: 8px 0 0 20px;">
+                        <asp:Label runat="server" ID="lblUser" CssClass="LoggedInUserInfo"></asp:Label></div>
+                    <div style="float: right;">
+                        <asp:ImageButton ID="imgbtnLogOut" runat="server" ImageUrl="~/Images/Logout.gif"
+                            OnClick="imgbtnLogOut_Click" ValidationGroup="_logout" />
+                    </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <table width="960" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF"
+                    class="mainbdr">
+                    <tr>
+                        <td align="left" valign="top">
+                            <div class="maincontaint">
+                                <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#fafbfb"
+                                    class="mainbdr">
+                                    <tr>
+                                        <td width="21%" align="left" valign="top">
+                                            <div class="leftclmn">
+                                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td align="left" valign="top" id="tdMenu" runat="server">
+                                                            <%--<asp:TreeView ID="pMenu" runat="server" ImageSet="BulletedList" ShowExpandCollapse="False">
+                                                                    <ParentNodeStyle Font-Bold="False" />
+                                                                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                                                                    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px"
+                                                                        VerticalPadding="0px" />
+                                                                    <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="0px"
+                                                                        NodeSpacing="0px" VerticalPadding="0px" />
+                                                                </asp:TreeView>--%>
+                                                            <%--<ul id="menu" runat="server">
+                                                                </ul>--%>
+                                                            <%--<ul id="menu">
+                                                                    <li><a href="#">Quote Request</a>
+                                                                        <ul>
+                                                                            <li><a href="QuoteRequest.aspx">Create Request</a></li>
+                                                                            <li><a href="ViewSentRequests.aspx">View Sent Requests</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li><a href="#">Quotation</a>
+                                                                        <ul>
+                                                                            <li><a href="ViewRecivedQuoteRequests.aspx">View Received Requests</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                    <li><a href="#">Masters</a>
+                                                                        <ul>
+                                                                            <li><a href="AccessoriesMaster.aspx">Accessory</a></li>
+                                                                            <li><a href="ChargeTypeMaster.aspx">Fixed Charges</a></li>
+                                                                            <li><a href="CityMaster.aspx">City</a></li>
+                                                                            <li><a href="AddConfigValues.aspx">Configuration Values</a></li>
+                                                                            <li><a href="DealerMaster.aspx">Dealer</a></li>
+                                                                            <li><a href="LocationMaster.aspx">Location</a></li>
+                                                                             <li><a href="MakeMaster.aspx">Make</a></li>
+                                                                            <li><a href="ModelMaster.aspx">Model</a></li>
+                                                                            <li><a href="SeriesMaster.aspx">Series</a></li>
+                                                                            <li><a href="StateMaster.aspx">State</a></li>
+                                                                            <li><a href="MakeDealerMaster.aspx">Make - Dealer</a></li>
+                                                                            <li><a href="SeriesAccessoriesMaster.aspx">Series - Accessories</a></li>
+                                                                            <li><a href="UserMaster.aspx">User</a></li>
+                                                                            <li><a href="ManageRoles.aspx">Role</a></li>
+                                                                            <li><a href="ManagePages.aspx">Page</a></li>
+                                                                            <li><a href="ManageActions.aspx">Action</a></li>
+                                                                            <li><a href="PageActionMapping.aspx">Page - Action</a></li>
+                                                                        </ul>
+                                                                    </li>
+                                                                     
+                                                                   
+                                                                </ul>--%>
+                                                            <%--<asp:Menu ID="pMenu" runat="server" DynamicHorizontalOffset="3" 
+                        StaticSubMenuIndent="10px" DynamicEnableDefaultPopOutImage="False" StaticEnableDefaultPopOutImage="False" StaticDisplayLevels="2">
+                        <StaticMenuItemStyle HorizontalPadding="6px" CssClass="menu" VerticalPadding="3px" BorderStyle="None" />
+                        <DynamicHoverStyle CssClass="menuhover" />                                                                               
+                        <DynamicMenuItemStyle  ForeColor="Black" CssClass="menustatic" Width="180px" HorizontalPadding="5px" VerticalPadding="4px" />
+                        <DynamicMenuStyle CssClass="IE8Fix" />
+                        <StaticHoverStyle CssClass="menuhover" />
+                    </asp:Menu>--%>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                        <td width="79%" align="left" valign="top">
+                                            <div class="rghtclmn">
+                                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                    <tr>
+                                                        <td height="29" align="left" valign="middle" background="images/Nav_bg_hvr.jpg">
+                                                            <div class="bullate">
+                                                                <img src="images/Bullate.jpg" alt="" width="19" height="21" />
+                                                            </div>
+                                                            <div class="header">
+                                                                <asp:Label ID="lblHeader" runat="server" Text=""></asp:Label>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                    <tr id="trAccess" runat="server" visible="false">
+                                                        <td style="height: 30px; padding-left: 10px;" valign="middle">
+                                                            <asp:Label ID="lblMasterMsg" runat="server" CssClass="dbresult"></asp:Label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr runat="server" id="divNoAccess" visible="false">
+                                                        <td>
+                                                            <table align="center" cellpadding="0" cellspacing="0" width="60%">
+                                                                <tr align="center">
+                                                                    <td>
+                                                                        <img src='<%=ResolveUrl("~/Images/no_access.png")%>' alt="" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr align="center" style="height: 30px;">
+                                                                    <td>
+                                                                        <asp:Label ID="lblNoAccess" runat="server">You are not Authorised User to access this page.</asp:Label>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr align="center">
+                                                                    <td>
+                                                                        <asp:ImageButton ID="btnPrevious" runat="server" ImageUrl="~/Images/back.gif" onmouseout="this.src='Images/back.gif'"
+                                                                            onmouseover="this.src='Images/back_hvr.gif'" OnClick="btnPrevious_Click" />
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr runat="server" id="trContent">
+                                                        <td align="left" valign="top" height="500px">
+                                                            <asp:UpdatePanel ID="UP1" runat="server">
+                                                                <ContentTemplate>
+                                                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="Server">
+                                                                    </asp:ContentPlaceHolder>
+                                                                </ContentTemplate>
+                                                            </asp:UpdatePanel>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label runat="server" ID="lblCancelid"></asp:Label>
+                <asp:Label runat="server" ID="lblinvoke"></asp:Label>
+                <asp:Button runat="server" ID="btnModalInvoke" Text="Inovke" OnClick="btnModalInvoke_Click"
+                    Style="display: none" CausesValidation="false" />
+                <ajaxToolkit:ModalPopupExtender runat="server" ID="modal" TargetControlID="lblinvoke"
+                    CancelControlID="lblCancelid" PopupControlID="pnlmodal" BackgroundCssClass="ModalCSS"
+                    Enabled="false">
+                </ajaxToolkit:ModalPopupExtender>
+                <asp:Panel runat="server" ID="pnlmodal" BackColor="White" Visible="false">
+                    <table width="400px">
+                        <tr>
+                            <td style="background-color: #0A73A2; color: White; font-weight: bold; padding-left: 5px;
+                                height: 30px; font-size: large">
+                                Private Fleet
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 5px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 5px">
+                                There are outstanding delivery updates required. Please complete these before accessing
+                                new quote requests.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 5px">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <asp:Button runat="server" ID="btnClose" Text="Ok" OnClick="btnClose_Click" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 5px">
+                            </td>
+                        </tr>
+                    </table>
+                </asp:Panel>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" valign="top">
+                <asp:UpdateProgress ID="upProcess" runat="server" DisplayAfter="500" AssociatedUpdatePanelID="UP1">
+                    <ProgressTemplate>
+                        <div id="progressBackgroundFilter">
+                        </div>
+                        <div id="processMessage">
+                            <span style="text-align: center;">
+                                <img src="images/loading.gif" /><br />
+                                Loading...Please wait...</span></div>
+                    </ProgressTemplate>
+                </asp:UpdateProgress>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
