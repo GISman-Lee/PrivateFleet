@@ -66,12 +66,17 @@
                             <%-- <asp:HiddenField ID="hdfIsHotDealer" runat="server" Value='<%# Eval("IsHotDealer") %>' />  --%>
 
                             <br />
-                            <a href='<%# "mailto:"+ Eval("Email") %>' style="color: Blue;">
-                                <asp:Label ID="Email" runat="server" Text='<%#Bind("Email") %>'></asp:Label></a>
-                            <br />
-
+                            
                             Address&nbsp;&nbsp;&nbsp;:&nbsp;
                             <asp:Label ID="lblAddress" runat="server" Font-Size="14px" Text='<%#Bind("Address") %>' EnableViewState="True"></asp:Label>
+                            <br />
+
+                            Post Code&nbsp;&nbsp;&nbsp;:&nbsp;
+                            <asp:Label ID="lblPostCode" runat="server" Font-Size="14px" Text='<%#Bind("PCode") %>' EnableViewState="True"></asp:Label>
+                            <br />
+
+                            <a href='<%# "mailto:"+ Eval("Email") %>' style="color: Blue;">
+                                <asp:Label ID="Email" runat="server" Text='<%#Bind("Email") %>'></asp:Label></a>
                             <br />
                         </ItemTemplate>
                     </asp:TemplateField>

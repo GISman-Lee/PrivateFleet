@@ -16,7 +16,7 @@ public partial class DealerMaster : System.Web.UI.Page
        
         if (!IsPostBack)
         {
-            ((Label)Master.FindControl("lblHeader")).Text = "Dealer Master";
+            ((Label)Master.FindControl("lblHeader")).Text = "Dealer Manager";
         }
        
 
