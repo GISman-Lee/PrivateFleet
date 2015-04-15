@@ -123,7 +123,7 @@
                         <ItemStyle HorizontalAlign="Center" />
                         <HeaderStyle HorizontalAlign="Center" />
                     </asp:TemplateField>
-                    <asp:TemplateField>
+                    <asp:TemplateField Visible="false">
                         <EditItemTemplate>
                         </EditItemTemplate>
                         <FooterTemplate>
@@ -140,7 +140,7 @@
                         <ItemTemplate>
                             <asp:HiddenField ID="hdfID" runat="server" Value='<%# Bind("ID") %>' />
                             <asp:LinkButton ID="lnkbtnActiveness" runat="server" CommandArgument="<%# Container.DataItemIndex %>"
-                                CommandName="Activeness" Style="padding-left: 10px" CssClass="activatelink">Activate</asp:LinkButton>&nbsp;
+                                CommandName="Activeness" Style="padding-left: 10px" CssClass="activatelink" enable="false">Activate</asp:LinkButton>&nbsp;
                             <asp:HiddenField ID="hdfIsActive" runat="server" Value='<%# Bind("IsActive") %>' />
                             <asp:HiddenField ID="hdfIsHotDealer" runat="server" Value='<%# Bind("IsHotDealer") %>' />
                         </ItemTemplate>
