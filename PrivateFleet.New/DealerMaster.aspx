@@ -8,7 +8,7 @@
             <uc1:UCDealerView ID="UCDealerView1" runat="server" />
         </ContentTemplate>
     </asp:UpdatePanel>
-    <asp:UpdateProgress ID="upProcess" runat="server" DisplayAfter="500" AssociatedUpdatePanelID="UP_DealerView">
+    <asp:UpdateProgress ID="upProcess" runat="server" DisplayAfter="1500" AssociatedUpdatePanelID="UP_DealerView">
         <ProgressTemplate>
             <div id="progressBackgroundFilter">
             </div>

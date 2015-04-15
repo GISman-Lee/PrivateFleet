@@ -1,10 +1,12 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 --%>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
 <head runat="server">
+    <%-- Below are somewhat added by Miles --%>
+    <%-- Above are somewhat added by Miles --%>>
     <%--25 Mar 2013 : For IE 10 Javascript issue--%>
     <meta http-equiv="X-UA-Compatible" content="IE=9" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -123,6 +125,7 @@
                 Loading...Please wait...</span>
         </div>
     </div>
+    
     <table width="1000px" border="0" align="center" cellpadding="0" cellspacing="0" class="mainbdr">
         <tr>
             <td align="left" valign="top" style="background-color: #F7F7F7;">

@@ -54,7 +54,7 @@
                     <asp:TemplateField HeaderText="Contact Info">
                         <ItemTemplate>
                             Company&nbsp;&nbsp:&nbsp;
-                            <asp:Label ID="Company" runat="server" Text='<%#Bind("Company") %>'></asp:Label>
+                            <asp:Label ID="Company" runat="server" Font-Size="14px" Text='<%#Bind("Company") %>' EnableViewState="True"></asp:Label>
                             <br />
                             
                             Mobile&nbsp;&nbsp;&nbsp;:&nbsp;
@@ -62,7 +62,7 @@
                             <br />
                       
                             Phone&nbsp;&nbsp;&nbsp;:&nbsp;
-                            <asp:Label ID="Phone" runat="server" Font-Size="14px" Text='<%#Bind("Phone") %>'></asp:Label>
+                            <asp:Label ID="Phone" runat="server" Font-Size="14px" Text='<%#Bind("Phone") %>' EnableViewState="True"></asp:Label>
                             <%-- <asp:HiddenField ID="hdfIsHotDealer" runat="server" Value='<%# Eval("IsHotDealer") %>' />  --%>
 
                             <br />
@@ -109,7 +109,7 @@
                                 </ItemTemplate>
                             </asp:TemplateField>--%>
                     
-                    <asp:TemplateField HeaderText="Is Hot ?">
+                    <asp:TemplateField HeaderText="Is Hot ?" SortExpression="IsHotDealer" Visible="false">
                         <ItemTemplate>
                             <asp:Image ID="imgbtnIsHotDealer" runat="server" />
                         </ItemTemplate>
