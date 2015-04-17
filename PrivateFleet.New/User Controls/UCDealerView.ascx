@@ -116,7 +116,7 @@
                         <ItemStyle HorizontalAlign="Center" />
                     </asp:TemplateField>
 
-                    <asp:TemplateField HeaderText="Active">
+                    <asp:TemplateField HeaderText="Active" SortExpression="IsActive">
                         <ItemTemplate>
                             <asp:Image ID="imgbtnActivate" runat="server" />
                         </ItemTemplate>

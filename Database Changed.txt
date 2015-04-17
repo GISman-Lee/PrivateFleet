@@ -1,0 +1,90 @@
+﻿1.  Add a sub clause in Storage Procedure "SpGetDealerDetails" within {select} clause as follow:
+    (select Make from tblDealerMaster as DM INNER JOIN tblMakeDealer as MD on DM.ID = MD.DealerID INNER JOIN tblMakeMaster as MM on MD.MakeID = MM.ID where DM.ID=@ID) as Make 
+
+2.  Add a whole new Storage Procedure "SpGetAllActiveCarMakes"
+
+3.  Add a whole new Storage Procedure "MilesTest"
+
+4.  Add a sub clause in Storage Procedure "SpGetAllDealers" after {from clause} as follow:
+    INNER JOIN tblMakeDealer as MD ON MD.DealerID = DM.ID -- Miles Modification
+    INNER JOIN tblMakeMaster as MM ON MM.ID = MD.MakeID  -- Miles Modification 
+	Add a sub clause within select clause as follow:
+    DM.Mobile, MM.Make, MM.ID as MakeID (??)
+
+5.  Add a conditional sub clause in Storage Procedure "MilesTest" within {where} clause as follow:
+    if @Make<>''
+       begin
+       if @count1='Y'
+          set @sqlQuery=@sqlQuery+ ' and MM.Make like ''%'+@Make+'%'''
+       else
+          set @sqlQuery=@sqlQuery+ ' MM.Make like ''%'+@Make+'%'''
+       set @count1='Y'
+    end
+	Add a variable at the beginning, @Make varchar (10)
+	Add a sub clause in select clause : MM.Make,
+
+6.  Modify the select sub clause by deleting ,ID in Storage Procedure "SpGetCitiesOfState"
+    Append the where conditional sub clause as follow:
+	and DM.City != '' and DM.City != '0'
+
+7. Add a whole new Storage Procedure "SpGetAllCities"
+
+8. Add a sub clause in select clause in Storage Procedure : DM.City,
+
+9. Change the variable intakes in 2 storagte procedures:
+   *1*: In SpUpdateDealer, Change @City int to @City varhchar(50)=' '
+   *2*: In SpCheckIfDealerExists, Change @City int to @City Varchar(50)=' '
+
+10. Add a sub clause oin select clause in Storage Procedure "SpGetDealerDetails": ,DM.Moble
+
+11. Add a parameter ,@Mobile varchar(50) and a sub clause ,[Mobile]=@Mobile  in Storage Procedure SpUpdateDealer
+
+12. Add a parameter ,@Mobile varchar(50) and a sub clause ,[Mobile]=@Mobile in Storage Procedure SpCheckIfDealerExists
+
+13. In Storage procedure SpAddDealer:
+    Add 2 parameters @Make, @OldMake, @Mobile
+	Add an Insert clause Insert into [dbo].[tblMakeDealer] at the end after Insert into [dbo].[tblDealerMaster]
+
+14. In Storage Procedure SpCheckIfDealerExists:
+    Add 2 new parameters: @Make, @OldMake
+
+15. In Storage Procudure SpUpdateDealer:
+    Add 2 new parameters: @Make, @ OldMake
+	Add an update clause update [dbo].[tblMakeDealer] at the end after update [dbo].[tblDealerMaster]
+
+16. Change the database table ACU_Access ID 163, ACU_PageMaster ID 4;  --> Change it in final stage
+
+17. Add a field [Address] in table tblDealerMaster. Add a new table (get data from PF Database) DAMiles
+
+18. In Storage Procedure SpAddDealer:
+    Add a parameter @Address varchar(255)
+	In subclause "INSERT TO", add a variable [Address] = @Address
+	In subclause "VALUES", add a variable @Address
+
+19. In Storage Procedure SpUpdateDealer:
+    Add a parameter @Address varchar(255)
+	In Subclause "UPDATE", add a variable [Address] = @Address
+
+20. In Storage Procedure "SpCheckIfDealerExists":
+    Add a parameter @Address varchar(255)
+
+21. In Storage Procedure "SpGetAllDealers":
+    In Subclause "SELECT", add a variable (Case when DM.Address IS NULL THEN 'no record' ELSE DM.Address END) as Address
+
+22. In Storage Procedure "MilesTest":
+    In Subclause "set @sqlQuery", add a variable (Case when DM.Address IS NULL THEN ''No Record'' ELSE DM.Address END) as Address
+
+-------------------------------------------------------
+The Contents within brancket has been ignored
+{
+23. In Storage Procedure "SpAddDealer":
+    Add Subclause "INSERT INTO [dbo].[DAMiles] ..."
+
+24. In Storage Procedure "SpUpdateDealer":
+    Add Subclause "update [dbo].[DAMiles] ..."
+}
+
+-------------------------------------------------------
+
+25. In Storage Procedure "SpGetDealerDetails":
+    In select Subclause add variable "DM.Address".

@@ -481,6 +481,7 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
                     this.txtName.Text = dtDealerDetails.Rows[0]["Name"].ToString();
                     this.txtPCode.Text = dtDealerDetails.Rows[0]["PCode"].ToString();
                     this.txtMobile.Text = dtDealerDetails.Rows[0]["Mobile"].ToString();
+                    this.txtLocation.Text = dtDealerDetails.Rows[0]["Address"].ToString();
                     if (this.txtPCode.Text.Length == 3)
                         this.txtPCode.Text = this.txtPCode.Text.PadLeft(4, '0');
                     lbtGetLocations_Click(null, null);
