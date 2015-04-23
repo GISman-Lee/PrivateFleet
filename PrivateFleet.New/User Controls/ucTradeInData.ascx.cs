@@ -345,9 +345,11 @@ public partial class User_Controls_ucTradeInData : System.Web.UI.UserControl
 
             System.IO.File.WriteAllBytes(HttpContext.Current.Server.MapPath("~/Report/ReportTradeIn.pdf"), file);
             Response.AddHeader("Content-Disposition", "attachment; filename=ReportTradeIn.pdf");
-            Response.AddHeader("Content-Length", file.Length.ToString());
+            //Response.AddHeader("Content-Length", file.Length.ToString());
             Response.ContentType = "application/octet-stream";
+            //Response.ContentType = "application/pdf";
             Response.WriteFile("~/Report/ReportTradeIn.pdf");
+            //Response.WriteFile("quotes.privatefleet.com.au/Report/ReportTradeIn.pdf");
         }
         catch (Exception ex)
         {

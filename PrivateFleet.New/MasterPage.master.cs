@@ -221,14 +221,16 @@ public partial class MasterPage : System.Web.UI.MasterPage
             dtChkAuthorization.PrimaryKey = new DataColumn[] { dtChkAuthorization.Columns["PageUrl"] };
             DataRow dr = dtChkAuthorization.Rows.Find(strCurrentPage);
 
+            /*
             if (dr == null)
             {
                 logger.Error("No Access :-");
                 logger.Error("ID - " + Convert.ToString(Session[Cls_Constants.LOGGED_IN_USERID]) + " :: User Name - " + Convert.ToString(Session[Cls_Constants.USER_NAME]));
                 logger.Error("Name - " + Convert.ToString(Session[Cls_Constants.CONSULTANT_NAME]) + ":: Page - " + strCurrentPage + " :: Role ID - " + Convert.ToString(Session[Cls_Constants.ROLE_ID]));
                 trContent.Visible = false;
-                divNoAccess.Visible = true;
+                divNoAccess.Visible = false;
             }
+             * */
             //end
 
             //if(Convert .ToString (Request .QueryString .ToString())!="")
