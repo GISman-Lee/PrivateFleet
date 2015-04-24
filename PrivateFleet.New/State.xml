@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<States>
+  <State>
+    <id>1</id>
+    <name>NSW</name>
+  </State>
+  <State>
+    <id>2</id>
+    <name>QLD</name>
+  </State>
+  <State>
+    <id>3</id>
+    <name>VIC</name>
+  </State>
+  <State>
+    <id>4</id>
+    <name>NT</name>
+  </State>
+  <State>
+    <id>5</id>
+    <name>WA</name>
+  </State>
+  <State>
+    <id>6</id>
+    <name>SA</name>
+  </State>
+  <State>
+    <id>7</id>
+    <name>TA</name>
+  </State>
+</States>

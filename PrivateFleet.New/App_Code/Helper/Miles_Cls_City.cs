@@ -34,4 +34,20 @@ public class Miles_Cls_City : Cls_CommonProperties
             return null;
         }
     }
+
+    public DataTable GetAllCitiesForClients()
+    {
+        try
+        {
+            DbCommand objCmd = null;
+
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "spGetAllCitiesForClients");
+
+            return Cls_DataAccess.getInstance().GetDataTable(objCmd); 
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
 }

@@ -39,7 +39,7 @@
                     <asp:Label ID="Label9" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;City :</asp:Label>
                 </td>
                 <td>
-                    <asp:DropDownList ID="DropDownListCity" runat="server" style="width:100px">
+                    <asp:DropDownList ID="ddlCity" runat="server" style="width:100px" DataTextField="City" DataValueField="City">
                     </asp:DropDownList>
                 </td>
                 <td style="width: 108px">
@@ -60,7 +60,7 @@
                     <asp:Label ID="Label12" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;State :</asp:Label>
                 </td>
                 <td style="width: 100px">
-                    <asp:DropDownList ID="DropDownListState" runat="server" style="width:100px">
+                    <asp:DropDownList ID="ddlState" runat="server" style="width:100px">
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -86,14 +86,13 @@
                     <asp:Label ID="Label13" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Vehicle Year :</asp:Label>
                 </td>
                 <td style="width: 100px">
-                    <asp:DropDownList ID="DropDownListVehicleYear" runat="server" style="width:100px">
-                    </asp:DropDownList>
+                    <asp:TextBox ID="txtVehicleYear" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
                 </td>
                 <td style="width: 108px; padding-left: 20px;">
                     <asp:Label ID="Label14" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Car Make :</asp:Label>
                 </td>
                 <td style="width:100px">
-                    <asp:DropDownList ID="DropDownListCarMake" runat="server" style="width:100px">
+                    <asp:DropDownList ID="ddlCarMake" runat="server" style="width:100px" DataTextField="Make" DataValueField="ID">
                     </asp:DropDownList>           
                 </td>
             </tr>
@@ -124,7 +123,7 @@
                     <asp:Label ID="Label18" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Fuel Type :</asp:Label>
                 </td>
                 <td style="width: 100px">
-                    <asp:DropDownList ID="DropDownListFuelType" runat="server" style="width:100px">
+                    <asp:DropDownList ID="ddlFuelType" runat="server" style="width:100px">
                     </asp:DropDownList>
                 </td>
             </tr>
@@ -134,7 +133,7 @@
                    <asp:Label ID="Label19" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Transmission :</asp:Label>
                </td>
                <td style="width: 100px">
-                   <asp:DropDownList ID="DropDownListTransmission" runat="server" style="width:100px">
+                   <asp:DropDownList ID="ddlTransmission" runat="server" style="width:100px">
                    </asp:DropDownList>
                </td>
                <td style="width: 108px">
@@ -183,7 +182,7 @@
                    <asp:Label ID="Label8" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Supplier :</asp:Label>
                </td>
                <td style="width: 100px">
-                   <asp:DropDownList ID="DropDownListSupplyingDealer" runat="server" style="width:100px">
+                   <asp:DropDownList ID="ddlSupplier" runat="server" style="width:100px" DataTextField="Name" DataValueField="ID">
                    </asp:DropDownList>
                </td>
 

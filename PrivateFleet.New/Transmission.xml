@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Transmissions>
+  <Transmission>
+    <id>1</id>
+    <name>Auto</name>
+  </Transmission>
+  <Transmission>
+    <id>2</id>
+    <name>mannual</name>
+  </Transmission>
+  <Transmission>
+    <id>3</id>
+    <name>Semi-Auto</name>
+  </Transmission>
+</Transmissions>

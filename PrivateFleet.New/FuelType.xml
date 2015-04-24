@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FuelTypes>
+  <FuelType>
+    <id>1</id>
+    <name>Turbo Diesel</name>
+  </FuelType>
+  <FuelType>
+    <id>2</id>
+    <name>Dual Fuel</name>
+  </FuelType>
+  <FuelType>
+    <id>3</id>
+    <name>Hybrid</name>
+  </FuelType>
+  <FuelType>
+    <id>4</id>
+    <name>LPG</name>
+  </FuelType>
+  <FuelType>
+    <id>5</id>
+    <name>Petrol</name>
+  </FuelType>
+  <FuelType>
+    <id>6</id>
+    <name>Diesel</name>
+  </FuelType>
+</FuelTypes>

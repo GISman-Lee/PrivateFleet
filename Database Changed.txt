@@ -88,3 +88,7 @@ The Contents within brancket has been ignored
 
 25. In Storage Procedure "SpGetDealerDetails":
     In select Subclause add variable "DM.Address".
+
+26. Add a brand new Storage Procedure "SpGetAllCitiesForClients"
+
+27. Copy a brand new table tbl_VDT_CustomerMasterMiles and add some new fields
