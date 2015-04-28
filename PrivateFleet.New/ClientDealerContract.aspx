@@ -192,7 +192,8 @@
 
         <asp:Button ID="Button1" runat="server" Text="Search Client by Name/Email" Style="padding-right: 10px;
             padding-left: 30px; margin-left: 150px" />
-        <asp:Button ID="Button2" runat="server" Text="Add Client" Style="padding-right: 10px" />
+        <asp:Button ID="Button2" runat="server" Text="Add Client" 
+            Style="padding-right: 10px" onclick="Button2_Click" />
         <asp:Button ID="Button3" runat="server" Text="Edit Client" Style="padding-right: 10px" />
         <asp:Button ID="Button4" runat="server" Text="Create Contract" Style="padding-right: 10px" />
     </asp:Panel>

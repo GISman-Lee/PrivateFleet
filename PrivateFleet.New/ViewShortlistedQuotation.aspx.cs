@@ -189,6 +189,20 @@ public partial class ViewShortlistedQuotation : System.Web.UI.Page
         //    ((Button)e.Row.FindControl("btnShortList")).CommandArgument = DataBinder.Eval(e.Row.DataItem, "CommandArgument").ToString();
         //}
     }
+
+    protected void CreateContract(object sender, EventArgs e)
+    {
+        try
+        {
+            string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContract.aspx";
+            Response.Redirect(PageToRedirect + "?ReqID=" + Request.QueryString["ReqID"] + "?QuoteID=" + Request.QueryString["QuoteID"], true);
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
     protected void btnBack_Click(object sender, ImageClickEventArgs e)
     {
         try

@@ -122,4 +122,8 @@ public partial class ClientDealerContract : System.Web.UI.Page
 
         }
     }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        //this.txtPrice.Text = ddlCarMake.SelectedItem.Value +ddlCarMake.SelectedItem.Text;  
+    }
 }
