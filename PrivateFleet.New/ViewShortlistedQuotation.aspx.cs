@@ -195,7 +195,7 @@ public partial class ViewShortlistedQuotation : System.Web.UI.Page
         try
         {
             string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContract.aspx";
-            Response.Redirect(PageToRedirect + "?ReqID=" + Request.QueryString["ReqID"] + "?QuoteID=" + Request.QueryString["QuoteID"], true);
+            Response.Redirect(PageToRedirect + "?ReqID=" + Request.QueryString["ReqID"] + "&QuoteID=" + Request.QueryString["QuoteID"], true);
         }
         catch (Exception ex)
         {

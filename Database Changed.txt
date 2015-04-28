@@ -92,3 +92,5 @@ The Contents within brancket has been ignored
 26. Add 2 brand new Storage Procedures "SpGetAllCitiesForClients" and "SpGetAllDealersForClients"
 
 27. Copy a brand new table tbl_VDT_CustomerMasterMiles and add some new fields
+
+28. Add 2 new Storage Procedures "SpSearchDealerInfoByReqID" and "SpSearchHeaderByReqID"

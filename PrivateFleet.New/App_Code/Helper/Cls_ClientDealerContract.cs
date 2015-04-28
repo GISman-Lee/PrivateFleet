@@ -183,6 +183,41 @@ public class Cls_ClientDealerContract
     }
     #endregion
 
+    public DataTable SearchDealerInfo(string ReqID)
+    {
+        DataTable dt = new DataTable();
+        try
+        {
+            DbCommand objcmd = null;
+            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchDealerByReqID"); //sptest
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@ReqID", DbType.String, ReqID);
+            dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            return dt;
+
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
+    public DataTable SearchHeaderInfo(string ReqID)
+    {
+        DataTable dt = new DataTable();
+        try
+        {
+            DbCommand objcmd = null;
+            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchHeaderByReqID"); //sptest
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@ReqID", DbType.String, ReqID);
+            dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            return dt;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
     private int HandleDealerMaster()
     {
         try

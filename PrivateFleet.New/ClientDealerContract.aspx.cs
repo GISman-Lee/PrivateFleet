@@ -8,10 +8,14 @@ using System.Data;
 
 public partial class ClientDealerContract : System.Web.UI.Page
 {
+    static Cls_ClientDealerContract CDC = new Cls_ClientDealerContract();
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if(!IsPostBack)
         {
+            DataTable DealerInfo = CDC.SearchDealerInfo(Request.QueryString["ReqID"]);
+            this.txtCustomerName.Text = DealerInfo.Rows[0]["Name"].ToString();
             this.BindFuelTypeXml();
             this.BindTransmissionXml();
             this.BindStateXml();
