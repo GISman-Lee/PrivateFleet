@@ -78,6 +78,22 @@
                     <asp:TextBox ID="txtPhone" runat="server" CssClass="gvtextbox" Width="217px"></asp:TextBox>
                 </td>
             </tr>
+
+            <tr>
+                <td style="width: 108px">
+                    <asp:Label ID="Label21" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Consultant :</asp:Label>
+                </td>
+                <td style="width: 100px">
+                    <asp:TextBox ID="txtConsultant" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+                </td>
+                <td style="width: 108px">
+                    <asp:Label ID="Label24" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Registration :</asp:Label>
+                </td>
+                <td style="width: 100px">
+                    <asp:DropDownList ID="ddlRegistration" runat="server" style="width:100px">
+                    </asp:DropDownList>
+                </td>
+            </tr>
         </table>
 
         <table style="padding: 20px">
@@ -145,12 +161,12 @@
             </tr>
 
             <tr>
-               <td style="width: 108px">
-                   <asp:Label ID="Label21" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Trim-Color :</asp:Label>
-               </td>
-               <td style="width: 100px">
-                   <asp:TextBox ID="txtTrimColor" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-               </td>
+                <td style="width: 108px">
+                    <asp:Label ID="Label25" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Estimated Delivery Date :</asp:Label>
+                </td>
+                <td style="width: 100px">
+                    <asp:TextBox ID="txtEstimatedDeliveryDate" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+                </td>
             </tr>
 
         </table>
@@ -195,6 +211,7 @@
         <asp:Button ID="Button2" runat="server" Text="Add Client" 
             Style="padding-right: 10px" onclick="Button2_Click" />
         <asp:Button ID="Button3" runat="server" Text="Edit Client" Style="padding-right: 10px" />
-        <asp:Button ID="Button4" runat="server" Text="Create Contract" Style="padding-right: 10px" />
+        <asp:Button ID="Button4" runat="server" Text="Create Contract" 
+            Style="padding-right: 10px" onclick="Button4_Click" />
     </asp:Panel>
 </asp:Content>

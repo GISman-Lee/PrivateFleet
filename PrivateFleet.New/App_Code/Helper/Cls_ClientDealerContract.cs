@@ -183,6 +183,57 @@ public class Cls_ClientDealerContract
     }
     #endregion
 
+    public DataTable SearchConsultantDeliveryDateByQuoteID(string QuoteID)
+    {
+        DbCommand objCmd = null;
+        DataTable dt = null;
+        try
+        {
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpGetQuotationHeaderDetails");
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "@QuotationID", DbType.Int32, Convert.ToInt32(QuoteID));
+            dt = Cls_DataAccess.getInstance().GetDataTable(objCmd);
+        }
+        catch (Exception ex)
+        {
+
+        }
+        return dt;
+    }
+
+    public DataTable SearchRequestParametersByReqID(string ReqID)
+    {
+        DbCommand objCmd = null;
+        DataTable dt = null;
+        try
+        {
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpGetRequestParameters");
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "requestId", DbType.Int32, Convert.ToInt32(ReqID));
+            dt = Cls_DataAccess.getInstance().GetDataTable(objCmd);
+        }
+        catch (Exception ex)
+        {
+            
+        }
+        return dt;
+    }
+
+    public DataTable SearchCustomerInfo(string ReqID)
+    {
+        DataTable dt = new DataTable();
+        try
+        {
+            DbCommand objcmd = null;
+            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchCustomerByReqID"); //sptest
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@ReqID", DbType.Int64, Convert.ToInt64(ReqID));
+            dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            return dt;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
     public DataTable SearchDealerInfo(string ReqID)
     {
         DataTable dt = new DataTable();
@@ -207,7 +258,7 @@ public class Cls_ClientDealerContract
         try
         {
             DbCommand objcmd = null;
-            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchHeaderByReqID"); //sptest
+            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchHeaderByReqID");
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@ReqID", DbType.String, ReqID);
             dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
             return dt;

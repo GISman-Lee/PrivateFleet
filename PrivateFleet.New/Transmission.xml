@@ -2,11 +2,11 @@
 <Transmissions>
   <Transmission>
     <id>1</id>
-    <name>Auto</name>
+    <name>Automatic</name>
   </Transmission>
   <Transmission>
     <id>2</id>
-    <name>mannual</name>
+    <name>Mannual</name>
   </Transmission>
   <Transmission>
     <id>3</id>

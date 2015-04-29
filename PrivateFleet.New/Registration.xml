@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Registrations>
+  <Registration>
+    <id>1</id>
+    <name>Private</name>
+  </Registration>
+  <Registration>
+    <id>2</id>
+    <name>Business</name>
+  </Registration>
+</Registrations>
