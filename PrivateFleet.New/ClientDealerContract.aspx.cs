@@ -178,7 +178,13 @@ public partial class ClientDealerContract : System.Web.UI.Page
     }
     protected void Button4_Click(object sender, EventArgs e)
     {
-        DataTable DealerInfo = CDC.SearchDealerInfo(Request.QueryString["ReqID"]);
+        string ReqID = Request.QueryString["ReqID"];
+        string QuoteID = Request.QueryString["QuoteID"];
+
+        DataTable DealerInfo = CDC.SearchDealerInfo(ReqID);
+        DataTable CustomerInfo = CDC.SearchCustomerInfo(ReqID);
+        DataTable OtherInfo = CDC.SearchConsultantDeliveryDateByQuoteID(QuoteID);
+
         string pdfTemplate = @"E:\ContractNoTrade.pdf";
         string newFile = @"E:\ContractNoTrade2.pdf";
 
@@ -188,6 +194,7 @@ public partial class ClientDealerContract : System.Web.UI.Page
 
         pdfFormFields.SetField("ContactP1", this.txtCustomerName.Text);
         pdfFormFields.SetField("VNMSP1", this.txtVehicleYear.Text + " " + this.ddlCarMake.SelectedItem.Text + " " + this.txtModel.Text + " " + this.txtSeries.Text);
+
         pdfFormFields.SetField("VNP2", this.txtVehicleYear.Text + " " + this.ddlCarMake.SelectedItem.Text);
         pdfFormFields.SetField("MSBP2", this.txtModel.Text + " " + this.txtSeries.Text + " " + this.txtBodyShape.Text);
         pdfFormFields.SetField("TSP2", this.ddlTransmission.SelectedItem.Text);
@@ -198,10 +205,15 @@ public partial class ClientDealerContract : System.Web.UI.Page
         pdfFormFields.SetField("FNP3", this.txtCustomerName.Text);
         pdfFormFields.SetField("MNP3", this.txtMemberNo.Text);
         pdfFormFields.SetField("CTP3", "");  //Card Type
-        pdfFormFields.SetField("CDNP3", "");  //Card Number
-        pdfFormFields.SetField("EEP3", "");  //Exp Month Exp Year
-        pdfFormFields.SetField("CVNP3", "");  //CV Number
+        pdfFormFields.SetField("CDNP3", this.txtCardNumber.Text);  //Card Number
+        pdfFormFields.SetField("EEP3", this.txtMonth.Text + "/" + this.txtYear.Text);  //Exp Month Exp Year
+        pdfFormFields.SetField("CVNP3", this.txtCVNumber.Text);  //CV Number
 
+        pdfFormFields.SetField("ContactP4", this.txtCustomerName.Text);
+        pdfFormFields.SetField("PHMP4", this.txtPhone.Text + " " + this.txtMobile.Text);
+        pdfFormFields.SetField("EmailP4", this.txtEmail.Text);
+        pdfFormFields.SetField("HomeAddressP4", this.txtAddress.Text);
+        pdfFormFields.SetField("HHPP4", this.ddlCity.SelectedItem.Text + " " + this.ddlState.SelectedItem.Text + " " + this.txtPostCode.Text);
         pdfFormFields.SetField("DealerCompanyNameP4", DealerInfo.Rows[0]["Company"].ToString());
         pdfFormFields.SetField("DealerAddressP4", DealerInfo.Rows[0]["Address"].ToString());
         pdfFormFields.SetField("CityStatePCodeP4", DealerInfo.Rows[0]["City"].ToString() + " " + DealerInfo.Rows[0]["State"].ToString() + " " + DealerInfo.Rows[0]["PCode"].ToString());  //Card Number
@@ -209,6 +221,14 @@ public partial class ClientDealerContract : System.Web.UI.Page
         pdfFormFields.SetField("DealerPhoneP4", DealerInfo.Rows[0]["Phone"].ToString());
         pdfFormFields.SetField("DealerEmailP4", DealerInfo.Rows[0]["Email"].ToString());
         pdfFormFields.SetField("ConsultantP4", this.txtConsultant.Text);
+        pdfFormFields.SetField("DealerEmailP4", DealerInfo.Rows[0]["Email"].ToString());
+        pdfFormFields.SetField("ConsultantP4", this.txtConsultant.Text);
+        pdfFormFields.SetField("ConsultantPhoneP4", OtherInfo.Rows[0]["CunsPhone"].ToString());
+        pdfFormFields.SetField("ConsultantEmailP4", OtherInfo.Rows[0]["CunsMail"].ToString());
+        
+
+
+
         // flatten the form to remove editting options, set it to false
         // to leave the form open to subsequent manual edits
         pdfStamper.FormFlattening = false;

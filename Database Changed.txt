@@ -94,3 +94,5 @@ The Contents within brancket has been ignored
 27. Copy a brand new table tbl_VDT_CustomerMasterMiles and add some new fields
 
 28. Add 2 new Storage Procedures "SpSearchDealerInfoByReqID" and "SpSearchHeaderByReqID" and "SpSearchCustomerByReqID"
+
+29. Add "UM.[Phone] as CunsPhone" in Select clause of "SpGetQuotationHeaderDetails"

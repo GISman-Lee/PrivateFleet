@@ -201,7 +201,46 @@
                    <asp:DropDownList ID="ddlSupplier" runat="server" style="width:100px" DataTextField="Name" DataValueField="ID">
                    </asp:DropDownList>
                </td>
+            </tr>
 
+            <tr>
+               <td style="width: 108px">
+                   <asp:Label ID="Label26" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Card Type :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                    <asp:TextBox ID="TextBox1" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+                </td>
+
+                <td style="width: 108px">
+                   <asp:Label ID="Label27" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Card Number :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                    <asp:TextBox ID="txtCardNumber" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+               <td style="width: 108px">
+                   <asp:Label ID="Label28" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Expiry Date :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                    <asp:TextBox ID="txtMonth" runat="server" Width="20px" CssClass="gvtextbox"></asp:TextBox>
+                    <asp:Label ID="Label30" runat="server" CssClass="label">&nbsp;/</asp:Label>
+                    <asp:TextBox ID="txtYear" runat="server" Width="20px" CssClass="gvtextbox"></asp:TextBox>
+                </td>
+
+                <td style="width: 108px">
+                   <asp:Label ID="Label29" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;CV Number :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                    <asp:TextBox ID="txtCVNumber" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="width: 108px">
+                   
+                </td>
             </tr>
 
         </table>
