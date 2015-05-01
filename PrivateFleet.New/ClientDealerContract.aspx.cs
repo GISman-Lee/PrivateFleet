@@ -11,16 +11,25 @@ using System.IO;
 public partial class ClientDealerContract : System.Web.UI.Page
 {
     static Cls_ClientDealerContract CDC = new Cls_ClientDealerContract();
+    DataTable DealerInfo;
+    DataTable CustomerInfo;
+    DataTable HeaderInfo;
+    DataTable ParameterInfo;
+    DataTable OtherInfo;
+    string ReqID = "";
+    string QuoteID = "";
+    string ConsID = "";
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        string ReqID = Request.QueryString["ReqID"];
-        string QuoteID = Request.QueryString["QuoteID"];
-        DataTable DealerInfo = CDC.SearchDealerInfo(ReqID);
-        DataTable CustomerInfo = CDC.SearchCustomerInfo(ReqID);
-        DataTable HeaderInfo = CDC.SearchHeaderInfo(ReqID);
-        DataTable ParameterInfo = CDC.SearchRequestParametersByReqID(ReqID);
-        DataTable OtherInfo = CDC.SearchConsultantDeliveryDateByQuoteID(QuoteID);
+        this.ReqID = Request.QueryString["ReqID"];
+        this.QuoteID = Request.QueryString["QuoteID"];
+        this.ConsID = Request.QueryString["ConsID"];
+        this.DealerInfo = CDC.SearchDealerInfo(ReqID);
+        this.CustomerInfo = CDC.SearchCustomerInfo(ReqID);
+        this.HeaderInfo = CDC.SearchHeaderInfo(ReqID);
+        this.ParameterInfo = CDC.SearchRequestParametersByReqID(ReqID);
+        this.OtherInfo = CDC.SearchConsultantDeliveryDateByQuoteID(QuoteID);
         
         if(!IsPostBack)
         {
@@ -45,7 +54,7 @@ public partial class ClientDealerContract : System.Web.UI.Page
             this.BindFuelTypeXml();
             this.BindTransmissionXml();
             if (ParameterInfo.Rows[4]["ParamValue"].ToString() != "") this.ddlFuelType.Items.FindByText(ParameterInfo.Rows[4]["ParamValue"].ToString()).Selected = true;
-            if (ParameterInfo.Rows[2]["ParamValue"] != null) this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
+            if (ParameterInfo.Rows[2]["ParamValue"] != null && ParameterInfo.Rows[2]["ParamValue"].ToString() !="") this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
             this.txtBodyShape.Text = ParameterInfo.Rows[0]["ParamValue"].ToString();
             this.txtBodyColor.Text = ParameterInfo.Rows[3]["ParamValue"].ToString();
             this.txtEstimatedDeliveryDate.Text = OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString();
@@ -54,6 +63,9 @@ public partial class ClientDealerContract : System.Web.UI.Page
             this.ddlSupplier.Items.FindByText(DealerInfo.Rows[0]["Name"].ToString()).Selected = true;
 
             this.BindRegistrationXml();
+
+            this.BindPrices();
+            this.BindCardTypeXml();
         }
     }
 
@@ -93,6 +105,19 @@ public partial class ClientDealerContract : System.Web.UI.Page
             ddlState.DataTextField = "name";
             ddlState.DataValueField = "id";
             ddlState.DataBind();
+        }
+    }
+
+    private void BindCardTypeXml()
+    {
+        string filePath = Server.MapPath("~/CardType.xml");
+        using (DataSet ds = new DataSet())
+        {
+            ds.ReadXml(filePath);
+            ddlCardType.DataSource = ds;
+            ddlCardType.DataTextField = "name";
+            ddlCardType.DataValueField = "id";
+            ddlCardType.DataBind();
         }
     }
 
@@ -159,6 +184,106 @@ public partial class ClientDealerContract : System.Web.UI.Page
         }
     }
 
+    private void BindPrices()
+    {
+        try
+        {
+            int AccessoryCounter = 0;
+            DataTable PricesInfo = CDC.SearchPricesByReqIDConsID(this.ReqID, this.ConsID);
+            foreach (DataRow Row in PricesInfo.Rows)
+            {
+                if (Row["SumCol"].ToString() == "0")
+                {
+                    if (Row["Description"].ToString() == "Recommended Retail Price Exc GST")
+                    {
+                        this.txtVehicleRetailPrice.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (Row["Description"].ToString() == "Pre-Delivery")
+                    {
+                        this.txtPreDelivery.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (Row["Description"].ToString() == "Stamp Duty")
+                    {
+                        this.txtStampDuty.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (Row["Description"].ToString() == "Registration")
+                    {
+                        this.txtRegistrationPrice.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (Row["Description"].ToString() == "CTP")
+                    {
+                        this.txtCTP.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (Row["Description"].ToString() == "GST ( LCT if applicable)")
+                    {
+                        this.txtGST.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (Row["Description"].ToString() == "Premium Plate Fee")
+                    {
+                        this.txtPlateFee.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (Row["Description"].ToString() == "Total Cost of Accessories")
+                    {           
+                        this.txtTotalAccessories.Text = Convert.ToString(Convert.ToDouble(this.txtAccessory1.Text)
+                                                        + Convert.ToDouble(this.txtAccessory2.Text)
+                                                        + Convert.ToDouble(this.txtAccessory3.Text)
+                                                        + Convert.ToDouble(this.txtAccessory4.Text));
+                    }
+
+                    if (Row["Description"].ToString() == "Total-On Road Cost (Inclusive of GST)")
+                    {
+                        this.txtTotalOnRoadCost.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (Row["Description"].ToString() == "Fleet Discount")
+                    {
+                        this.txtFleetDiscount.Text = Row["QuoteValue"].ToString();
+                    }
+                }
+                else
+                {
+                    if(AccessoryCounter == 0)
+                    {
+                        this.Label37.Text = Row["Description"].ToString();
+                        this.txtAccessory1.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (AccessoryCounter == 1)
+                    {
+                        this.Label38.Text = Row["Description"].ToString();
+                        this.txtAccessory2.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (AccessoryCounter == 2)
+                    {
+                        this.Label39.Text = Row["Description"].ToString();
+                        this.txtAccessory3.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    if (AccessoryCounter == 3)
+                    {
+                        this.Label40.Text = Row["Description"].ToString();
+                        this.txtAccessory4.Text = Row["QuoteValue"].ToString();
+                    }
+
+                    AccessoryCounter++;
+                }
+            }
+
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
     private void BindRegistrationXml()
     {
         string filePath = Server.MapPath("~/Registration.xml");
@@ -178,13 +303,6 @@ public partial class ClientDealerContract : System.Web.UI.Page
     }
     protected void Button4_Click(object sender, EventArgs e)
     {
-        string ReqID = Request.QueryString["ReqID"];
-        string QuoteID = Request.QueryString["QuoteID"];
-
-        DataTable DealerInfo = CDC.SearchDealerInfo(ReqID);
-        DataTable CustomerInfo = CDC.SearchCustomerInfo(ReqID);
-        DataTable OtherInfo = CDC.SearchConsultantDeliveryDateByQuoteID(QuoteID);
-
         string pdfTemplate = @"E:\ContractNoTrade.pdf";
         string newFile = @"E:\ContractNoTrade2.pdf";
 
@@ -204,7 +322,7 @@ public partial class ClientDealerContract : System.Web.UI.Page
 
         pdfFormFields.SetField("FNP3", this.txtCustomerName.Text);
         pdfFormFields.SetField("MNP3", this.txtMemberNo.Text);
-        pdfFormFields.SetField("CTP3", "");  //Card Type
+        pdfFormFields.SetField("CTP3", this.ddlCardType.SelectedItem.Text);  //Card Type
         pdfFormFields.SetField("CDNP3", this.txtCardNumber.Text);  //Card Number
         pdfFormFields.SetField("EEP3", this.txtMonth.Text + "/" + this.txtYear.Text);  //Exp Month Exp Year
         pdfFormFields.SetField("CVNP3", this.txtCVNumber.Text);  //CV Number
@@ -225,15 +343,57 @@ public partial class ClientDealerContract : System.Web.UI.Page
         pdfFormFields.SetField("ConsultantP4", this.txtConsultant.Text);
         pdfFormFields.SetField("ConsultantPhoneP4", OtherInfo.Rows[0]["CunsPhone"].ToString());
         pdfFormFields.SetField("ConsultantEmailP4", OtherInfo.Rows[0]["CunsMail"].ToString());
+
+        pdfFormFields.SetField("PreDelivery_Price", this.txtPreDelivery.Text);
+        pdfFormFields.SetField("Stamp_Duty_Price", this.txtStampDuty.Text);
+        pdfFormFields.SetField("Registration_Price", this.txtRegistrationPrice.Text);
+        pdfFormFields.SetField("CTP_Price", this.txtCTP.Text);
+        pdfFormFields.SetField("Plate_Fee_Price", this.txtPlateFee.Text);
+        pdfFormFields.SetField("Insert Accessories_1", this.Label37.Text);
+        pdfFormFields.SetField("Accessories_Price_1", this.txtAccessory1.Text);
+        pdfFormFields.SetField("Insert Accessories_2", this.Label38.Text);
+        pdfFormFields.SetField("Accessories_Price_2", this.txtAccessory2.Text);
+        pdfFormFields.SetField("Insert Accessories_3", this.Label39.Text.TrimStart());
+        pdfFormFields.SetField("Accessories_Price_3", this.txtAccessory3.Text);
+        pdfFormFields.SetField("Insert Accessories_4", this.Label40.Text.TrimStart());
+        pdfFormFields.SetField("Accessories_Price_4", this.txtAccessory4.Text);
+        pdfFormFields.SetField("Retail Price of  Vehicle", this.txtVehicleRetailPrice.Text);
+        pdfFormFields.SetField("FleetDiscount", this.txtFleetDiscount.Text);
+
+
+        double TempTotalAccessories = Convert.ToDouble(this.txtAccessory1.Text)
+            + Convert.ToDouble(this.txtAccessory2.Text)
+            + Convert.ToDouble(this.txtAccessory3.Text)
+            + Convert.ToDouble(this.txtAccessory4.Text);
+
+        pdfFormFields.SetField("TotalAccessories", TempTotalAccessories.ToString());
+
+        double TempTotalonRoadCost = Convert.ToDouble(this.txtVehicleRetailPrice.Text)
+            + Convert.ToDouble(TempTotalAccessories)
+            + Convert.ToDouble(this.txtPreDelivery.Text)
+            + Convert.ToDouble(this.txtStampDuty.Text)
+            + Convert.ToDouble(this.txtRegistrationPrice.Text)
+            + Convert.ToDouble(this.txtCTP.Text)
+            + Convert.ToDouble(this.txtPlateFee.Text)
+            - Convert.ToDouble(this.txtFleetDiscount.Text);
         
+        pdfFormFields.SetField("TotalonRoadCost", TempTotalonRoadCost.ToString());
 
-
-
+        pdfFormFields.SetField("DeliveryDateP4", OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString());
+        
         // flatten the form to remove editting options, set it to false
         // to leave the form open to subsequent manual edits
         pdfStamper.FormFlattening = false;
 
         pdfStamper.Close();
         pdfReader.Close();
+    }
+    protected void Button5_Click(object sender, EventArgs e)
+    {
+
+    }
+    protected void Button6_Click(object sender, EventArgs e)
+    {
+        
     }
 }

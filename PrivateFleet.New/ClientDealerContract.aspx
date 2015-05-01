@@ -208,7 +208,8 @@
                    <asp:Label ID="Label26" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Card Type :</asp:Label>
                </td>
                <td style="width: 100px">
-                    <asp:TextBox ID="TextBox1" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+                    <asp:DropDownList ID="ddlCardType" runat="server" style="width:100px">
+                   </asp:DropDownList>
                 </td>
 
                 <td style="width: 108px">
@@ -229,20 +230,141 @@
                     <asp:TextBox ID="txtYear" runat="server" Width="20px" CssClass="gvtextbox"></asp:TextBox>
                 </td>
 
-                <td style="width: 108px">
+               <td style="width: 108px">
                    <asp:Label ID="Label29" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;CV Number :</asp:Label>
                </td>
                <td style="width: 100px">
                     <asp:TextBox ID="txtCVNumber" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                </td>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="width: 108px">
+                   <asp:Button ID="Button5" runat="server" Text="Add Credit Card" 
+                       onclick="Button5_Click" />
+               </td>
+
+               <td style="width: 108px; padding-left: 30px">
+                   <asp:Button ID="Button6" runat="server" Text="Edit Credit Card" onclick="Button6_Click" 
+                       />
+               </td>
+            </tr>
+
+        </table>
+
+        <table style="padding: 20px">
+            <tr>
+               <td style="width: 78px">
+                   <asp:Label ID="Label41" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Vehicle Retail Price :</asp:Label>
+               </td>
+               <td style="width: 60px">
+                    <asp:TextBox ID="txtVehicleRetailPrice" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
+
+               <td style="width: 78px">
+                   <asp:Label ID="Label42" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp; Total Cost of Accessories :</asp:Label>
+               </td>
+               <td style="width: 60px">
+                    <asp:TextBox ID="txtTotalAccessories" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
+
+               
+            </tr>
+
+            <tr>
+               <td style="width: 78px">
+                   <asp:Label ID="Label44" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Fleet Discount :</asp:Label>
+               </td>
+               <td style="width: 60px">
+                    <asp:TextBox ID="txtFleetDiscount" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
+               <td style="width: 78px">
+                   <asp:Label ID="Label43" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Total OnRoad Cost :</asp:Label>
+               </td>
+               <td style="width: 60px">
+                    <asp:TextBox ID="txtTotalOnRoadCost" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="width: 108px">
+                   <asp:Label ID="Label31" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Pre-Delivery Price :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                    <asp:TextBox ID="txtPreDelivery" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
+
+               <td style="width: 108px">
+                   <asp:Label ID="Label32" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Stamp Duty :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                    <asp:TextBox ID="txtStampDuty" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
+            </tr>
+
+            <tr>
+               <td style="width: 108px">
+                   <asp:Label ID="Label33" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Registration Price :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                   <asp:TextBox ID="txtRegistrationPrice" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
+
+               <td style="width: 108px">
+                   <asp:Label ID="Label34" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;CTP :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                   <asp:TextBox ID="txtCTP" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
             </tr>
 
             <tr>
                 <td style="width: 108px">
-                   
-                </td>
+                   <asp:Label ID="Label35" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;GST :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                   <asp:TextBox ID="txtGST" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
+
+               <td style="width: 108px">
+                   <asp:Label ID="Label36" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Plate Fee :</asp:Label>
+               </td>
+               <td style="width: 100px">
+                   <asp:TextBox ID="txtPlateFee" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
+               </td>
             </tr>
 
+            <tr>
+                <td style="width: 108px">
+                   <asp:Label ID="Label37" runat="server" CssClass="label" Text="Accessory 1"></asp:Label>
+               </td>
+               <td style="width: 100px">
+                   <asp:TextBox ID="txtAccessory1" runat="server" Width="217px" CssClass="gvtextbox" Text="0.00"></asp:TextBox>
+               </td>
+
+               <td style="width: 108px">
+                   <asp:Label ID="Label38" runat="server" CssClass="label" Text="Accessory 2"></asp:Label>
+               </td>
+               <td style="width: 100px">
+                   <asp:TextBox ID="txtAccessory2" runat="server" Width="217px" CssClass="gvtextbox" Text="0.00"></asp:TextBox>
+               </td>
+            </tr>
+
+            <tr>
+                <td style="width: 108px">
+                   <asp:Label ID="Label39" runat="server" CssClass="label" Text=" Accessory 3"></asp:Label>
+               </td>
+               <td style="width: 100px">
+                   <asp:TextBox ID="txtAccessory3" runat="server" Width="217px" CssClass="gvtextbox" Text="0.00"></asp:TextBox>
+               </td>
+
+               <td style="width: 108px">
+                   <asp:Label ID="Label40" runat="server" CssClass="label" Text=" Accessory 4"></asp:Label>
+               </td>
+               <td style="width: 100px">
+                   <asp:TextBox ID="txtAccessory4" runat="server" Width="217px" CssClass="gvtextbox" Text="0.00"></asp:TextBox>
+               </td>
+            </tr>
         </table>
 
         <asp:Button ID="Button1" runat="server" Text="Search Client by Name/Email" Style="padding-right: 10px;

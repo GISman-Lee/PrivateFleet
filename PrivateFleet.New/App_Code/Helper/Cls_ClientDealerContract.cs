@@ -183,6 +183,24 @@ public class Cls_ClientDealerContract
     }
     #endregion
 
+    public DataTable SearchPricesByReqIDConsID(string ReqID, string ConsID)
+    {
+        DbCommand objCmd = null;
+        DataTable dt = null;
+        try
+        {
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpGetSelectedQuotation");
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "@RequestId", DbType.Int32, Convert.ToInt32(ReqID));
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "@ConsultantId", DbType.Int32, Convert.ToInt32(ConsID));
+            dt = Cls_DataAccess.getInstance().GetDataTable(objCmd);
+        }
+        catch (Exception ex)
+        {
+
+        }
+        return dt;
+    }
+
     public DataTable SearchConsultantDeliveryDateByQuoteID(string QuoteID)
     {
         DbCommand objCmd = null;

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CardTypes>
+  <CardType>
+    <id>1</id>
+    <name>Visa</name>
+  </CardType>
+  <CardType>
+    <id>2</id>
+    <name>AMEX</name>
+  </CardType>
+  <CardType>
+    <id>3</id>
+    <name>MasterCard</name>
+  </CardType>
+</CardTypes>
