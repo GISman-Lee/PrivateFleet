@@ -183,6 +183,62 @@ public class Cls_ClientDealerContract
     }
     #endregion
 
+    public DataTable CheckIfTradeIn(string ReqID)
+    {
+        DbCommand objCmd = null;
+        DataTable dt = null;
+        try
+        {
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpCheckIfTradeIn");
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "@ReqID", DbType.Int64, Convert.ToInt64(ReqID));
+            dt = Cls_DataAccess.getInstance().GetDataTable(objCmd);
+        }
+        catch (Exception ex)
+        {
+
+        }
+        return dt;
+    }
+
+    public DataTable SearchCreditCard(long ProspectId)
+    {
+        DbCommand objCmd = null;
+        DataTable dt = null;
+        try
+        {
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchCreditCard");
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "@ProspectId", DbType.Int64, Convert.ToInt32(ProspectId));
+            dt = Cls_DataAccess.getInstance().GetDataTable(objCmd);
+        }
+        catch (Exception ex)
+        {
+
+        }
+        return dt;
+    }
+
+    public void AddCreditCard(long ProspectId, string CVNumber, string CardNumber, string CardType, DateTime expirydate, string ExpiryMonth, string ExpiryYear, string MemberNo, string Deposit)
+    {
+        try
+        {
+            DbCommand objCmd = null;
+
+            objCmd = DataAccess.GetCommand(System.Data.CommandType.StoredProcedure, "SpAddCreditCard");
+            DataAccess.AddInParameter(objCmd, "ProspectId", DbType.Int64, ProspectId);
+            DataAccess.AddInParameter(objCmd, "CVNumber", DbType.String, CVNumber);
+            DataAccess.AddInParameter(objCmd, "CardNumber", DbType.String, CardNumber);
+            DataAccess.AddInParameter(objCmd, "CardType", DbType.String, CardType);
+            DataAccess.AddInParameter(objCmd, "ExpiryDate", DbType.DateTime, expirydate);
+            DataAccess.AddInParameter(objCmd, "ExpiryMonth", DbType.String, ExpiryMonth);
+            DataAccess.AddInParameter(objCmd, "ExpiryYear", DbType.String, ExpiryYear);
+            DataAccess.AddInParameter(objCmd, "MemberNo", DbType.String, MemberNo);
+            DataAccess.AddInParameter(objCmd, "Deposit", DbType.Double, Convert.ToDouble(Deposit));
+
+            DataAccess.ExecuteNonQuery(objCmd);
+        }
+        catch (Exception ex) { }
+    }
+
     public DataTable SearchPricesByReqIDConsID(string ReqID, string ConsID)
     {
         DbCommand objCmd = null;
@@ -285,45 +341,5 @@ public class Cls_ClientDealerContract
         {
             return null;
         }
-    }
-
-    private int HandleDealerMaster()
-    {
-        try
-        {
-            DbCommand objCmd = null;
-
-            objCmd = DataAccess.GetCommand(System.Data.CommandType.StoredProcedure, "");
-            setParametersAdd(objCmd);
-
-            return DataAccess.ExecuteNonQuery(objCmd);
-        }
-        catch (Exception ex)
-        { return 0; }
-    }
-
-    private void setParametersAdd(DbCommand objCmd)
-    {
-        try
-        {
-                DataAccess.AddInParameter(objCmd, "Customer", DbType.String, this.Customer);
-                DataAccess.AddInParameter(objCmd, "Company", DbType.String, this.Company);
-                DataAccess.AddInParameter(objCmd, "Email", DbType.String, this.Email);
-                DataAccess.AddInParameter(objCmd, "Fax", DbType.String, this.Fax);
-                DataAccess.AddInParameter(objCmd, "Phone", DbType.String, this.Phone);
-                DataAccess.AddInParameter(objCmd, "Mobile", DbType.String, this.Mobile);
-                DataAccess.AddInParameter(objCmd, "Address", DbType.String, this.Address);
-                DataAccess.AddInParameter(objCmd, "City", DbType.String, this.City);
-                DataAccess.AddInParameter(objCmd, "State", DbType.String, State);
-                DataAccess.AddInParameter(objCmd, "PostCode", DbType.String, this.PostCode);
-                DataAccess.AddInParameter(objCmd, "VehicleYear", DbType.String, this.VehicleYear);
-                DataAccess.AddInParameter(objCmd, "Make", DbType.String, this.CarMake);
-                DataAccess.AddInParameter(objCmd, "MakeID", DbType.String, "");  //TODO MakeID
-                DataAccess.AddInParameter(objCmd, "Model", DbType.String, this.Model);  //TODO Model
-                DataAccess.AddInParameter(objCmd, "Series", DbType.String, this.Series);  //TODO MakeID
-                DataAccess.AddInParameter(objCmd, "Model", DbType.String, this.Model);  //TODO Model
-        }
-        catch (Exception ex) { }
-
     }
 }

@@ -8,7 +8,7 @@ using System.Data;
 using iTextSharp.text.pdf;
 using System.IO;
 
-public partial class ClientDealerContract : System.Web.UI.Page
+public partial class ClientDealerContractT : System.Web.UI.Page
 {
     static Cls_ClientDealerContract CDC = new Cls_ClientDealerContract();
     DataTable DealerInfo;
@@ -27,13 +27,13 @@ public partial class ClientDealerContract : System.Web.UI.Page
         this.QuoteID = Request.QueryString["QuoteID"];
         this.ConsID = Request.QueryString["ConsID"];
         this.CustomerInfo = CDC.SearchCustomerInfo(ReqID);
-        this.DealerInfo = CDC.SearchDealerInfo(ReqID);    
+        this.DealerInfo = CDC.SearchDealerInfo(ReqID);
         this.HeaderInfo = CDC.SearchHeaderInfo(ReqID);
         this.ParameterInfo = CDC.SearchRequestParametersByReqID(ReqID);
         this.OtherInfo = CDC.SearchConsultantDeliveryDateByQuoteID(QuoteID);
         this.CreditCardInfo = CDC.SearchCreditCard(Convert.ToInt64(this.CustomerInfo.Rows[0]["Id"].ToString()));
-        
-        if(!IsPostBack)
+
+        if (!IsPostBack)
         {
             this.BindStateXml();
             this.BindCities();
@@ -56,7 +56,7 @@ public partial class ClientDealerContract : System.Web.UI.Page
             this.BindFuelTypeXml();
             this.BindTransmissionXml();
             if (ParameterInfo.Rows[4]["ParamValue"].ToString() != "") this.ddlFuelType.Items.FindByText(ParameterInfo.Rows[4]["ParamValue"].ToString()).Selected = true;
-            if (ParameterInfo.Rows[2]["ParamValue"] != null && ParameterInfo.Rows[2]["ParamValue"].ToString() !="") this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
+            if (ParameterInfo.Rows[2]["ParamValue"] != null && ParameterInfo.Rows[2]["ParamValue"].ToString() != "") this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
             this.txtBodyShape.Text = ParameterInfo.Rows[0]["ParamValue"].ToString();
             this.txtBodyColor.Text = ParameterInfo.Rows[3]["ParamValue"].ToString();
             this.txtEstimatedDeliveryDate.Text = OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString();
@@ -240,7 +240,7 @@ public partial class ClientDealerContract : System.Web.UI.Page
                     }
 
                     if (Row["Description"].ToString() == "Total Cost of Accessories")
-                    {           
+                    {
                         this.txtTotalAccessories.Text = Convert.ToString(Convert.ToDouble(this.txtAccessory1.Text)
                                                         + Convert.ToDouble(this.txtAccessory2.Text)
                                                         + Convert.ToDouble(this.txtAccessory3.Text)
@@ -259,7 +259,7 @@ public partial class ClientDealerContract : System.Web.UI.Page
                 }
                 else
                 {
-                    if(AccessoryCounter == 0)
+                    if (AccessoryCounter == 0)
                     {
                         this.Label37.Text = Row["Description"].ToString();
                         this.txtAccessory1.Text = Row["QuoteValue"].ToString();
@@ -315,6 +315,7 @@ public partial class ClientDealerContract : System.Web.UI.Page
     {
         //string pdfTemplate = @"E:\ContractNoTrade.pdf";
         //string newFile = @"E:\ContractNoTrade2.pdf";
+
         string pdfTemplate = Server.MapPath("~/Contract/ContractNoTrade.pdf");
         string newFile = Server.MapPath("~/Contract/ContractNoTrade2.pdf");
 
@@ -389,13 +390,13 @@ public partial class ClientDealerContract : System.Web.UI.Page
             + Convert.ToDouble(this.txtCTP.Text)
             + Convert.ToDouble(this.txtPlateFee.Text)
             - Convert.ToDouble(this.txtFleetDiscount.Text);
-        
+
         pdfFormFields.SetField("TotalonRoadCost", TempTotalonRoadCost.ToString());
 
         pdfFormFields.SetField("DeliveryDateP4", OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString());
 
         pdfFormFields.SetField("SupplierP5", DealerInfo.Rows[0]["Company"].ToString());
-        
+
         // flatten the form to remove editting options, set it to false
         // to leave the form open to subsequent manual edits
         pdfStamper.FormFlattening = false;
@@ -403,17 +404,15 @@ public partial class ClientDealerContract : System.Web.UI.Page
         pdfStamper.Close();
         pdfReader.Close();
 
-        //Download file
         this.LinkDownLoad.Visible = true;
-        
     }
     protected void Button5_Click(object sender, EventArgs e)
     {
-        DateTime ExpDate = new DateTime(Convert.ToInt32("20"+this.txtYear.Text), Convert.ToInt32(this.txtMonth.Text), 1);
+        DateTime ExpDate = new DateTime(Convert.ToInt32("20" + this.txtYear.Text), Convert.ToInt32(this.txtMonth.Text), 1);
         CDC.AddCreditCard(Convert.ToInt32(CustomerInfo.Rows[0]["Id"].ToString()), this.txtCVNumber.Text, this.txtCardNumber.Text, this.ddlCardType.SelectedItem.Text, ExpDate, this.txtMonth.Text, this.txtYear.Text, this.txtMemberNo.Text, this.txtDeposit.Text);
     }
     protected void Button6_Click(object sender, EventArgs e)
     {
-        
+
     }
 }

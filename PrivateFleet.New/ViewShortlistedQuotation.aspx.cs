@@ -194,16 +194,22 @@ public partial class ViewShortlistedQuotation : System.Web.UI.Page
     {
         try
         {
+            string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContract.aspx";
             string ReqID = Request.QueryString["ReqID"];
             string QuoteID = Request.QueryString["QuoteID"];
             Cls_ClientDealerContract CDC = new Cls_ClientDealerContract();
+            DataTable TradeInInfo = CDC.CheckIfTradeIn(ReqID);
             DataTable HeaderInfo = CDC.SearchHeaderInfo(ReqID);
-            string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContract.aspx";
+            if(Convert.ToBoolean(TradeInInfo.Rows[0]["TradeIn"]) == true)
+            {
+                PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx";
+            }
+     
             Response.Redirect(PageToRedirect + "?ReqID=" + ReqID + "&QuoteID=" + QuoteID + "&ConsID=" + HeaderInfo.Rows[0]["ConsultantID"].ToString(), true);
         }
         catch (Exception ex)
         {
-
+            Console.Write("Nothing");
         }
     }
 

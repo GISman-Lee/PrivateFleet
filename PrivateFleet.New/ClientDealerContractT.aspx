@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
-    CodeFile="ClientDealerContract.aspx.cs" Inherits="ClientDealerContract" %>
+    CodeFile="ClientDealerContractT.aspx.cs" Inherits="ClientDealerContractT" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <link href="~/CSS/stylesheet.css" rel="stylesheet" type="text/css" />
@@ -354,5 +354,6 @@
                     Visible="false">Down Load Contract</asp:HyperLink>
             </tr>
         </table>
+
     </asp:Panel>
 </asp:Content>

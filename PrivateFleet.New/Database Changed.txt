@@ -100,3 +100,10 @@ The Contents within brancket has been ignored
 30. Add "RH.ConsultantID" in Select clause of "SpSearchHeaderByReqID"
 
 31. Add Table tblCreditCard in PFSales database;
+
+32. Add 2 Storage Procedures "SpAddCreditCard" and "SpSearchCreditCard" in Priv database
+
+33. Add a Storage Procedures "SpCheckIfTradeIn" in Priv databtase
+
+34. In Storage Procedure "SpAddCreditCard": 
+    Add 2 parameters, and 2 variables MemberNo, Deposit

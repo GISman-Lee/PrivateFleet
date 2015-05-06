@@ -8,4 +8,8 @@
     <id>2</id>
     <name>Business</name>
   </Registration>
+  <Registration>
+    <id>3</id>
+    <name>Pension</name>
+  </Registration>
 </Registrations>
