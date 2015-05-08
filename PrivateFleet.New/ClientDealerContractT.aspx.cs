@@ -17,6 +17,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
     DataTable ParameterInfo;
     DataTable OtherInfo;
     DataTable CreditCardInfo;
+    DataTable TradeInInfo;
     string ReqID = "";
     string QuoteID = "";
     string ConsID = "";
@@ -32,6 +33,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         this.ParameterInfo = CDC.SearchRequestParametersByReqID(ReqID);
         this.OtherInfo = CDC.SearchConsultantDeliveryDateByQuoteID(QuoteID);
         this.CreditCardInfo = CDC.SearchCreditCard(Convert.ToInt64(this.CustomerInfo.Rows[0]["Id"].ToString()));
+        this.TradeInInfo = CDC.SearchTradeInByReqID(ReqID);
 
         if (!IsPostBack)
         {
@@ -49,12 +51,16 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             this.txtConsultant.Text = OtherInfo.Rows[0]["Name"].ToString();
 
             this.BindCarMakes();
+            this.BindTCarMakes();
             this.ddlCarMake.Items.FindByText(HeaderInfo.Rows[0]["Make"].ToString()).Selected = true;
             this.txtModel.Text = HeaderInfo.Rows[0]["Model"].ToString();
             this.txtSeries.Text = HeaderInfo.Rows[0]["Series"].ToString();
 
             this.BindFuelTypeXml();
+            this.BindTFuelTypeXml();
             this.BindTransmissionXml();
+            this.BindTTransmissionXml();
+            this.BindLogBookXml();
             if (ParameterInfo.Rows[4]["ParamValue"].ToString() != "") this.ddlFuelType.Items.FindByText(ParameterInfo.Rows[4]["ParamValue"].ToString()).Selected = true;
             if (ParameterInfo.Rows[2]["ParamValue"] != null && ParameterInfo.Rows[2]["ParamValue"].ToString() != "") this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
             this.txtBodyShape.Text = ParameterInfo.Rows[0]["ParamValue"].ToString();
@@ -76,6 +82,55 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             this.txtYear.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Year.ToString();
             this.txtMemberNo.Text = CreditCardInfo.Rows[0]["MemberNo"].ToString();
             this.txtDeposit.Text = CreditCardInfo.Rows[0]["Deposit"].ToString();
+
+            if(TradeInInfo.Rows.Count != 0)
+            {
+                this.txtTradeYear.Text = TradeInInfo.Rows[0]["T1year"].ToString();
+                this.ddlTCarMake.Items.FindByText(TradeInInfo.Rows[0]["UsedCar"].ToString()).Selected = true;
+                this.txtTModel.Text = TradeInInfo.Rows[0]["T1Model"].ToString();
+                this.txtTSeries.Text = TradeInInfo.Rows[0]["T1Series"].ToString();
+                this.txtTBodyShape.Text = TradeInInfo.Rows[0]["T1BodyShap"].ToString();
+                this.ddlTFuelType.Items.FindByText(TradeInInfo.Rows[0]["T1FuelType"].ToString()).Selected = true;
+            }
+            
+
+            Tab1.CssClass = ".Clicked";
+            Tab2.CssClass = ".Initial";
+            MainView.ActiveViewIndex = 0;
+        }
+    }
+
+    protected void Tab1_Click(object sender, EventArgs e)
+    {
+        Tab1.CssClass = ".Clicked";
+        Tab2.CssClass = ".Initial";
+        MainView.ActiveViewIndex = 0;
+    }
+
+    protected void Tab2_Click(object sender, EventArgs e)
+    {
+        Tab1.CssClass = ".Initial";
+        Tab2.CssClass = ".Clicked";
+        MainView.ActiveViewIndex = 1;
+    }
+
+    protected void Tab3_Click(object sender, EventArgs e)
+    {
+        Tab1.CssClass = ".Initial";
+        Tab2.CssClass = ".Initial";
+        MainView.ActiveViewIndex = 2;
+    }
+
+    private void BindLogBookXml()
+    {
+        string filePath = Server.MapPath("~/LogBooks.xml");
+        using (DataSet ds = new DataSet())
+        {
+            ds.ReadXml(filePath);
+            ddlTLogBooks.DataSource = ds;
+            ddlTLogBooks.DataTextField = "name";
+            ddlTLogBooks.DataValueField = "id";
+            ddlTLogBooks.DataBind();
         }
     }
 
@@ -92,6 +147,19 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         }
     }
 
+    private void BindTTransmissionXml()
+    {
+        string filePath = Server.MapPath("~/Transmission.xml");
+        using (DataSet ds = new DataSet())
+        {
+            ds.ReadXml(filePath);
+            ddlTTransmission.DataSource = ds;
+            ddlTTransmission.DataTextField = "name";
+            ddlTTransmission.DataValueField = "id";
+            ddlTTransmission.DataBind();
+        }
+    }
+
     private void BindFuelTypeXml()
     {
         string filePath = Server.MapPath("~/FuelType.xml");
@@ -102,6 +170,19 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             ddlFuelType.DataTextField = "name";
             ddlFuelType.DataValueField = "id";
             ddlFuelType.DataBind();
+        }
+    }
+
+    private void BindTFuelTypeXml()
+    {
+        string filePath = Server.MapPath("~/FuelType.xml");
+        using (DataSet ds = new DataSet())
+        {
+            ds.ReadXml(filePath);
+            ddlTFuelType.DataSource = ds;
+            ddlTFuelType.DataTextField = "name";
+            ddlTFuelType.DataValueField = "id";
+            ddlTFuelType.DataBind();
         }
     }
 
@@ -166,6 +247,27 @@ public partial class ClientDealerContractT : System.Web.UI.Page
                 ddlCarMake.Items.Insert(0, new ListItem("No Car Makes Found", "-Select-"));
             else
                 ddlCarMake.Items.Insert(0, new ListItem("-Select Car Make-", "-Select-"));
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
+
+    private void BindTCarMakes()
+    {
+        try
+        {
+            ddlTCarMake.Items.Clear();
+            Miles_Cls_CarMake objTCarMake = new Miles_Cls_CarMake();
+            DataTable dtTCarMakes = objTCarMake.GetAllCarMakes();
+            ddlTCarMake.DataSource = dtTCarMakes;
+            ddlTCarMake.DataBind();
+
+            if (ddlTCarMake.Items.Count == 0)
+                ddlTCarMake.Items.Insert(0, new ListItem("No Car Makes Found", "-Select-"));
+            else
+                ddlTCarMake.Items.Insert(0, new ListItem("-Select Car Make-", "-Select-"));
         }
         catch (Exception ex)
         {
@@ -316,8 +418,8 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         //string pdfTemplate = @"E:\ContractNoTrade.pdf";
         //string newFile = @"E:\ContractNoTrade2.pdf";
 
-        string pdfTemplate = Server.MapPath("~/Contract/ContractNoTrade.pdf");
-        string newFile = Server.MapPath("~/Contract/ContractNoTrade2.pdf");
+        string pdfTemplate = Server.MapPath("~/Contract/ContractTrade.pdf");
+        string newFile = Server.MapPath("~/Contract/ContractTrade2.pdf");
 
         PdfReader pdfReader = new PdfReader(pdfTemplate);
         PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
@@ -325,6 +427,13 @@ public partial class ClientDealerContractT : System.Web.UI.Page
 
         pdfFormFields.SetField("ContactP1", this.txtCustomerName.Text);
         pdfFormFields.SetField("VNMSP1", this.txtVehicleYear.Text + " " + this.ddlCarMake.SelectedItem.Text + " " + this.txtModel.Text + " " + this.txtSeries.Text);
+
+        pdfFormFields.SetField("CustomerContactDetail", this.txtCustomerName.Text
+            + "  of  " + this.txtCompany.Text
+            + "  " + this.txtAddress.Text
+            + "  " + this.ddlCity.SelectedItem.Text
+            + "  " + this.ddlState.SelectedItem.Text
+            + "  " + this.txtPostCode.Text);
 
         pdfFormFields.SetField("VNP2", this.txtVehicleYear.Text + " " + this.ddlCarMake.SelectedItem.Text);
         pdfFormFields.SetField("MSBP2", this.txtModel.Text + " " + this.txtSeries.Text + " " + this.txtBodyShape.Text);
@@ -394,6 +503,19 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         pdfFormFields.SetField("TotalonRoadCost", TempTotalonRoadCost.ToString());
 
         pdfFormFields.SetField("DeliveryDateP4", OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString());
+
+        pdfFormFields.SetField("TradeInBasicInfoP4", this.txtTradeYear.Text
+            + "  " + this.ddlTCarMake.SelectedItem.Text
+            + "  " + this.txtTModel.Text
+            + "  " + this.txtTSeries.Text
+            + "  " + this.ddlTTransmission.SelectedItem.Text
+            + "  " + this.txtBodyShape.Text
+            + "  " + this.txtBodyColor.Text
+            + "  " + this.ddlFuelType.SelectedItem.Text);
+        pdfFormFields.SetField("OdemeterP4", this.txtTOdometer.Text);
+        pdfFormFields.SetField("REP4", this.txtTExpiryMonth.Text + "/" + this.txtTExpiryYear.Text);
+        pdfFormFields.SetField("LogBooksP4", this.ddlTLogBooks.SelectedItem.Text);
+        pdfFormFields.SetField("TDescriptionP4", this.txtTDescription.Text);
 
         pdfFormFields.SetField("SupplierP5", DealerInfo.Rows[0]["Company"].ToString());
 

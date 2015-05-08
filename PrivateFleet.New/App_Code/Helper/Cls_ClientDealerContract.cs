@@ -183,6 +183,7 @@ public class Cls_ClientDealerContract
     }
     #endregion
 
+    //====The below is the TradeInSpecific
     public DataTable CheckIfTradeIn(string ReqID)
     {
         DbCommand objCmd = null;
@@ -200,6 +201,25 @@ public class Cls_ClientDealerContract
         return dt;
     }
 
+    public DataTable SearchTradeInByReqID(string ReqID)
+    {
+        DbCommand objCmd = null;
+        DataTable dt = null;
+        try
+        {
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchTradeInByReqID");
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "@ReqID", DbType.Int64, Convert.ToInt64(ReqID));
+            dt = Cls_DataAccess.getInstance().GetDataTable(objCmd);
+        }
+        catch (Exception ex)
+        {
+
+        }
+        return dt;
+    }
+
+
+    //====The above is the TradeInSpecific
     public DataTable SearchCreditCard(long ProspectId)
     {
         DbCommand objCmd = null;

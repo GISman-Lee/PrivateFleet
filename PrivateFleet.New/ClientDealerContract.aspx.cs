@@ -325,6 +325,13 @@ public partial class ClientDealerContract : System.Web.UI.Page
         pdfFormFields.SetField("ContactP1", this.txtCustomerName.Text);
         pdfFormFields.SetField("VNMSP1", this.txtVehicleYear.Text + " " + this.ddlCarMake.SelectedItem.Text + " " + this.txtModel.Text + " " + this.txtSeries.Text);
 
+        pdfFormFields.SetField("CustomerContactDetail", this.txtCustomerName.Text 
+            + "  of  " + this.txtCompany.Text
+            + "  " + this.txtAddress.Text
+            + "  " + this.ddlCity.SelectedItem.Text 
+            + "  " + this.ddlState.SelectedItem.Text 
+            + "  " + this.txtPostCode.Text);
+
         pdfFormFields.SetField("VNP2", this.txtVehicleYear.Text + " " + this.ddlCarMake.SelectedItem.Text);
         pdfFormFields.SetField("MSBP2", this.txtModel.Text + " " + this.txtSeries.Text + " " + this.txtBodyShape.Text);
         pdfFormFields.SetField("TSP2", this.ddlTransmission.SelectedItem.Text);

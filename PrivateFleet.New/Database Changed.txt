@@ -107,3 +107,7 @@ The Contents within brancket has been ignored
 
 34. In Storage Procedure "SpAddCreditCard": 
     Add 2 parameters, and 2 variables MemberNo, Deposit
+
+35. Add a field "ProspectId" in datatable "tbl_VDT_CustomerMaster" and datatable "tblTradeInDataHolder" (seems to have no side-effects)
+
+36. Add a new Storage Procedure "SpSearchTradeInByReqID"

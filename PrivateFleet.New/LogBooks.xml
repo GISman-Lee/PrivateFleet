@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LogBooks>
+  <LogBook>
+    <id>1</id>
+    <name>Fully Complete Log Books</name>
+  </LogBook>
+  <LogBook>
+    <id>2</id>
+    <name>No Log Books</name>
+  </LogBook>
+  <LogBook>
+    <id>3</id>
+    <name>Partially Complete Log Books</name>
+  </LogBook>
+</LogBooks>
