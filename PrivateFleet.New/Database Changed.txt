@@ -113,3 +113,7 @@ The Contents within brancket has been ignored
 36. Add a new Storage Procedure "SpSearchTradeInByReqID"
 
 37. Add the Storage Procedure "SpAddTradeInInfo"
+
+38. Add the Storage Procedure "SpAddQuoteProspectMapping"
+
+39. Add 2 Storage Procedures "SpDuplicateDealerMaster" and "SpDuplicateMakeDealer" to button duplicate for DealerMaster

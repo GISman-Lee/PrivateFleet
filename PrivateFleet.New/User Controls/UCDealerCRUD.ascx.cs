@@ -582,4 +582,12 @@ public partial class User_Controls_UCDealerCRUD : System.Web.UI.UserControl
         else
             ddlLocation.Items.Insert(0, new ListItem("- Select Location -", "-Select-"));
     }
+    protected void btnDuplicate_Click(object sender, EventArgs e)
+    {
+        Miles_Cls_Dealer MCD = new Miles_Cls_Dealer();
+        MCD.DuplicateDealerMaster(this.txtName.Text, this.txtCompany.Text, this.txtEmail.Text, this.txtFax.Text
+            , this.txtPhone.Text, this.txtMobile.Text, this.txtPCode.Text, this.ddlState.SelectedItem.Text
+            , this.ddlCity.SelectedItem.Text, this.txtLocation.Text, this.ddlState.SelectedValue);
+        MCD.DuplicateMakeDealer(this.ddlCarMake.SelectedValue, "0");
+    }
 }

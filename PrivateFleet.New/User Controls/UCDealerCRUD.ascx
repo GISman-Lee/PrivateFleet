@@ -171,6 +171,8 @@
                     ValidationGroup="VGSubmit" />&nbsp;<asp:ImageButton ID="imgbtnCancel" runat="server"
                         ImageUrl="~/Images/Cancel.gif" OnClick="imgbtnCancel_Click" onmouseout="this.src='Images/Cancel.gif'"
                         onmouseover="this.src='Images/Cancel_hvr.gif'" CausesValidation="False" />
+                <asp:Button ID="btnDuplicate" runat="server" Text="Duplicate"  
+                    BackColor = "Gold"  ForeColor ="Black" onclick="btnDuplicate_Click"/>
             </td>
             <td align="left" style="width: 76px">
             </td>

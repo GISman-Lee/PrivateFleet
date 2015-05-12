@@ -173,8 +173,16 @@ public partial class ViewSentRequests : System.Web.UI.Page
         {
             if(e.CommandName == "SelectRequest")
             {
-
-
+                string ProspectID = Request.QueryString["ProspectId"];
+                string ConsID = Request.QueryString["ConsID"];
+                LinkButton lnkChooseRequest = (LinkButton)e.CommandSource;
+                GridViewRow gvRow = (GridViewRow)lnkChooseRequest.Parent.Parent;
+                int intRequestId = Convert.ToInt32(gvRequests.DataKeys[gvRow.RowIndex].Values["ID"]);
+                if(ProspectID !=null && ConsID !=null)
+                {
+                    Cls_AddQuoteProspectMapping APM = new Cls_AddQuoteProspectMapping();
+                    APM.AddQuoteProspectMapping(ProspectID, ConsID, intRequestId);
+                }
             }
 
             else if (e.CommandName == "ViewDetails")

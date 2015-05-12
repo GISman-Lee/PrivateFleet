@@ -116,7 +116,7 @@
                             <asp:TemplateField>
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lnkChooseRequest" runat="server" CommandName="SelectRequest" Text="SELECT THIS"
-                                        CssClass="activeLink"></asp:LinkButton>
+                                        CssClass="activeLink" ></asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField>
