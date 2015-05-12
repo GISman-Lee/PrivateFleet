@@ -86,11 +86,19 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             if(TradeInInfo.Rows.Count != 0)
             {
                 this.txtTradeYear.Text = TradeInInfo.Rows[0]["T1year"].ToString();
-                this.ddlTCarMake.Items.FindByText(TradeInInfo.Rows[0]["UsedCar"].ToString()).Selected = true;
+                this.ddlTCarMake.Items.FindByText(TradeInInfo.Rows[0]["UsedCar"].ToString().ToUpper()).Selected = true;
                 this.txtTModel.Text = TradeInInfo.Rows[0]["T1Model"].ToString();
                 this.txtTSeries.Text = TradeInInfo.Rows[0]["T1Series"].ToString();
                 this.txtTBodyShape.Text = TradeInInfo.Rows[0]["T1BodyShap"].ToString();
                 this.ddlTFuelType.Items.FindByText(TradeInInfo.Rows[0]["T1FuelType"].ToString()).Selected = true;
+                this.txtTOdometer.Text = TradeInInfo.Rows[0]["T1Odometer"].ToString();
+                this.ddlTTransmission.Items.FindByText(TradeInInfo.Rows[0]["T1Transmission"].ToString()).Selected = true;
+                this.txtTBodyColour.Text = TradeInInfo.Rows[0]["T1BodyColor"].ToString();
+                this.txtTTrimColour.Text = TradeInInfo.Rows[0]["T1TrimColor"].ToString();
+                this.txtTExpiryMonth.Text = TradeInInfo.Rows[0]["T1RegExpMnt"].ToString();
+                this.txtTExpiryYear.Text = TradeInInfo.Rows[0]["T1RegExpYear"].ToString();
+                this.ddlTLogBooks.Items.FindByText(TradeInInfo.Rows[0]["LogBooks"].ToString()).Selected = true;
+                this.txtTDescription.Text = TradeInInfo.Rows[0]["TradeInDesc"].ToString();
             }
             
 
@@ -536,5 +544,14 @@ public partial class ClientDealerContractT : System.Web.UI.Page
     protected void Button6_Click(object sender, EventArgs e)
     {
 
+    }
+    protected void Button7_Click(object sender, EventArgs e)
+    {
+        CDC.AddTradeInInfo(Convert.ToInt64(this.CustomerInfo.Rows[0]["Id"].ToString()), this.txtTradeYear.Text
+            , this.ddlTCarMake.SelectedItem.Text, this.txtTModel.Text, this.txtTSeries.Text, this.txtTBodyShape.Text
+            , this.ddlTFuelType.SelectedItem.Text, Convert.ToInt64(this.txtTOdometer.Text), this.ddlTransmission.SelectedItem.Text
+            , this.txtTBodyColour.Text, this.txtTTrimColour.Text, Convert.ToInt32(this.txtTExpiryMonth.Text)
+            , Convert.ToInt32(this.txtTExpiryYear.Text), this.ddlTLogBooks.SelectedItem.Text, this.txtTDescription.Text
+            , this.txtCustomerName.Text, this.txtEmail.Text, this.txtPhone.Text, this.txtMobile.Text);
     }
 }

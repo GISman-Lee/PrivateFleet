@@ -114,6 +114,12 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:LinkButton ID="lnkChooseRequest" runat="server" CommandName="SelectRequest" Text="SELECT THIS"
+                                        CssClass="activeLink"></asp:LinkButton>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
                                 <%--added on 30 Jun 2012--%>
                                 <ItemTemplate>
                                     <asp:LinkButton ID="lnkAddDealer" runat="server" CommandName="AddMoreDealer" Text="Send More"

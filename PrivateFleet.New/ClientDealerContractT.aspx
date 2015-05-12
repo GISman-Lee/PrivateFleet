@@ -367,110 +367,120 @@
                     <asp:MultiView ID="MainView" runat="server">
                         <asp:View ID="View1" runat="server">
                             <table style="width: 100%; border-width: 1px; border-color: #666; border-style: solid">
-                                <br></br>
-                                <tr>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label46" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Year :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="txtTradeYear" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 108px; padding-left: 20px;">
-                                        <asp:Label ID="Label45" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;T Make :</asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:DropDownList ID="ddlTCarMake" runat="server" Style="width: 100px" DataTextField="Make"
-                                            DataValueField="ID">
-                                        </asp:DropDownList>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label47" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Model :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="txtTModel" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label48" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Series :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="txtTSeries" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label49" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Body Shape :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="txtTBodyShape" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 108px; padding-left: 20px;">
-                                        <asp:Label ID="Label50" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;T Fuel Type :</asp:Label>
-                                    </td>
-                                    <td>
-                                        <asp:DropDownList ID="ddlTFuelType" runat="server" Style="width: 100px">
-                                        </asp:DropDownList>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label51" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Odometer :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="txtTOdometer" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label52" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Transmission :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:DropDownList ID="ddlTTransmission" runat="server" Style="width: 100px">
-                                        </asp:DropDownList>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label53" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Body Color :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="txtTBodyColour" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label54" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Trim Color :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="txtTTrimColour" runat="server" Width="217px" CssClass="gvtextbox"></asp:TextBox>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label55" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Rego Expiry :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:TextBox ID="txtTExpiryMonth" runat="server" Width="20px" CssClass="gvtextbox"></asp:TextBox>
-                                        <asp:Label ID="Label56" runat="server" CssClass="label">&nbsp;/</asp:Label>
-                                        <asp:TextBox ID="txtTExpiryYear" runat="server" Width="20px" CssClass="gvtextbox"></asp:TextBox>
-                                    </td>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label57" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Log Books :</asp:Label>
-                                    </td>
-                                    <td style="width: 100px">
-                                        <asp:DropDownList ID="ddlTLogBooks" runat="server" Style="width: 100px">
-                                        </asp:DropDownList>
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td style="width: 108px">
-                                        <asp:Label ID="Label22" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Description :</asp:Label>
-                                    </td>
-                                    
-                                    <td style="width: 200px">
-                                        <asp:TextBox ID="txtTDescription" runat="server"  Width="200px" Height = "150px" CssClass="gvtextbox"  TextMode="MultiLine" ></asp:TextBox>
-                                    </td>
-                                </tr>
+                                <caption>
+                                    <br></br>
+                                    <tr>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label46" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Year :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:TextBox ID="txtTradeYear" runat="server" CssClass="gvtextbox" 
+                                                Width="217px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 108px; padding-left: 20px;">
+                                            <asp:Label ID="Label45" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;T Make :</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:DropDownList ID="ddlTCarMake" runat="server" DataTextField="Make" 
+                                                DataValueField="ID" Style="width: 100px">
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label47" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Model :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:TextBox ID="txtTModel" runat="server" CssClass="gvtextbox" Width="217px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label48" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Series :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:TextBox ID="txtTSeries" runat="server" CssClass="gvtextbox" Width="217px"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label49" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Body Shape :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:TextBox ID="txtTBodyShape" runat="server" CssClass="gvtextbox" 
+                                                Width="217px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 108px; padding-left: 20px;">
+                                            <asp:Label ID="Label50" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;T Fuel Type :</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:DropDownList ID="ddlTFuelType" runat="server" Style="width: 100px">
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label51" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Odometer :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:TextBox ID="txtTOdometer" runat="server" CssClass="gvtextbox" 
+                                                Width="217px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label52" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Transmission :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:DropDownList ID="ddlTTransmission" runat="server" Style="width: 100px">
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label53" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Body Color :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:TextBox ID="txtTBodyColour" runat="server" CssClass="gvtextbox" 
+                                                Width="217px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label54" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Trim Color :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:TextBox ID="txtTTrimColour" runat="server" CssClass="gvtextbox" 
+                                                Width="217px"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label55" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Rego Expiry :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:TextBox ID="txtTExpiryMonth" runat="server" CssClass="gvtextbox" 
+                                                Width="20px"></asp:TextBox>
+                                            <asp:Label ID="Label56" runat="server" CssClass="label">&nbsp;/</asp:Label>
+                                            <asp:TextBox ID="txtTExpiryYear" runat="server" CssClass="gvtextbox" 
+                                                Width="20px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label57" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Log Books :</asp:Label>
+                                        </td>
+                                        <td style="width: 100px">
+                                            <asp:DropDownList ID="ddlTLogBooks" runat="server" Style="width: 100px">
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 108px">
+                                            <asp:Label ID="Label22" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Description :</asp:Label>
+                                        </td>
+                                        <td style="width: 200px">
+                                            <asp:TextBox ID="txtTDescription" runat="server" CssClass="gvtextbox" 
+                                                Height="150px" TextMode="MultiLine" Width="200px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 90px">
+                                            <asp:Button ID="Button7" runat="server" onclick="Button7_Click" 
+                                                Style="padding-right: 10px" Text="Add TradeIn Info" />
+                                        </td>
+                                    </tr>
+                                </caption>
                             </table>
                         </asp:View>
                         <asp:View ID="View2" runat="server">

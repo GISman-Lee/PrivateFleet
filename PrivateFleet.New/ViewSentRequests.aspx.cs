@@ -171,7 +171,13 @@ public partial class ViewSentRequests : System.Web.UI.Page
         Cls_General objGeneral = new Cls_General();
         try
         {
-            if (e.CommandName == "ViewDetails")
+            if(e.CommandName == "SelectRequest")
+            {
+
+
+            }
+
+            else if (e.CommandName == "ViewDetails")
             {
                 if (ViewState[Cls_Constants.ALLOWED_ACTION_ON_PAGE] != null)
                     objGeneral.AllowedActions = ((DataTable)ViewState[Cls_Constants.ALLOWED_ACTION_ON_PAGE]);

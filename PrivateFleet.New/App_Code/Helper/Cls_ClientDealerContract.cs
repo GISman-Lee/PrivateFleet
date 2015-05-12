@@ -218,6 +218,42 @@ public class Cls_ClientDealerContract
         return dt;
     }
 
+    public void AddTradeInInfo(long ProspectId, string T1Year, string UsedCar, string T1Model, string T1Series
+        , string T1BodyShap, string T1FuelType, long T1Odometer, string T1Transmission, string T1BodyColor, string T1TrimColor
+        , int T1RegExpMnt, int T1RegExpYear, string LogBooks, string TradeInDesc, string Name, string Email, string Phone, string Mobile)
+    {
+        DbCommand objCmd = null;
+
+        try
+        {
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpAddTradeInInfo");
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "ProspectId", DbType.Int64, ProspectId);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1Year", DbType.String, T1Year);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "UsedCar", DbType.String, UsedCar);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1Model", DbType.String, T1Model);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1Series", DbType.String, T1Series);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1BodyShap", DbType.String, T1BodyShap);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1FuelType", DbType.String, T1FuelType);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1Odometer", DbType.Int64, T1Odometer);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1Transmission", DbType.String, T1Transmission);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1BodyColor", DbType.String, T1BodyColor);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1TrimColor", DbType.String, T1TrimColor);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1RegExpMnt", DbType.Int32, T1RegExpMnt);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1RegExpYear", DbType.Int32, T1RegExpYear);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "LogBooks", DbType.String, LogBooks);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "TradeInDesc", DbType.String, TradeInDesc);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "Name", DbType.String, Name);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "Email", DbType.String, Email);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "phone", DbType.String, Phone);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "Mobile", DbType.String, Mobile);
+
+            DataAccess.ExecuteNonQuery(objCmd);
+        }
+        catch (Exception ex)
+        {
+
+        }
+    }
 
     //====The above is the TradeInSpecific
     public DataTable SearchCreditCard(long ProspectId)

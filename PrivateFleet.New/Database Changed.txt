@@ -111,3 +111,5 @@ The Contents within brancket has been ignored
 35. Add a field "ProspectId" in datatable "tbl_VDT_CustomerMaster" and datatable "tblTradeInDataHolder" (seems to have no side-effects)
 
 36. Add a new Storage Procedure "SpSearchTradeInByReqID"
+
+37. Add the Storage Procedure "SpAddTradeInInfo"

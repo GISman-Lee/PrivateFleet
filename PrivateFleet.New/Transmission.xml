@@ -6,10 +6,14 @@
   </Transmission>
   <Transmission>
     <id>2</id>
-    <name>Mannual</name>
+    <name>Manual</name>
   </Transmission>
   <Transmission>
     <id>3</id>
     <name>Semi-Auto</name>
+  </Transmission>
+  <Transmission>
+    <id>4</id>
+    <name>Semi-Automatic</name>
   </Transmission>
 </Transmissions>
