@@ -86,10 +86,9 @@
             <td colspan="2" align="left" style="padding-bottom: 2px; height: 19px;">
                 <asp:ImageButton ID="btnBack_Copy" runat="server" ImageUrl="~/Images/back.gif" onmouseout="this.src='Images/back.gif'"
                     onmouseover="this.src='Images/back_hvr.gif'" OnClick="btnBack_Click" />
-            </td>
-
-            <td>
-                <asp:Button ID="Button1" runat="server" Text="Create Contract" OnClick = "CreateContract" style="height: 19px"/>
+                <asp:ImageButton ID="btnMakePaperwork" runat="server" 
+                    ImageUrl="~/Images/btnMakePaperwork.png" OnClick="CreateContract" Height="27px" 
+                    Width="123px" ImageAlign="Right"/>
             </td>
         </tr>
     </table>

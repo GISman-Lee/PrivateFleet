@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Tradestatuses>
+  <Tradestatus>
+    <id>1</id>
+    <name>Arrived With Agent</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>2</id>
+    <name>Cancelled</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>3</id>
+    <name>Dealer Purchased</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>4</id>
+    <name>Deposit Taken</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>5</id>
+    <name>Freight Booked - Chatswood</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>6</id>
+    <name>Freight Booked - Minto</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>7</id>
+    <name>In Dispute</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>8</id>
+    <name>In Stock - Bespoke</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>9</id>
+    <name>In Stock - CHAT</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>10</id>
+    <name>In Stock - MINTO</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>11</id>
+    <name>In Transit</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>12</id>
+    <name>Optional</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>13</id>
+    <name>Pending</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>14</id>
+    <name>Pickles</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>15</id>
+    <name>Pre-Traded</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>16</id>
+    <name>Retailed - Minto</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>17</id>
+    <name>Retailed CHAT</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>18</id>
+    <name>Revalue</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>19</id>
+    <name>sold Bartercard</name>
+  </Tradestatus>
+  <Tradestatus>
+    <id>20</id>
+    <name>Wholesaled</name>
+  </Tradestatus>
+</Tradestatuses>

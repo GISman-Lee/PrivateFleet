@@ -162,17 +162,26 @@
                 <asp:HiddenField ID="hdfDBOperation" runat="server" />
                 &nbsp;
                 <%-- Added code by Amol --%>
-                <asp:ImageButton ID="ImagebtnSearch" runat="server" ImageUrl="~/Images/Search_dealer.gif"
-                    OnClick="ImagebtnSearch_Click" onmouseout="this.src='Images/Search_dealer.gif'"
-                    onmouseover="this.src='Images/Search_dealer_hvr.gif'" />&nbsp;
-                <%-- Added code by Amol --%>
-                <asp:ImageButton ID="imgbtnAdd" runat="server" ImageUrl="~/Images/Submit.gif" OnClick="imgbtnAdd_Click"
-                    onmouseout="this.src='Images/Submit.gif'" onmouseover="this.src='Images/Submit_hvr.gif'"
-                    ValidationGroup="VGSubmit" />&nbsp;<asp:ImageButton ID="imgbtnCancel" runat="server"
-                        ImageUrl="~/Images/Cancel.gif" OnClick="imgbtnCancel_Click" onmouseout="this.src='Images/Cancel.gif'"
-                        onmouseover="this.src='Images/Cancel_hvr.gif'" CausesValidation="False" />
-                <asp:Button ID="btnDuplicate" runat="server" Text="Duplicate"  
-                    BackColor = "Gold"  ForeColor ="Black" onclick="btnDuplicate_Click"/>
+                <br>
+                <br>
+                <br></br>
+                <asp:ImageButton ID="ImagebtnSearch" runat="server" 
+                    ImageUrl="~/Images/Search_dealer.gif" OnClick="ImagebtnSearch_Click" 
+                    onmouseout="this.src='Images/Search_dealer.gif'" 
+                    onmouseover="this.src='Images/Search_dealer_hvr.gif'" />
+                &nbsp; <%-- Added code by Amol --%>
+                <asp:ImageButton ID="imgbtnAdd" runat="server" ImageUrl="~/Images/Submit.gif" 
+                    OnClick="imgbtnAdd_Click" onmouseout="this.src='Images/Submit.gif'" 
+                    onmouseover="this.src='Images/Submit_hvr.gif'" ValidationGroup="VGSubmit" />
+                &nbsp;<asp:ImageButton ID="imgbtnCancel" runat="server" CausesValidation="False" 
+                    ImageUrl="~/Images/Cancel.gif" OnClick="imgbtnCancel_Click" 
+                    onmouseout="this.src='Images/Cancel.gif'" 
+                    onmouseover="this.src='Images/Cancel_hvr.gif'" />
+                <asp:ImageButton ID="btnDuplicate" runat="server" Height="21px" 
+                    ImageUrl="~/Images/Duplicate.png" OnClick="btnDuplicate_Click" Width="77px" />
+                <br></br>
+                </br>
+                </br>
             </td>
             <td align="left" style="width: 76px">
             </td>

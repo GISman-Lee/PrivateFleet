@@ -220,7 +220,7 @@ public class Cls_ClientDealerContract
 
     public void AddTradeInInfo(long ProspectId, string T1Year, string UsedCar, string T1Model, string T1Series
         , string T1BodyShap, string T1FuelType, long T1Odometer, string T1Transmission, string T1BodyColor, string T1TrimColor
-        , int T1RegExpMnt, int T1RegExpYear, string LogBooks, string TradeInDesc, string Name, string Email, string Phone, string Mobile)
+        , int T1RegExpMnt, int T1RegExpYear, string LogBooks, string TradeInDesc, string T1OrigValue, string Tradestatus, string Name, string Email, string Phone, string Mobile, string ReqID)
     {
         DbCommand objCmd = null;
 
@@ -242,10 +242,13 @@ public class Cls_ClientDealerContract
             Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1RegExpYear", DbType.Int32, T1RegExpYear);
             Cls_DataAccess.getInstance().AddInParameter(objCmd, "LogBooks", DbType.String, LogBooks);
             Cls_DataAccess.getInstance().AddInParameter(objCmd, "TradeInDesc", DbType.String, TradeInDesc);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "T1OrigValue", DbType.String, T1OrigValue);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "Tradestatus", DbType.String, Tradestatus);
             Cls_DataAccess.getInstance().AddInParameter(objCmd, "Name", DbType.String, Name);
             Cls_DataAccess.getInstance().AddInParameter(objCmd, "Email", DbType.String, Email);
             Cls_DataAccess.getInstance().AddInParameter(objCmd, "phone", DbType.String, Phone);
             Cls_DataAccess.getInstance().AddInParameter(objCmd, "Mobile", DbType.String, Mobile);
+            Cls_DataAccess.getInstance().AddInParameter(objCmd, "RequestId", DbType.Int64, Convert.ToInt64(ReqID));
 
             DataAccess.ExecuteNonQuery(objCmd);
         }

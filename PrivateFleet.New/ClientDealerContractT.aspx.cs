@@ -49,6 +49,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             this.ddlCity.Items.FindByText(CustomerInfo.Rows[0]["City"].ToString()).Selected = true;
             this.ddlState.Items.FindByText(CustomerInfo.Rows[0]["State"].ToString()).Selected = true;
             this.txtConsultant.Text = OtherInfo.Rows[0]["Name"].ToString();
+            this.txtSurName.Text = CustomerInfo.Rows[0]["LName"].ToString();
 
             this.BindCarMakes();
             this.BindTCarMakes();
@@ -83,10 +84,12 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             this.txtMemberNo.Text = CreditCardInfo.Rows[0]["MemberNo"].ToString();
             this.txtDeposit.Text = CreditCardInfo.Rows[0]["Deposit"].ToString();
 
+            this.BindTradeStatusXml();
+
             if(TradeInInfo.Rows.Count != 0)
             {
                 this.txtTradeYear.Text = TradeInInfo.Rows[0]["T1year"].ToString();
-                this.ddlTCarMake.Items.FindByText(TradeInInfo.Rows[0]["UsedCar"].ToString().ToUpper()).Selected = true;
+                if(TradeInInfo.Rows[0]["UsedCar"] != null) this.ddlTCarMake.Items.FindByText(TradeInInfo.Rows[0]["UsedCar"].ToString().ToUpper()).Selected = true;
                 this.txtTModel.Text = TradeInInfo.Rows[0]["T1Model"].ToString();
                 this.txtTSeries.Text = TradeInInfo.Rows[0]["T1Series"].ToString();
                 this.txtTBodyShape.Text = TradeInInfo.Rows[0]["T1BodyShap"].ToString();
@@ -99,33 +102,43 @@ public partial class ClientDealerContractT : System.Web.UI.Page
                 this.txtTExpiryYear.Text = TradeInInfo.Rows[0]["T1RegExpYear"].ToString();
                 this.ddlTLogBooks.Items.FindByText(TradeInInfo.Rows[0]["LogBooks"].ToString()).Selected = true;
                 this.txtTDescription.Text = TradeInInfo.Rows[0]["TradeInDesc"].ToString();
+                this.txtTOrigValue.Text = TradeInInfo.Rows[0]["T1OrigValue"].ToString();
+                if (TradeInInfo.Rows[0]["Tradestatus"] != null && TradeInInfo.Rows[0]["Tradestatus"].ToString() != "")
+                {
+                    this.ddlTTradeStatus.Items.FindByText(TradeInInfo.Rows[0]["Tradestatus"].ToString()).Selected = true;
+                }
+                else 
+                {
+                    this.ddlTTradeStatus.Items.FindByText("Pending").Selected = true;
+                }
             }
             
 
-            Tab1.CssClass = ".Clicked";
-            Tab2.CssClass = ".Initial";
+            //Tab1.CssClass = ".Clicked";
+            //Tab2.CssClass = ".Initial";
+            
             MainView.ActiveViewIndex = 0;
         }
     }
 
     protected void Tab1_Click(object sender, EventArgs e)
     {
-        Tab1.CssClass = ".Clicked";
-        Tab2.CssClass = ".Initial";
+        Tab_1.CssClass = ".Clicked";
+        Tab_2.CssClass = ".Initial";
         MainView.ActiveViewIndex = 0;
     }
 
     protected void Tab2_Click(object sender, EventArgs e)
     {
-        Tab1.CssClass = ".Initial";
-        Tab2.CssClass = ".Clicked";
+        Tab_1.CssClass = ".Initial";
+        Tab_2.CssClass = ".Clicked";
         MainView.ActiveViewIndex = 1;
     }
 
     protected void Tab3_Click(object sender, EventArgs e)
     {
-        Tab1.CssClass = ".Initial";
-        Tab2.CssClass = ".Initial";
+        //Tab1.CssClass = ".Initial";
+        //Tab2.CssClass = ".Initial";
         MainView.ActiveViewIndex = 2;
     }
 
@@ -417,6 +430,19 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         }
     }
 
+    private void BindTradeStatusXml()
+    {
+        string filePath = Server.MapPath("~/Tradestatus.xml");
+        using (DataSet ds = new DataSet())
+        {
+            ds.ReadXml(filePath);
+            ddlTTradeStatus.DataSource = ds;
+            ddlTTradeStatus.DataTextField = "name";
+            ddlTTradeStatus.DataValueField = "id";
+            ddlTTradeStatus.DataBind();
+        }
+    }
+
     protected void Button2_Click(object sender, EventArgs e)
     {
         //this.txtPrice.Text = ddlCarMake.SelectedItem.Value +ddlCarMake.SelectedItem.Text;  
@@ -551,7 +577,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             , this.ddlTCarMake.SelectedItem.Text, this.txtTModel.Text, this.txtTSeries.Text, this.txtTBodyShape.Text
             , this.ddlTFuelType.SelectedItem.Text, Convert.ToInt64(this.txtTOdometer.Text), this.ddlTransmission.SelectedItem.Text
             , this.txtTBodyColour.Text, this.txtTTrimColour.Text, Convert.ToInt32(this.txtTExpiryMonth.Text)
-            , Convert.ToInt32(this.txtTExpiryYear.Text), this.ddlTLogBooks.SelectedItem.Text, this.txtTDescription.Text
-            , this.txtCustomerName.Text, this.txtEmail.Text, this.txtPhone.Text, this.txtMobile.Text);
+            , Convert.ToInt32(this.txtTExpiryYear.Text), this.ddlTLogBooks.SelectedItem.Text, this.txtTDescription.Text, this.txtTOrigValue.Text
+            , this.ddlTTradeStatus.SelectedItem.Text, this.txtCustomerName.Text, this.txtEmail.Text, this.txtPhone.Text, this.txtMobile.Text, this.ReqID);
     }
 }

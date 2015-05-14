@@ -47,6 +47,7 @@ public partial class ClientDealerContract : System.Web.UI.Page
             this.ddlCity.Items.FindByText(CustomerInfo.Rows[0]["City"].ToString()).Selected = true;
             this.ddlState.Items.FindByText(CustomerInfo.Rows[0]["State"].ToString()).Selected = true;
             this.txtConsultant.Text = OtherInfo.Rows[0]["Name"].ToString();
+            this.txtSurName.Text = CustomerInfo.Rows[0]["LName"].ToString();
 
             this.BindCarMakes();
             this.ddlCarMake.Items.FindByText(HeaderInfo.Rows[0]["Make"].ToString()).Selected = true;
@@ -419,6 +420,12 @@ public partial class ClientDealerContract : System.Web.UI.Page
         DateTime ExpDate = new DateTime(Convert.ToInt32("20"+this.txtYear.Text), Convert.ToInt32(this.txtMonth.Text), 1);
         CDC.AddCreditCard(Convert.ToInt32(CustomerInfo.Rows[0]["Id"].ToString()), this.txtCVNumber.Text, this.txtCardNumber.Text, this.ddlCardType.SelectedItem.Text, ExpDate, this.txtMonth.Text, this.txtYear.Text, this.txtMemberNo.Text, this.txtDeposit.Text);
     }
+
+    protected void AddDeliveryTrack_Click(object sender, EventArgs e)
+    {
+
+    }
+
     protected void Button6_Click(object sender, EventArgs e)
     {
         
