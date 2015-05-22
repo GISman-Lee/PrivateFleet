@@ -194,18 +194,30 @@ public partial class ViewShortlistedQuotation : System.Web.UI.Page
     {
         try
         {
-            string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContract.aspx";
+            string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx?TStatus=0";  //Test Version
+            //string PageToRedirect = "http://quotes.privatefleet.com.au/ClientDealerContractT.aspx?TStatus=0";
             string ReqID = Request.QueryString["ReqID"];
             string QuoteID = Request.QueryString["QuoteID"];
             Cls_ClientDealerContract CDC = new Cls_ClientDealerContract();
             DataTable TradeInInfo = CDC.CheckIfTradeIn(ReqID);
             DataTable HeaderInfo = CDC.SearchHeaderInfo(ReqID);
-            if(Convert.ToBoolean(TradeInInfo.Rows[0]["TradeIn"]) == true)
+            if (TradeInInfo.Rows.Count != 0)
             {
-                PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx";
+                if (Convert.ToBoolean(TradeInInfo.Rows[0]["TradeIn"]) == true)
+                {
+                    PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx?TStatus=1";  //Test Version
+                    //PageToRedirect = "http://quotes.privatefleet.com.au/ClientDealerContractT.aspx?TStatus=1";
+                }
+
+                Response.Redirect(PageToRedirect + "&ReqID=" + ReqID + "&QuoteID=" + QuoteID + "&ConsID=" + HeaderInfo.Rows[0]["ConsultantID"].ToString(), true);
             }
-     
-            Response.Redirect(PageToRedirect + "?ReqID=" + ReqID + "&QuoteID=" + QuoteID + "&ConsID=" + HeaderInfo.Rows[0]["ConsultantID"].ToString(), true);
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "Not bind a client", "<script> alert('This Quote has not binded to a client, please go to CRM to bind the client');</script>", false);
+            }
+            
+            
+            //Response.Redirect(PageToRedirect + "?ReqID=" + ReqID + "&QuoteID=" + QuoteID + "&ConsID=" + HeaderInfo.Rows[0]["ConsultantID"].ToString(), true);
         }
         catch (Exception ex)
         {

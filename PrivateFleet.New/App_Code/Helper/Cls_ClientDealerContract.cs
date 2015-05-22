@@ -258,7 +258,79 @@ public class Cls_ClientDealerContract
         }
     }
 
-    //====The above is the TradeInSpecific
+    //==== The above is the TradeInSpecific
+
+    //==== The below is the DeliveryTrack - VDT_CustomerMaster Specific
+    public void AddDeliveryTrack(string UserName, string Password, string MemberId, string FirstName, string LastName
+        , string FullName, string Email, string State, string StateID, string City, string PostalCode, string Address
+        , string Phone, string Mobile, string Fax, string DealerCompany, string DealerName, string DealerID, string DealerKey
+        , string DealerPhone, string DealerEmail, string Make, string MakeID, string Model, string Consultant
+        , string DeliveryDate, string Tradestatus, string ProspectId, string RequestId)
+    {
+        try
+        {
+            DbCommand objCmd = null;
+
+            objCmd = DataAccess.GetCommand(System.Data.CommandType.StoredProcedure, "SpAddDeliveryTrack");
+            DataAccess.AddInParameter(objCmd, "UserName", DbType.String, UserName);
+            DataAccess.AddInParameter(objCmd, "Password", DbType.String, Password);
+            DataAccess.AddInParameter(objCmd, "MemberId", DbType.String, MemberId);
+            DataAccess.AddInParameter(objCmd, "FirstName", DbType.String, FirstName);
+            DataAccess.AddInParameter(objCmd, "LastName", DbType.String, LastName);
+            DataAccess.AddInParameter(objCmd, "FullName", DbType.String, FullName);
+            DataAccess.AddInParameter(objCmd, "Email", DbType.String, Email);
+            DataAccess.AddInParameter(objCmd, "State", DbType.String, State);
+            DataAccess.AddInParameter(objCmd, "StateID", DbType.Int32, Convert.ToInt32(StateID));
+            DataAccess.AddInParameter(objCmd, "City", DbType.String, City);
+            DataAccess.AddInParameter(objCmd, "PostalCode", DbType.String, PostalCode);
+            DataAccess.AddInParameter(objCmd, "Address", DbType.String, Address);
+
+            DataAccess.AddInParameter(objCmd, "Phone", DbType.String, Phone);
+            DataAccess.AddInParameter(objCmd, "Mobile", DbType.String, Mobile);
+            DataAccess.AddInParameter(objCmd, "Fax", DbType.String, Fax);
+            DataAccess.AddInParameter(objCmd, "DealerCompany", DbType.String, DealerCompany);
+            DataAccess.AddInParameter(objCmd, "DealerName", DbType.String, DealerName);
+            DataAccess.AddInParameter(objCmd, "DealerID", DbType.Int32, Convert.ToInt32(DealerID));
+            DataAccess.AddInParameter(objCmd, "DealerKey", DbType.String, DealerKey);
+
+            DataAccess.AddInParameter(objCmd, "DealerPhone", DbType.String, DealerPhone);
+            DataAccess.AddInParameter(objCmd, "DealerEmail", DbType.String, DealerEmail);
+            DataAccess.AddInParameter(objCmd, "Make", DbType.String, Make);
+            DataAccess.AddInParameter(objCmd, "MakeID", DbType.Int32, Convert.ToInt32(MakeID));
+            DataAccess.AddInParameter(objCmd, "Model", DbType.String, Model);
+            DataAccess.AddInParameter(objCmd, "Consultant", DbType.String, Consultant);
+            DataAccess.AddInParameter(objCmd, "DeliveryDate", DbType.DateTime, Convert.ToDateTime(DeliveryDate));
+            DataAccess.AddInParameter(objCmd, "Tradestatus", DbType.String, Tradestatus);
+            DataAccess.AddInParameter(objCmd, "ProspectId", DbType.Int64, Convert.ToInt64(ProspectId));
+            DataAccess.AddInParameter(objCmd, "RequestId", DbType.String, RequestId);
+
+            DataAccess.ExecuteNonQuery(objCmd);
+        }
+        catch (Exception ex) { }
+    }
+
+    public void UpdatePFMembership(string LastName, string Password, string MemberId, string DepositAmount
+        , string DepositTakenBy, string MembershipFee, string ProspectId)
+    {
+        try
+        {
+            DbCommand objCmd = null;
+
+            objCmd = DataAccess.GetCommand(System.Data.CommandType.StoredProcedure, "SpUpdatePFMembership");
+
+            DataAccess.AddInParameter(objCmd, "Lastname", DbType.String, LastName);
+            DataAccess.AddInParameter(objCmd, "Password", DbType.String, Password);
+            DataAccess.AddInParameter(objCmd, "MemberId", DbType.String, MemberId);
+            DataAccess.AddInParameter(objCmd, "DepositAmount", DbType.Decimal, Convert.ToDecimal(DepositAmount));
+            DataAccess.AddInParameter(objCmd, "DepositTakenBy", DbType.String, DepositTakenBy);
+            DataAccess.AddInParameter(objCmd, "MembershipFee", DbType.Decimal, Convert.ToDecimal(MembershipFee));
+            DataAccess.AddInParameter(objCmd, "ProspectId", DbType.Int64, Convert.ToInt64(ProspectId));
+
+            DataAccess.ExecuteNonQuery(objCmd);
+        }
+        catch (Exception ex) { }
+    }
+    //==== The above is the DeliveryTrack - VDT_CustomerMaster Specific
     public DataTable SearchCreditCard(long ProspectId)
     {
         DbCommand objCmd = null;

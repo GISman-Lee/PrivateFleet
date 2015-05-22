@@ -97,6 +97,11 @@ public partial class ViewSentRequests : System.Web.UI.Page
             //Convert.ToDateTime(TxtToDate.Text.ToString());
             objRequest.ToDate = date1;//.Add(ts);
             objRequest.ConsultantId = Convert.ToInt32(Session[Cls_Constants.LOGGED_IN_USERID]);
+            if (Convert.ToInt32(Session[Cls_Constants.ROLE_ID]) == 1)
+            {
+                objRequest.ConsultantId = -9999;
+            }
+            
             dt = objRequest.GetSentQuoteRequests();
 
             dv = dt.DefaultView;

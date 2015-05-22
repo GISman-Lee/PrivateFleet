@@ -122,20 +122,6 @@
                     </asp:DropDownList>
                 </td>
             </tr>
-            <tr>
-                <td style="width: 150px">
-                    <asp:Label ID="Label7" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Member No :</asp:Label>
-                </td>
-                <td style="width: 160px">
-                    <asp:TextBox ID="txtMemberNo" runat="server" Width="160px" CssClass="gvtextbox"></asp:TextBox>
-                </td>
-                <td style="width: 150px; padding-left: 20px;">
-                    <asp:Label ID="Label60" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Sur Name :</asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="txtSurName" runat="server" CssClass="gvtextbox" Width="160px"></asp:TextBox>
-                </td>
-            </tr>
         </table>
         <table style="padding: 20px; border-width: 2px; border-color: gray; border-style: solid;Width:100%;">
             <tr>
@@ -216,14 +202,6 @@
             </tr>
         </table>
         <table style="padding: 20px; border-width: 2px; border-color: gray; border-style: solid;Width:100%;">
-            <tr>
-                <td style="width: 150px; padding-left: 20px;">
-                    <asp:Label ID="Label23" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Deposit :</asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="txtDeposit" runat="server" CssClass="gvtextbox" Width="160px"></asp:TextBox>
-                </td>
-            </tr>
             <tr>
                 <td style="width: 150px">
                     <asp:Label ID="Label26" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Card Type :</asp:Label>
@@ -373,7 +351,7 @@
                 <td>
                     <!--http://dabuttonfactory.com/#t=TAB++2&f=Calibri-Bold&ts=20&tc=fff&tshs=1&tshc=000&hp=20&vp=8&c=5&bgt=gradient&bgc=d4d8dc&ebgc=073763-->
                     <asp:ImageButton ID="Tab_1" runat="server" ImageUrl="~/Images/tabTrade1.png"  OnClick="Tab1_Click"  ImageAlign="Left"  CssClass=".Clicked" />
-                    <asp:ImageButton ID="Tab_2" runat="server" ImageUrl="~/Images/tabTab2.png"  OnClick="Tab2_Click"  ImageAlign="Left"  CssClass=".Initial" />
+                    <asp:ImageButton ID="Tab_2" runat="server" ImageUrl="~/Images/tabPFMembership.png"  OnClick="Tab2_Click"  ImageAlign="Left"  CssClass=".Initial" />
                     <asp:MultiView ID="MainView" runat="server">
                         <asp:View ID="View1" runat="server">
                             <table style="width: 100%; border-width: 5px; border-color: Navy; border-style: solid;">
@@ -496,18 +474,17 @@
                                         <td style="width: 150px">
                                             <asp:Label ID="Label22" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;T Description:</asp:Label>
                                         </td>
-                                        <td style="width: 200px; padding-left:10px">
-                                            <asp:TextBox ID="txtTDescription" runat="server" CssClass="gvtextbox" 
-                                                Height="100px" TextMode="MultiLine" Width="158px"></asp:TextBox>
-                                        </td>    
+                                        <td style="width: 200px; padding-left: 10px">
+                                            <asp:TextBox ID="txtTDescription" runat="server" CssClass="gvtextbox" Height="100px"
+                                                TextMode="MultiLine" Width="158px"></asp:TextBox>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>
                                         </td>
                                         <td style="width: 90px">
-                                            <asp:ImageButton ID="btnAddTradeIn" runat="server" 
-                                                ImageUrl="~/Images/btnAddTradeIn.png"  CssClass="btnAddTradeIn"  
-                                                OnClick="Button7_Click"  ImageAlign="left" Width="113px" />
+                                            <asp:ImageButton ID="btnAddTradeIn" runat="server" ImageUrl="~/Images/btnAddTradeIn.png"
+                                                CssClass="btnAddTradeIn" OnClick="Button7_Click" ImageAlign="left" Width="113px" />
                                         </td>
                                     </tr>
                                 </caption>
@@ -515,23 +492,67 @@
                         </asp:View>
                         <asp:View ID="View2" runat="server">
                             <table style="width: 100%; border-width: 5px; border-color: Navy; border-style: solid">
-                                <tr>
-                                    <td>
-                                        Reserve Fields for Future Use
-                                    </td>
-                                </tr>
+                                <caption>
+                                    <tr>
+                                        <td style="width: 170px">
+                                            <asp:Label ID="Label7" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Member No :</asp:Label>
+                                        </td>
+                                        <td style="width: 160px; padding-left: 10px;">
+                                            <asp:TextBox ID="txtMemberNo" runat="server" Width="160px" CssClass="gvtextbox"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 150px; padding-left: 10px;">
+                                            <asp:Label ID="Label60" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Sur Name :</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtSurName" runat="server" CssClass="gvtextbox" Width="160px"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 170px">
+                                            <asp:Label ID="Label61" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Deposit Amount :</asp:Label>
+                                        </td>
+                                        <td style="width: 160px; padding-left: 10px;">
+                                            <asp:TextBox ID="txtDepositAmount" runat="server" CssClass="gvtextbox" 
+                                                Width="160px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 150px; padding-left: 10px;">
+                                            <asp:Label ID="Label62" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Deposit Taken :</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:DropDownList ID="ddlDepositTaken" runat="server" Style="width: 160px">
+                                            </asp:DropDownList>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 170px">
+                                            <asp:Label ID="Label63" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Membership Fee :</asp:Label>
+                                        </td>
+                                        <td style="width: 160px; padding-left: 10px;">
+                                            <asp:TextBox ID="txtMembershipFee" runat="server" CssClass="gvtextbox" 
+                                                Width="160px"></asp:TextBox>
+                                        </td>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <asp:ImageButton ID="btnUpdatePFMembership" runat="server" ImageUrl="~/Images/btnUpdatePFMembership.png"  CssClass="btnAddTradeIn"  onClick="UpdatePFMembership_Click" Style=""/>
+                                        </td>
+                                    </tr>
+                                </caption>
                             </table>
                         </asp:View>
                     </asp:MultiView>
                 </td>
             </tr>
         </table>
-        <asp:ImageButton ID="btnCreateContract" runat="server" ImageUrl="~/Images/btnCreateContract.png"  CssClass="btnAddTradeIn"  onClick="Button4_Click"  ImageAlign=Right Style="margin-top: 30px; margin-right: 40px"/>
-        <table style="padding: 140px">
+        <table style="padding: 30px">
+        <asp:ImageButton ID="btnAddDeliveryTrack" runat="server" ImageUrl="~/Images/btnAddDeliveryTrack.png"  CssClass="btnAddTradeIn"  onClick="AddDeliveryTrack_Click" Style="margin-top: 20px; margin-left: 30px"/>
+        <asp:ImageButton ID="btnCreateContract" runat="server" ImageUrl="~/Images/btnCreateContract.png"  CssClass="btnAddTradeIn"  onClick="Button4_Click"  ImageAlign=Right Style="margin-top: 20px; margin-right: 30px"/>
+        </table>
+        <table style="padding: 10px; padding-left: 30px">
             <tr>
                 <asp:HyperLink ID="LinkDownLoad" runat="server" NavigateUrl="~/Contract/ContractTrade2.pdf"
-                    Visible="false">Down Load Contract</asp:HyperLink>
-            </tr>  
+                    Visible="false" >Down Load Contract</asp:HyperLink>
+            </tr>
         </table>
     </asp:Panel>
 </asp:Content>

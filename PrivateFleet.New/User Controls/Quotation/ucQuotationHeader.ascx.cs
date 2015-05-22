@@ -70,7 +70,6 @@ public partial class User_Controls_Quotation_ucQuotationHeader : System.Web.UI.U
         }
         catch (Exception ex)
         {
-
             throw;
         }
     }

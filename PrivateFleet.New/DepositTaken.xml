@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DepositTakens>
+  <DepositTaken>
+    <id>1</id>
+    <name></name>
+  </DepositTaken>
+  <DepositTaken>
+    <id>2</id>
+    <name>Dealer</name>
+  </DepositTaken>
+  <DepositTaken>
+    <id>3</id>
+    <name>Private Fleet</name>
+  </DepositTaken>
+  <DepositTaken>
+    <id>4</id>
+    <name>Refunded</name>
+  </DepositTaken>
+</DepositTakens>

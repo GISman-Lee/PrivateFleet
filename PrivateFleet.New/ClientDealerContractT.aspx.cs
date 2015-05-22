@@ -21,39 +21,54 @@ public partial class ClientDealerContractT : System.Web.UI.Page
     string ReqID = "";
     string QuoteID = "";
     string ConsID = "";
+    string TStatus = "";
 
     protected void Page_Load(object sender, EventArgs e)
     {
         this.ReqID = Request.QueryString["ReqID"];
         this.QuoteID = Request.QueryString["QuoteID"];
         this.ConsID = Request.QueryString["ConsID"];
+        this.TStatus = Request.QueryString["TStatus"];
         this.CustomerInfo = CDC.SearchCustomerInfo(ReqID);
         this.DealerInfo = CDC.SearchDealerInfo(ReqID);
         this.HeaderInfo = CDC.SearchHeaderInfo(ReqID);
         this.ParameterInfo = CDC.SearchRequestParametersByReqID(ReqID);
         this.OtherInfo = CDC.SearchConsultantDeliveryDateByQuoteID(QuoteID);
-        this.CreditCardInfo = CDC.SearchCreditCard(Convert.ToInt64(this.CustomerInfo.Rows[0]["Id"].ToString()));
+        if(this.CustomerInfo.Rows.Count !=0) this.CreditCardInfo = CDC.SearchCreditCard(Convert.ToInt64(this.CustomerInfo.Rows[0]["Id"].ToString()));
         this.TradeInInfo = CDC.SearchTradeInByReqID(ReqID);
 
         if (!IsPostBack)
         {
             this.BindStateXml();
             this.BindCities();
+            this.BindDepositTakenXml();
             this.txtCustomerName.Text = CustomerInfo.Rows[0]["Fname"].ToString() + " " + CustomerInfo.Rows[0]["LName"].ToString();
             this.txtEmail.Text = CustomerInfo.Rows[0]["Email"].ToString();
-            this.txtAddress.Text = CustomerInfo.Rows[0]["Add1"].ToString() + " " + CustomerInfo.Rows[0]["Add2"].ToString();
+            if (CustomerInfo.Columns.Contains("Add1"))
+            {
+                this.txtAddress.Text = CustomerInfo.Rows[0]["Add1"].ToString() + " " + CustomerInfo.Rows[0]["Add2"].ToString();
+            }
+            else
+            {
+                this.txtAddress.Text = CustomerInfo.Rows[0]["Address"].ToString();
+                this.txtMemberNo.Text = CustomerInfo.Rows[0]["MemberNo"].ToString();
+                this.txtDepositAmount.Text = CustomerInfo.Rows[0]["DepositAmount"].ToString();
+                this.txtMembershipFee.Text = CustomerInfo.Rows[0]["MembershipFee"].ToString();
+                this.ddlDepositTaken.Items.FindByText(CustomerInfo.Rows[0]["DepositTakenBy"].ToString()).Selected = true;
+            }
+            
             this.txtFax.Text = CustomerInfo.Rows[0]["Fax"].ToString();
             this.txtMobile.Text = CustomerInfo.Rows[0]["Mobile"].ToString();
             this.txtPhone.Text = CustomerInfo.Rows[0]["Phone"].ToString();
             this.txtPostCode.Text = CustomerInfo.Rows[0]["PostalCode"].ToString();
-            this.ddlCity.Items.FindByText(CustomerInfo.Rows[0]["City"].ToString()).Selected = true;
-            this.ddlState.Items.FindByText(CustomerInfo.Rows[0]["State"].ToString()).Selected = true;
+            if (CustomerInfo.Rows[0]["City"] != null && CustomerInfo.Rows[0]["City"].ToString() != "") this.ddlCity.Items.FindByText(CustomerInfo.Rows[0]["City"].ToString()).Selected = true;
+            if (CustomerInfo.Rows[0]["State"] != null && CustomerInfo.Rows[0]["State"].ToString() != "") this.ddlState.Items.FindByText(CustomerInfo.Rows[0]["State"].ToString()).Selected = true;
             this.txtConsultant.Text = OtherInfo.Rows[0]["Name"].ToString();
             this.txtSurName.Text = CustomerInfo.Rows[0]["LName"].ToString();
 
             this.BindCarMakes();
             this.BindTCarMakes();
-            this.ddlCarMake.Items.FindByText(HeaderInfo.Rows[0]["Make"].ToString()).Selected = true;
+            if (HeaderInfo.Rows[0]["Make"] != null && HeaderInfo.Rows[0]["Make"].ToString() != "") this.ddlCarMake.Items.FindByText(HeaderInfo.Rows[0]["Make"].ToString()).Selected = true;
             this.txtModel.Text = HeaderInfo.Rows[0]["Model"].ToString();
             this.txtSeries.Text = HeaderInfo.Rows[0]["Series"].ToString();
 
@@ -62,27 +77,41 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             this.BindTransmissionXml();
             this.BindTTransmissionXml();
             this.BindLogBookXml();
-            if (ParameterInfo.Rows[4]["ParamValue"].ToString() != "") this.ddlFuelType.Items.FindByText(ParameterInfo.Rows[4]["ParamValue"].ToString()).Selected = true;
-            if (ParameterInfo.Rows[2]["ParamValue"] != null && ParameterInfo.Rows[2]["ParamValue"].ToString() != "") this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
+            if (ParameterInfo.Rows[4]["ParamValue"] != null && ParameterInfo.Rows[4]["ParamValue"].ToString() != "")
+                try
+                {
+                    this.ddlFuelType.Items.FindByText(ParameterInfo.Rows[4]["ParamValue"].ToString()).Selected = true;
+                }
+                catch (Exception)
+                {
+
+                }
+            if (ParameterInfo.Rows[2]["ParamValue"] != null && ParameterInfo.Rows[2]["ParamValue"].ToString() != "")
+                try
+                {
+                    this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
+                }
+                catch (Exception)
+                {
+
+                }
             this.txtBodyShape.Text = ParameterInfo.Rows[0]["ParamValue"].ToString();
             this.txtBodyColor.Text = ParameterInfo.Rows[3]["ParamValue"].ToString();
             this.txtEstimatedDeliveryDate.Text = OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString();
 
             this.BindSuppilers();
-            this.ddlSupplier.Items.FindByText(DealerInfo.Rows[0]["Name"].ToString()).Selected = true;
+            if (DealerInfo.Rows[0]["Name"] != null && DealerInfo.Rows[0]["Name"].ToString() != "") this.ddlSupplier.Items.FindByText(DealerInfo.Rows[0]["Name"].ToString()).Selected = true;
 
             this.BindRegistrationXml();
 
             this.BindPrices();
 
             this.BindCardTypeXml();
-            this.ddlCardType.Items.FindByText(CreditCardInfo.Rows[0]["CardType"].ToString()).Selected = true;
-            this.txtCardNumber.Text = CreditCardInfo.Rows[0]["CardNumber"].ToString();
-            this.txtCVNumber.Text = CreditCardInfo.Rows[0]["CVNumber"].ToString();
-            this.txtMonth.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Month.ToString();
-            this.txtYear.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Year.ToString();
-            this.txtMemberNo.Text = CreditCardInfo.Rows[0]["MemberNo"].ToString();
-            this.txtDeposit.Text = CreditCardInfo.Rows[0]["Deposit"].ToString();
+            //this.ddlCardType.Items.FindByText(CreditCardInfo.Rows[0]["CardType"].ToString()).Selected = true;
+            //this.txtCardNumber.Text = CreditCardInfo.Rows[0]["CardNumber"].ToString();
+            //this.txtCVNumber.Text = CreditCardInfo.Rows[0]["CVNumber"].ToString();
+            //this.txtMonth.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Month.ToString();
+            //this.txtYear.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Year.ToString();
 
             this.BindTradeStatusXml();
 
@@ -93,14 +122,14 @@ public partial class ClientDealerContractT : System.Web.UI.Page
                 this.txtTModel.Text = TradeInInfo.Rows[0]["T1Model"].ToString();
                 this.txtTSeries.Text = TradeInInfo.Rows[0]["T1Series"].ToString();
                 this.txtTBodyShape.Text = TradeInInfo.Rows[0]["T1BodyShap"].ToString();
-                this.ddlTFuelType.Items.FindByText(TradeInInfo.Rows[0]["T1FuelType"].ToString()).Selected = true;
+                if (TradeInInfo.Rows[0]["T1FuelType"] != null && TradeInInfo.Rows[0]["T1FuelType"].ToString() != "") this.ddlTFuelType.Items.FindByText(TradeInInfo.Rows[0]["T1FuelType"].ToString()).Selected = true;
                 this.txtTOdometer.Text = TradeInInfo.Rows[0]["T1Odometer"].ToString();
-                this.ddlTTransmission.Items.FindByText(TradeInInfo.Rows[0]["T1Transmission"].ToString()).Selected = true;
+                if (TradeInInfo.Rows[0]["T1Transmission"] != null && TradeInInfo.Rows[0]["T1Transmission"].ToString() != "") this.ddlTTransmission.Items.FindByText(TradeInInfo.Rows[0]["T1Transmission"].ToString()).Selected = true;
                 this.txtTBodyColour.Text = TradeInInfo.Rows[0]["T1BodyColor"].ToString();
                 this.txtTTrimColour.Text = TradeInInfo.Rows[0]["T1TrimColor"].ToString();
                 this.txtTExpiryMonth.Text = TradeInInfo.Rows[0]["T1RegExpMnt"].ToString();
                 this.txtTExpiryYear.Text = TradeInInfo.Rows[0]["T1RegExpYear"].ToString();
-                this.ddlTLogBooks.Items.FindByText(TradeInInfo.Rows[0]["LogBooks"].ToString()).Selected = true;
+                if (TradeInInfo.Rows[0]["LogBooks"] != null && TradeInInfo.Rows[0]["LogBooks"].ToString() != "") this.ddlTLogBooks.Items.FindByText(TradeInInfo.Rows[0]["LogBooks"].ToString()).Selected = true;
                 this.txtTDescription.Text = TradeInInfo.Rows[0]["TradeInDesc"].ToString();
                 this.txtTOrigValue.Text = TradeInInfo.Rows[0]["T1OrigValue"].ToString();
                 if (TradeInInfo.Rows[0]["Tradestatus"] != null && TradeInInfo.Rows[0]["Tradestatus"].ToString() != "")
@@ -112,6 +141,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
                     this.ddlTTradeStatus.Items.FindByText("Pending").Selected = true;
                 }
             }
+
             
 
             //Tab1.CssClass = ".Clicked";
@@ -443,17 +473,51 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         }
     }
 
+    private void BindDepositTakenXml()
+    {
+        string filePath = Server.MapPath("~/DepositTaken.xml");
+        using (DataSet ds = new DataSet())
+        {
+            ds.ReadXml(filePath);
+            ddlDepositTaken.DataSource = ds;
+            ddlDepositTaken.DataTextField = "name";
+            ddlDepositTaken.DataValueField = "id";
+            ddlDepositTaken.DataBind();
+        }
+    }
+
     protected void Button2_Click(object sender, EventArgs e)
     {
         //this.txtPrice.Text = ddlCarMake.SelectedItem.Value +ddlCarMake.SelectedItem.Text;  
     }
+
     protected void Button4_Click(object sender, EventArgs e)
     {
         //string pdfTemplate = @"E:\ContractNoTrade.pdf";
         //string newFile = @"E:\ContractNoTrade2.pdf";
+        string pdfTemplate="";
+        string newFile="";
+        if(this.TStatus == "1")
+        {
+            //pdfTemplate = Server.MapPath("~/Contract/ContractTrade.pdf");
+            //newFile = Server.MapPath("~/Contract/ContractTrade2.pdf");
+            //this.LinkDownLoad.NavigateUrl = "~/Contract/ContractTrade2.pdf";
 
-        string pdfTemplate = Server.MapPath("~/Contract/ContractTrade.pdf");
-        string newFile = Server.MapPath("~/Contract/ContractTrade2.pdf");
+            pdfTemplate = @"C:\inetpub\wwwroot\Quotesys\Contract\ContractTrade.pdf";
+            newFile = @"C:\inetpub\wwwroot\Quotesys\Contract\ContractTrade2.pdf";
+            this.LinkDownLoad.NavigateUrl = "~/Contract/ContractTrade2.pdf";
+        } else if (this.TStatus == "0")
+        {
+            //pdfTemplate = Server.MapPath("~/Contract/ContractNoTrade.pdf");
+            //newFile = Server.MapPath("~/Contract/ContractNoTrade2.pdf");
+            //this.LinkDownLoad.NavigateUrl = "~/Contract/ContractNoTrade2.pdf";
+
+            pdfTemplate = @"C:\inetpub\wwwroot\Quotesys\Contract\ContractNoTrade.pdf";
+            newFile = @"C:\inetpub\wwwroot\Quotesys\Contract\ContractNoTrade2.pdf";
+            this.LinkDownLoad.NavigateUrl = "~/Contract/ContractNoTrade2.pdf";
+        }
+        //string pdfTemplate = Server.MapPath("~/Contract/ContractTrade.pdf");
+        //string newFile = Server.MapPath("~/Contract/ContractTrade2.pdf");
 
         PdfReader pdfReader = new PdfReader(pdfTemplate);
         PdfStamper pdfStamper = new PdfStamper(pdfReader, new FileStream(newFile, FileMode.Create));
@@ -537,7 +601,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         pdfFormFields.SetField("TotalonRoadCost", TempTotalonRoadCost.ToString());
 
         pdfFormFields.SetField("DeliveryDateP4", OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString());
-
+        
         pdfFormFields.SetField("TradeInBasicInfoP4", this.txtTradeYear.Text
             + "  " + this.ddlTCarMake.SelectedItem.Text
             + "  " + this.txtTModel.Text
@@ -562,15 +626,18 @@ public partial class ClientDealerContractT : System.Web.UI.Page
 
         this.LinkDownLoad.Visible = true;
     }
+
     protected void Button5_Click(object sender, EventArgs e)
     {
         DateTime ExpDate = new DateTime(Convert.ToInt32("20" + this.txtYear.Text), Convert.ToInt32(this.txtMonth.Text), 1);
-        CDC.AddCreditCard(Convert.ToInt32(CustomerInfo.Rows[0]["Id"].ToString()), this.txtCVNumber.Text, this.txtCardNumber.Text, this.ddlCardType.SelectedItem.Text, ExpDate, this.txtMonth.Text, this.txtYear.Text, this.txtMemberNo.Text, this.txtDeposit.Text);
+        CDC.AddCreditCard(Convert.ToInt32(CustomerInfo.Rows[0]["Id"].ToString()), this.txtCVNumber.Text, this.txtCardNumber.Text, this.ddlCardType.SelectedItem.Text, ExpDate, this.txtMonth.Text, this.txtYear.Text, this.txtMemberNo.Text, this.txtDepositAmount.Text);
     }
+
     protected void Button6_Click(object sender, EventArgs e)
     {
 
     }
+
     protected void Button7_Click(object sender, EventArgs e)
     {
         CDC.AddTradeInInfo(Convert.ToInt64(this.CustomerInfo.Rows[0]["Id"].ToString()), this.txtTradeYear.Text
@@ -579,5 +646,22 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             , this.txtTBodyColour.Text, this.txtTTrimColour.Text, Convert.ToInt32(this.txtTExpiryMonth.Text)
             , Convert.ToInt32(this.txtTExpiryYear.Text), this.ddlTLogBooks.SelectedItem.Text, this.txtTDescription.Text, this.txtTOrigValue.Text
             , this.ddlTTradeStatus.SelectedItem.Text, this.txtCustomerName.Text, this.txtEmail.Text, this.txtPhone.Text, this.txtMobile.Text, this.ReqID);
+    }
+
+    protected void AddDeliveryTrack_Click(object sender, EventArgs e)
+    {
+        CDC.AddDeliveryTrack(this.txtEmail.Text, this.txtMemberNo.Text, this.txtMemberNo.Text, CustomerInfo.Rows[0]["Fname"].ToString()
+            , this.txtSurName.Text, this.txtCustomerName.Text, this.txtEmail.Text, this.ddlState.SelectedItem.Text, this.ddlState.SelectedValue
+            , this.ddlCity.SelectedItem.Text, this.txtPostCode.Text, this.txtAddress.Text, this.txtPhone.Text, this.txtMobile.Text
+            , this.txtFax.Text, DealerInfo.Rows[0]["Company"].ToString(), DealerInfo.Rows[0]["Name"].ToString(), DealerInfo.Rows[0]["ID"].ToString()
+            , DealerInfo.Rows[0]["Key"].ToString(), DealerInfo.Rows[0]["Phone"].ToString(), DealerInfo.Rows[0]["Email"].ToString()
+            , this.ddlCarMake.SelectedItem.Text, this.ddlCarMake.SelectedValue, this.txtModel.Text, this.txtConsultant.Text, this.txtEstimatedDeliveryDate.Text
+            , this.ddlTTradeStatus.SelectedItem.Text, CustomerInfo.Rows[0]["Id"].ToString(), this.ReqID);
+    }
+
+    protected void UpdatePFMembership_Click(object sender, EventArgs e)
+    {
+        CDC.UpdatePFMembership(this.txtSurName.Text, this.txtMemberNo.Text, this.txtMemberNo.Text, this.txtDepositAmount.Text, 
+           this.ddlDepositTaken.SelectedItem.Text , this.txtMembershipFee.Text, CustomerInfo.Rows[0]["Id"].ToString());
     }
 }

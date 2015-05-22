@@ -423,7 +423,13 @@ public partial class ClientDealerContract : System.Web.UI.Page
 
     protected void AddDeliveryTrack_Click(object sender, EventArgs e)
     {
-
+        CDC.AddDeliveryTrack(this.txtEmail.Text, this.txtMemberNo.Text, this.txtMemberNo.Text, CustomerInfo.Rows[0]["Fname"].ToString()
+            , this.txtSurName.Text, this.txtCustomerName.Text ,this.txtEmail.Text, this.ddlState.SelectedItem.Text, this.ddlState.SelectedValue
+            , this.ddlCity.SelectedItem.Text, this.txtPostCode.Text, this.txtAddress.Text, this.txtPhone.Text, this.txtMobile.Text
+            , this.txtFax.Text, DealerInfo.Rows[0]["Company"].ToString(), DealerInfo.Rows[0]["Name"].ToString(), DealerInfo.Rows[0]["ID"].ToString()
+            , DealerInfo.Rows[0]["Key"].ToString(), DealerInfo.Rows[0]["Phone"].ToString(), DealerInfo.Rows[0]["Email"].ToString()
+            , this.ddlCarMake.SelectedItem.Text, this.ddlCarMake.SelectedValue, this.txtModel.Text, this.txtConsultant.Text, this.txtEstimatedDeliveryDate.Text
+            , "0", CustomerInfo.Rows[0]["Id"].ToString(), this.ReqID);
     }
 
     protected void Button6_Click(object sender, EventArgs e)

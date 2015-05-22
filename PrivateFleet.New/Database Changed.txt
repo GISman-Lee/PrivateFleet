@@ -118,4 +118,6 @@ The Contents within brancket has been ignored
 
 39. Add 2 Storage Procedures "SpDuplicateDealerMaster" and "SpDuplicateMakeDealer" to button duplicate for DealerMaster
 
-40. Add Storage Procedure "SpAddDeliveryTrack" for AddDeliveryTrack button.
+40. Add Storage Procedure "SpAddDeliveryTrack" for AddDeliveryTrack button. 
+
+41. Add Storage Procedure "SpUpdatePFMembership" for Update Membership button.
