@@ -34,7 +34,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         this.HeaderInfo = CDC.SearchHeaderInfo(ReqID);
         this.ParameterInfo = CDC.SearchRequestParametersByReqID(ReqID);
         this.OtherInfo = CDC.SearchConsultantDeliveryDateByQuoteID(QuoteID);
-        if(this.CustomerInfo.Rows.Count !=0) this.CreditCardInfo = CDC.SearchCreditCard(Convert.ToInt64(this.CustomerInfo.Rows[0]["Id"].ToString()));
+        //if(this.CustomerInfo.Rows.Count !=0) this.CreditCardInfo = CDC.SearchCreditCard(Convert.ToInt64(this.CustomerInfo.Rows[0]["Id"].ToString()));
         this.TradeInInfo = CDC.SearchTradeInByReqID(ReqID);
 
         if (!IsPostBack)
@@ -42,107 +42,125 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             this.BindStateXml();
             this.BindCities();
             this.BindDepositTakenXml();
-            this.txtCustomerName.Text = CustomerInfo.Rows[0]["Fname"].ToString() + " " + CustomerInfo.Rows[0]["LName"].ToString();
-            this.txtEmail.Text = CustomerInfo.Rows[0]["Email"].ToString();
-            if (CustomerInfo.Columns.Contains("Add1"))
-            {
-                this.txtAddress.Text = CustomerInfo.Rows[0]["Add1"].ToString() + " " + CustomerInfo.Rows[0]["Add2"].ToString();
-            }
-            else
-            {
-                this.txtAddress.Text = CustomerInfo.Rows[0]["Address"].ToString();
-                this.txtMemberNo.Text = CustomerInfo.Rows[0]["MemberNo"].ToString();
-                this.txtDepositAmount.Text = CustomerInfo.Rows[0]["DepositAmount"].ToString();
-                this.txtMembershipFee.Text = CustomerInfo.Rows[0]["MembershipFee"].ToString();
-                this.ddlDepositTaken.Items.FindByText(CustomerInfo.Rows[0]["DepositTakenBy"].ToString()).Selected = true;
-            }
-            
-            this.txtFax.Text = CustomerInfo.Rows[0]["Fax"].ToString();
-            this.txtMobile.Text = CustomerInfo.Rows[0]["Mobile"].ToString();
-            this.txtPhone.Text = CustomerInfo.Rows[0]["Phone"].ToString();
-            this.txtPostCode.Text = CustomerInfo.Rows[0]["PostalCode"].ToString();
-            if (CustomerInfo.Rows[0]["City"] != null && CustomerInfo.Rows[0]["City"].ToString() != "") this.ddlCity.Items.FindByText(CustomerInfo.Rows[0]["City"].ToString()).Selected = true;
-            if (CustomerInfo.Rows[0]["State"] != null && CustomerInfo.Rows[0]["State"].ToString() != "") this.ddlState.Items.FindByText(CustomerInfo.Rows[0]["State"].ToString()).Selected = true;
-            this.txtConsultant.Text = OtherInfo.Rows[0]["Name"].ToString();
-            this.txtSurName.Text = CustomerInfo.Rows[0]["LName"].ToString();
-
             this.BindCarMakes();
             this.BindTCarMakes();
-            if (HeaderInfo.Rows[0]["Make"] != null && HeaderInfo.Rows[0]["Make"].ToString() != "") this.ddlCarMake.Items.FindByText(HeaderInfo.Rows[0]["Make"].ToString()).Selected = true;
-            this.txtModel.Text = HeaderInfo.Rows[0]["Model"].ToString();
-            this.txtSeries.Text = HeaderInfo.Rows[0]["Series"].ToString();
-
             this.BindFuelTypeXml();
             this.BindTFuelTypeXml();
             this.BindTransmissionXml();
             this.BindTTransmissionXml();
             this.BindLogBookXml();
-            if (ParameterInfo.Rows[4]["ParamValue"] != null && ParameterInfo.Rows[4]["ParamValue"].ToString() != "")
-                try
-                {
-                    this.ddlFuelType.Items.FindByText(ParameterInfo.Rows[4]["ParamValue"].ToString()).Selected = true;
-                }
-                catch (Exception)
-                {
-
-                }
-            if (ParameterInfo.Rows[2]["ParamValue"] != null && ParameterInfo.Rows[2]["ParamValue"].ToString() != "")
-                try
-                {
-                    this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
-                }
-                catch (Exception)
-                {
-
-                }
-            this.txtBodyShape.Text = ParameterInfo.Rows[0]["ParamValue"].ToString();
-            this.txtBodyColor.Text = ParameterInfo.Rows[3]["ParamValue"].ToString();
-            this.txtEstimatedDeliveryDate.Text = OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString();
-
             this.BindSuppilers();
-            if (DealerInfo.Rows[0]["Name"] != null && DealerInfo.Rows[0]["Name"].ToString() != "") this.ddlSupplier.Items.FindByText(DealerInfo.Rows[0]["Name"].ToString()).Selected = true;
-
             this.BindRegistrationXml();
-
             this.BindPrices();
-
             this.BindCardTypeXml();
-            //this.ddlCardType.Items.FindByText(CreditCardInfo.Rows[0]["CardType"].ToString()).Selected = true;
-            //this.txtCardNumber.Text = CreditCardInfo.Rows[0]["CardNumber"].ToString();
-            //this.txtCVNumber.Text = CreditCardInfo.Rows[0]["CVNumber"].ToString();
-            //this.txtMonth.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Month.ToString();
-            //this.txtYear.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Year.ToString();
-
             this.BindTradeStatusXml();
 
-            if(TradeInInfo.Rows.Count != 0)
+            if (this.ReqID != null && this.QuoteID != null || this.ConsID != null)
             {
-                this.txtTradeYear.Text = TradeInInfo.Rows[0]["T1year"].ToString();
-                if(TradeInInfo.Rows[0]["UsedCar"] != null) this.ddlTCarMake.Items.FindByText(TradeInInfo.Rows[0]["UsedCar"].ToString().ToUpper()).Selected = true;
-                this.txtTModel.Text = TradeInInfo.Rows[0]["T1Model"].ToString();
-                this.txtTSeries.Text = TradeInInfo.Rows[0]["T1Series"].ToString();
-                this.txtTBodyShape.Text = TradeInInfo.Rows[0]["T1BodyShap"].ToString();
-                if (TradeInInfo.Rows[0]["T1FuelType"] != null && TradeInInfo.Rows[0]["T1FuelType"].ToString() != "") this.ddlTFuelType.Items.FindByText(TradeInInfo.Rows[0]["T1FuelType"].ToString()).Selected = true;
-                this.txtTOdometer.Text = TradeInInfo.Rows[0]["T1Odometer"].ToString();
-                if (TradeInInfo.Rows[0]["T1Transmission"] != null && TradeInInfo.Rows[0]["T1Transmission"].ToString() != "") this.ddlTTransmission.Items.FindByText(TradeInInfo.Rows[0]["T1Transmission"].ToString()).Selected = true;
-                this.txtTBodyColour.Text = TradeInInfo.Rows[0]["T1BodyColor"].ToString();
-                this.txtTTrimColour.Text = TradeInInfo.Rows[0]["T1TrimColor"].ToString();
-                this.txtTExpiryMonth.Text = TradeInInfo.Rows[0]["T1RegExpMnt"].ToString();
-                this.txtTExpiryYear.Text = TradeInInfo.Rows[0]["T1RegExpYear"].ToString();
-                if (TradeInInfo.Rows[0]["LogBooks"] != null && TradeInInfo.Rows[0]["LogBooks"].ToString() != "") this.ddlTLogBooks.Items.FindByText(TradeInInfo.Rows[0]["LogBooks"].ToString()).Selected = true;
-                this.txtTDescription.Text = TradeInInfo.Rows[0]["TradeInDesc"].ToString();
-                this.txtTOrigValue.Text = TradeInInfo.Rows[0]["T1OrigValue"].ToString();
-                if (TradeInInfo.Rows[0]["Tradestatus"] != null && TradeInInfo.Rows[0]["Tradestatus"].ToString() != "")
-                {
-                    this.ddlTTradeStatus.Items.FindByText(TradeInInfo.Rows[0]["Tradestatus"].ToString()).Selected = true;
-                }
-                else 
-                {
-                    this.ddlTTradeStatus.Items.FindByText("Pending").Selected = true;
-                }
-            }
 
-            
+                if (this.CustomerInfo.Rows.Count != 0) this.txtCustomerName.Text = CustomerInfo.Rows[0]["Fname"].ToString() + " " + CustomerInfo.Rows[0]["LName"].ToString();
+                this.txtEmail.Text = CustomerInfo.Rows[0]["Email"].ToString();
+                if (CustomerInfo.Columns.Contains("Add1"))
+                {
+                    this.txtAddress.Text = CustomerInfo.Rows[0]["Add1"].ToString() + " " + CustomerInfo.Rows[0]["Add2"].ToString();
+                }
+                else
+                {
+                    this.txtAddress.Text = CustomerInfo.Rows[0]["Address"].ToString();
+                    this.txtMemberNo.Text = CustomerInfo.Rows[0]["MemberNo"].ToString();
+                    this.txtDepositAmount.Text = CustomerInfo.Rows[0]["DepositAmount"].ToString();
+                    this.txtMembershipFee.Text = CustomerInfo.Rows[0]["MembershipFee"].ToString();
+                    this.ddlDepositTaken.Items.FindByText(CustomerInfo.Rows[0]["DepositTakenBy"].ToString()).Selected = true;
+                    this.txtVehicleYear.Text = Convert.ToDateTime(CustomerInfo.Rows[0]["DeliveryDate"].ToString()).Year.ToString();
+                }
+
+                this.txtFax.Text = CustomerInfo.Rows[0]["Fax"].ToString();
+                this.txtMobile.Text = CustomerInfo.Rows[0]["Mobile"].ToString();
+                this.txtPhone.Text = CustomerInfo.Rows[0]["Phone"].ToString();
+                this.txtPostCode.Text = CustomerInfo.Rows[0]["PostalCode"].ToString();
+                if (CustomerInfo.Rows[0]["City"] != null && CustomerInfo.Rows[0]["City"].ToString() != "") this.ddlCity.Items.FindByText(CustomerInfo.Rows[0]["City"].ToString()).Selected = true;
+                if (CustomerInfo.Rows[0]["State"] != null && CustomerInfo.Rows[0]["State"].ToString() != "") this.ddlState.Items.FindByText(CustomerInfo.Rows[0]["State"].ToString()).Selected = true;
+                this.txtConsultant.Text = OtherInfo.Rows[0]["Name"].ToString();
+                this.txtSurName.Text = CustomerInfo.Rows[0]["LName"].ToString();
+                this.txtConsultantPhone.Text = OtherInfo.Rows[0]["CunsPhone"].ToString();
+                this.txtConsultantMail.Text = OtherInfo.Rows[0]["CunsMail"].ToString();
+
+
+                this.txtDealerCompany.Text = DealerInfo.Rows[0]["Company"].ToString();
+                this.txtDealerName.Text = DealerInfo.Rows[0]["Name"].ToString();
+                this.txtDealerEmail.Text = DealerInfo.Rows[0]["Email"].ToString();
+                this.txtDealerPhone.Text = DealerInfo.Rows[0]["Phone"].ToString();
+                this.txtDealerAddress.Text = DealerInfo.Rows[0]["Address"].ToString();
+                this.txtDealerCity.Text = DealerInfo.Rows[0]["City"].ToString();
+                this.txtDealerState.Text = DealerInfo.Rows[0]["State"].ToString();
+                this.txtDealerPCode.Text = DealerInfo.Rows[0]["PCode"].ToString();
+
+
+                if (HeaderInfo.Rows[0]["Make"] != null && HeaderInfo.Rows[0]["Make"].ToString() != "") this.ddlCarMake.Items.FindByText(HeaderInfo.Rows[0]["Make"].ToString()).Selected = true;
+                this.txtModel.Text = HeaderInfo.Rows[0]["Model"].ToString();
+                this.txtSeries.Text = HeaderInfo.Rows[0]["Series"].ToString();
+
+
+                if (ParameterInfo.Rows[4]["ParamValue"] != null && ParameterInfo.Rows[4]["ParamValue"].ToString() != "")
+                    try
+                    {
+                        this.ddlFuelType.Items.FindByText(ParameterInfo.Rows[4]["ParamValue"].ToString()).Selected = true;
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                if (ParameterInfo.Rows[2]["ParamValue"] != null && ParameterInfo.Rows[2]["ParamValue"].ToString() != "")
+                    try
+                    {
+                        this.ddlTransmission.Items.FindByText(ParameterInfo.Rows[2]["ParamValue"].ToString()).Selected = true;
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                this.txtBodyShape.Text = ParameterInfo.Rows[0]["ParamValue"].ToString();
+                this.txtBodyColor.Text = ParameterInfo.Rows[3]["ParamValue"].ToString();
+                this.txtEstimatedDeliveryDate.Text = OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString();
+
+
+                //if (DealerInfo.Rows[0]["Name"] != null && DealerInfo.Rows[0]["Name"].ToString() != "") this.ddlSupplier.Items.FindByText(DealerInfo.Rows[0]["Name"].ToString()).Selected = true;
+                if (DealerInfo.Rows[0]["Company"] != null && DealerInfo.Rows[0]["Company"].ToString() != "") this.ddlSupplier.Items.FindByText(DealerInfo.Rows[0]["Company"].ToString()).Selected = true;
+
+                //this.ddlCardType.Items.FindByText(CreditCardInfo.Rows[0]["CardType"].ToString()).Selected = true;
+                //this.txtCardNumber.Text = CreditCardInfo.Rows[0]["CardNumber"].ToString();
+                //this.txtCVNumber.Text = CreditCardInfo.Rows[0]["CVNumber"].ToString();
+                //this.txtMonth.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Month.ToString();
+                //this.txtYear.Text = Convert.ToDateTime(CreditCardInfo.Rows[0]["ExpiryDate"].ToString()).Year.ToString();
+
+                if (TradeInInfo.Rows.Count != 0)
+                {
+                    this.txtTradeYear.Text = TradeInInfo.Rows[0]["T1year"].ToString();
+                    if (TradeInInfo.Rows[0]["UsedCar"] != null) this.ddlTCarMake.Items.FindByText(TradeInInfo.Rows[0]["UsedCar"].ToString().ToUpper()).Selected = true;
+                    this.txtTModel.Text = TradeInInfo.Rows[0]["T1Model"].ToString();
+                    this.txtTSeries.Text = TradeInInfo.Rows[0]["T1Series"].ToString();
+                    this.txtTBodyShape.Text = TradeInInfo.Rows[0]["T1BodyShap"].ToString();
+                    if (TradeInInfo.Rows[0]["T1FuelType"] != null && TradeInInfo.Rows[0]["T1FuelType"].ToString() != "") this.ddlTFuelType.Items.FindByText(TradeInInfo.Rows[0]["T1FuelType"].ToString()).Selected = true;
+                    this.txtTOdometer.Text = TradeInInfo.Rows[0]["T1Odometer"].ToString();
+                    if (TradeInInfo.Rows[0]["T1Transmission"] != null && TradeInInfo.Rows[0]["T1Transmission"].ToString() != "") this.ddlTTransmission.Items.FindByText(TradeInInfo.Rows[0]["T1Transmission"].ToString()).Selected = true;
+                    this.txtTBodyColour.Text = TradeInInfo.Rows[0]["T1BodyColor"].ToString();
+                    this.txtTTrimColour.Text = TradeInInfo.Rows[0]["T1TrimColor"].ToString();
+                    this.txtTExpiryMonth.Text = TradeInInfo.Rows[0]["T1RegExpMnt"].ToString();
+                    this.txtTExpiryYear.Text = TradeInInfo.Rows[0]["T1RegExpYear"].ToString();
+                    if (TradeInInfo.Rows[0]["LogBooks"] != null && TradeInInfo.Rows[0]["LogBooks"].ToString() != "") this.ddlTLogBooks.Items.FindByText(TradeInInfo.Rows[0]["LogBooks"].ToString()).Selected = true;
+                    this.txtTDescription.Text = TradeInInfo.Rows[0]["TradeInDesc"].ToString();
+                    this.txtTOrigValue.Text = TradeInInfo.Rows[0]["T1OrigValue"].ToString();
+                    if (TradeInInfo.Rows[0]["Tradestatus"] != null && TradeInInfo.Rows[0]["Tradestatus"].ToString() != "")
+                    {
+                        this.ddlTTradeStatus.Items.FindByText(TradeInInfo.Rows[0]["Tradestatus"].ToString()).Selected = true;
+                    }
+                    else
+                    {
+                        this.ddlTTradeStatus.Items.FindByText("Pending").Selected = true;
+                    }
+                }
+
+            }
 
             //Tab1.CssClass = ".Clicked";
             //Tab2.CssClass = ".Initial";
@@ -155,6 +173,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
     {
         Tab_1.CssClass = ".Clicked";
         Tab_2.CssClass = ".Initial";
+        Tab_3.CssClass = ".Initial";
         MainView.ActiveViewIndex = 0;
     }
 
@@ -162,13 +181,15 @@ public partial class ClientDealerContractT : System.Web.UI.Page
     {
         Tab_1.CssClass = ".Initial";
         Tab_2.CssClass = ".Clicked";
+        Tab_3.CssClass = ".Initial";
         MainView.ActiveViewIndex = 1;
     }
 
     protected void Tab3_Click(object sender, EventArgs e)
     {
-        //Tab1.CssClass = ".Initial";
-        //Tab2.CssClass = ".Initial";
+        Tab_1.CssClass = ".Initial";
+        Tab_2.CssClass = ".Initial";
+        Tab_3.CssClass = ".Clicked";
         MainView.ActiveViewIndex = 2;
     }
 
@@ -440,11 +461,35 @@ public partial class ClientDealerContractT : System.Web.UI.Page
                 }
             }
 
+            CheckPriceNull();
+
         }
         catch (Exception ex)
         {
 
         }
+    }
+
+    private void CheckPriceNull()
+    {
+        if (this.txtAccessory1.Text == "") this.txtAccessory1.Text = "0.0";
+        if (this.txtAccessory2.Text == "") this.txtAccessory2.Text = "0.0";
+        if (this.txtAccessory3.Text == "") this.txtAccessory3.Text = "0.0";
+        if (this.txtAccessory4.Text == "") this.txtAccessory4.Text = "0.0";
+
+        if (this.txtVehicleRetailPrice.Text == "") this.txtVehicleRetailPrice.Text = "0.0";
+        if (this.txtPreDelivery.Text == "") this.txtPreDelivery.Text = "0.0";
+        if (this.txtRegistrationPrice.Text == "") this.txtRegistrationPrice.Text = "0.0";
+        if (this.txtStampDuty.Text == "") this.txtStampDuty.Text = "0.0";
+
+        if (this.txtCTP.Text == "") this.txtCTP.Text = "0.0";
+        if (this.txtGST.Text == "") this.txtGST.Text = "0.0";
+        if (this.txtPlateFee.Text == "") this.txtPlateFee.Text = "0.0";
+        if (this.txtTotalAccessories.Text == "") this.txtTotalAccessories.Text = "0.0";
+
+        if (this.txtTotalOnRoadCost.Text == "") this.txtTotalOnRoadCost.Text = "0.0";
+        if (this.txtFleetDiscount.Text == "") this.txtFleetDiscount.Text = "0.0";
+
     }
 
     private void BindRegistrationXml()
@@ -506,7 +551,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             pdfTemplate = @"C:\inetpub\wwwroot\Quotesys\Contract\ContractTrade.pdf";
             newFile = @"C:\inetpub\wwwroot\Quotesys\Contract\ContractTrade2.pdf";
             this.LinkDownLoad.NavigateUrl = "~/Contract/ContractTrade2.pdf";
-        } else if (this.TStatus == "0")
+        } else  //else if (this.TStatus == "0")
         {
             //pdfTemplate = Server.MapPath("~/Contract/ContractNoTrade.pdf");
             //newFile = Server.MapPath("~/Contract/ContractNoTrade2.pdf");
@@ -553,17 +598,16 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         pdfFormFields.SetField("HomeAddressP4", this.txtAddress.Text);
         pdfFormFields.SetField("HHPP4", this.ddlCity.SelectedItem.Text + " " + this.ddlState.SelectedItem.Text + " " + this.txtPostCode.Text);
         pdfFormFields.SetField("RegistrationP4", this.ddlRegistration.SelectedItem.Text);
-        pdfFormFields.SetField("DealerCompanyNameP4", DealerInfo.Rows[0]["Company"].ToString());
-        pdfFormFields.SetField("DealerAddressP4", DealerInfo.Rows[0]["Address"].ToString());
-        pdfFormFields.SetField("CityStatePCodeP4", DealerInfo.Rows[0]["City"].ToString() + " " + DealerInfo.Rows[0]["State"].ToString() + " " + DealerInfo.Rows[0]["PCode"].ToString());  //Card Number
-        pdfFormFields.SetField("DealerNameP4", DealerInfo.Rows[0]["Name"].ToString());
-        pdfFormFields.SetField("DealerPhoneP4", DealerInfo.Rows[0]["Phone"].ToString());
-        pdfFormFields.SetField("DealerEmailP4", DealerInfo.Rows[0]["Email"].ToString());
+        pdfFormFields.SetField("DealerCompanyNameP4", this.txtDealerCompany.Text);
+        pdfFormFields.SetField("DealerAddressP4", this.txtDealerAddress.Text);
+        pdfFormFields.SetField("CityStatePCodeP4", this.txtDealerCity.Text + " " + this.txtDealerState.Text + " " + this.txtDealerPCode.Text);  //Card Number
+        pdfFormFields.SetField("DealerNameP4", this.txtDealerName.Text);
+        pdfFormFields.SetField("DealerPhoneP4", this.txtDealerPhone.Text);
+        pdfFormFields.SetField("DealerEmailP4", this.txtDealerEmail.Text);
         pdfFormFields.SetField("ConsultantP4", this.txtConsultant.Text);
-        pdfFormFields.SetField("DealerEmailP4", DealerInfo.Rows[0]["Email"].ToString());
         pdfFormFields.SetField("ConsultantP4", this.txtConsultant.Text);
-        pdfFormFields.SetField("ConsultantPhoneP4", OtherInfo.Rows[0]["CunsPhone"].ToString());
-        pdfFormFields.SetField("ConsultantEmailP4", OtherInfo.Rows[0]["CunsMail"].ToString());
+        pdfFormFields.SetField("ConsultantPhoneP4", this.txtConsultantPhone.Text);
+        pdfFormFields.SetField("ConsultantEmailP4", this.txtConsultantMail.Text);
 
         pdfFormFields.SetField("PreDelivery_Price", this.txtPreDelivery.Text);
         pdfFormFields.SetField("Stamp_Duty_Price", this.txtStampDuty.Text);
@@ -600,7 +644,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
 
         pdfFormFields.SetField("TotalonRoadCost", TempTotalonRoadCost.ToString());
 
-        pdfFormFields.SetField("DeliveryDateP4", OtherInfo.Rows[0]["EstimatedDeliveryDate"].ToString());
+        pdfFormFields.SetField("DeliveryDateP4", this.txtEstimatedDeliveryDate.Text);
         
         pdfFormFields.SetField("TradeInBasicInfoP4", this.txtTradeYear.Text
             + "  " + this.ddlTCarMake.SelectedItem.Text
@@ -615,7 +659,7 @@ public partial class ClientDealerContractT : System.Web.UI.Page
         pdfFormFields.SetField("LogBooksP4", this.ddlTLogBooks.SelectedItem.Text);
         pdfFormFields.SetField("TDescriptionP4", this.txtTDescription.Text);
 
-        pdfFormFields.SetField("SupplierP5", DealerInfo.Rows[0]["Company"].ToString());
+        pdfFormFields.SetField("SupplierP5", this.txtDealerCompany.Text);
 
         // flatten the form to remove editting options, set it to false
         // to leave the form open to subsequent manual edits
@@ -657,6 +701,47 @@ public partial class ClientDealerContractT : System.Web.UI.Page
             , DealerInfo.Rows[0]["Key"].ToString(), DealerInfo.Rows[0]["Phone"].ToString(), DealerInfo.Rows[0]["Email"].ToString()
             , this.ddlCarMake.SelectedItem.Text, this.ddlCarMake.SelectedValue, this.txtModel.Text, this.txtConsultant.Text, this.txtEstimatedDeliveryDate.Text
             , this.ddlTTradeStatus.SelectedItem.Text, CustomerInfo.Rows[0]["Id"].ToString(), this.ReqID);
+    }
+
+    protected void SearchCustomer_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (this.ReqID == null || this.QuoteID == null || this.ConsID == null)
+            {
+                DataTable tCM = CDC.SearchCustomer(this.txtCustomerName.Text, this.txtEmail.Text);
+                this.ReqID = tCM.Rows[0]["RequestId"].ToString();
+                DataTable tQH = CDC.SearchQuoteIDbyReqID(this.ReqID);
+                this.QuoteID = tQH.Rows[0]["ID"].ToString();
+                this.HeaderInfo = CDC.SearchHeaderInfo(this.ReqID);
+                this.ConsID = HeaderInfo.Rows[0]["ConsultantID"].ToString();
+                this.TStatus = "1";
+
+                ///////////////////////////////////////////////////////////////////////
+                Response.Clear();
+                string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx?TStatus=0";
+                //string PageToRedirect = "http://quotes.privatefleet.com.au/ClientDealerContractT.aspx?TStatus=0";
+                DataTable TradeInInfo = CDC.CheckIfTradeIn(ReqID);
+                if (TradeInInfo.Rows.Count != 0)
+                {
+                    if (Convert.ToBoolean(TradeInInfo.Rows[0]["TradeIn"]) == true)
+                    {
+                        PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx?TStatus=1";  //Test Version
+                        //PageToRedirect = "http://quotes.privatefleet.com.au/ClientDealerContractT.aspx?TStatus=1";
+                    }
+
+                    Response.Redirect(PageToRedirect + "&ReqID=" + ReqID + "&QuoteID=" + QuoteID + "&ConsID=" + HeaderInfo.Rows[0]["ConsultantID"].ToString(), true);
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "Not bind a client", "<script> alert('This Quote has not binded to a client, please go to CRM to bind the client');</script>", false);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Redirect("http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx");
+        }
     }
 
     protected void UpdatePFMembership_Click(object sender, EventArgs e)

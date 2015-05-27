@@ -194,8 +194,8 @@ public partial class ViewShortlistedQuotation : System.Web.UI.Page
     {
         try
         {
-            string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx?TStatus=0";  //Test Version
-            //string PageToRedirect = "http://quotes.privatefleet.com.au/ClientDealerContractT.aspx?TStatus=0";
+            //string PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx?TStatus=0";  //Test Version
+            string PageToRedirect = "http://quotes.privatefleet.com.au/ClientDealerContractT.aspx?TStatus=0";
             string ReqID = Request.QueryString["ReqID"];
             string QuoteID = Request.QueryString["QuoteID"];
             Cls_ClientDealerContract CDC = new Cls_ClientDealerContract();
@@ -205,8 +205,8 @@ public partial class ViewShortlistedQuotation : System.Web.UI.Page
             {
                 if (Convert.ToBoolean(TradeInInfo.Rows[0]["TradeIn"]) == true)
                 {
-                    PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx?TStatus=1";  //Test Version
-                    //PageToRedirect = "http://quotes.privatefleet.com.au/ClientDealerContractT.aspx?TStatus=1";
+                    //PageToRedirect = "http://localhost:2540/PrivateFleet.New/ClientDealerContractT.aspx?TStatus=1";  //Test Version
+                    PageToRedirect = "http://quotes.privatefleet.com.au/ClientDealerContractT.aspx?TStatus=1";
                 }
 
                 Response.Redirect(PageToRedirect + "&ReqID=" + ReqID + "&QuoteID=" + QuoteID + "&ConsID=" + HeaderInfo.Rows[0]["ConsultantID"].ToString(), true);

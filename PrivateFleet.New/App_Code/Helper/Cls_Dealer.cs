@@ -332,12 +332,13 @@ public class Cls_Dealer : Cls_CommonProperties
         {
             this.SpName = "SpAddDealer";
             int Result = HandleDealerMaster();
-            //SaveUserMiles();
-            //DataTable TopDealer = SearchTopDealer();
-            //DataTable TopUser = SearchTopUser();
-            //AddDealerUser(TopDealer.Rows[0]["ID"].ToString(), TopUser.Rows[0]["ID"].ToString());
-
-            return HandleDealerMaster();
+            SaveUserMiles();
+            DataTable TopDealer = SearchTopDealer();
+            DataTable TopUser = SearchTopUser();
+            AddUserRoleDetail(TopUser.Rows[0]["ID"].ToString());
+            AddDealerUser(TopDealer.Rows[0]["ID"].ToString(), TopUser.Rows[0]["ID"].ToString());
+            
+            return Result;
         }
         catch (Exception ex) { logger.Error("AddDealer Function :" + ex.Message); return 0; }
     }
@@ -515,9 +516,9 @@ public class Cls_Dealer : Cls_CommonProperties
         {
             DbCommand objCmd = null;
 
-            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "sp_acu_saveUserRoleDetails");
-            DataAccess.AddInParameter(objCmd, "userId", DbType.Int32, Convert.ToInt32(UserID));
-            DataAccess.AddInParameter(objCmd, "roleId", DbType.Int32, 2);
+            objCmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "sp_acu_saveUserRoleDetails_Miles");
+            DataAccess.AddInParameter(objCmd, "UserID", DbType.Int32, Convert.ToInt32(UserID));
+            DataAccess.AddInParameter(objCmd, "RoleID", DbType.Int32, 2);
 
             DataAccess.ExecuteNonQuery(objCmd);
         }

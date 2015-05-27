@@ -122,6 +122,20 @@
                     </asp:DropDownList>
                 </td>
             </tr>
+            <tr>
+                <td style="width: 150px">
+                    <asp:Label ID="Label71" runat="server" CssClass="label" Visible=false><span style="color:Red"> </span>&nbsp;&nbsp;Consultant Phone :</asp:Label>
+                </td>
+                <td style="width: 160px">
+                    <asp:TextBox ID="txtConsultantPhone" runat="server" Width="160px" CssClass="gvtextbox" Visible=false></asp:TextBox>
+                </td>
+                <td style="width: 150px; padding-left: 20px;">
+                    <asp:Label ID="Label72" runat="server" CssClass="label" Visible=false><span style="color:black"> </span>&nbsp;&nbsp;Consultant Mail :</asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtConsultantMail" runat="server" CssClass="gvtextbox" Width="160px" Visible=false></asp:TextBox>
+                </td>
+            </tr>
         </table>
         <table style="padding: 20px; border-width: 2px; border-color: gray; border-style: solid;Width:100%;">
             <tr>
@@ -195,7 +209,7 @@
                     <asp:Label ID="Label8" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Supplier :</asp:Label>
                 </td>
                 <td style="width: 160px">
-                    <asp:DropDownList ID="ddlSupplier" runat="server" Style="width: 160px" DataTextField="Name"
+                    <asp:DropDownList ID="ddlSupplier" runat="server" Style="width: 160px" DataTextField="Company"
                         DataValueField="ID">
                     </asp:DropDownList>
                 </td>
@@ -352,6 +366,7 @@
                     <!--http://dabuttonfactory.com/#t=TAB++2&f=Calibri-Bold&ts=20&tc=fff&tshs=1&tshc=000&hp=20&vp=8&c=5&bgt=gradient&bgc=d4d8dc&ebgc=073763-->
                     <asp:ImageButton ID="Tab_1" runat="server" ImageUrl="~/Images/tabTrade1.png"  OnClick="Tab1_Click"  ImageAlign="Left"  CssClass=".Clicked" />
                     <asp:ImageButton ID="Tab_2" runat="server" ImageUrl="~/Images/tabPFMembership.png"  OnClick="Tab2_Click"  ImageAlign="Left"  CssClass=".Initial" />
+                    <asp:ImageButton ID="Tab_3" runat="server" ImageUrl="~/Images/tabDealerInfo.png"  OnClick="Tab3_Click"  ImageAlign="Left"  CssClass=".Initial" />
                     <asp:MultiView ID="MainView" runat="server">
                         <asp:View ID="View1" runat="server">
                             <table style="width: 100%; border-width: 5px; border-color: Navy; border-style: solid;">
@@ -540,13 +555,82 @@
                                 </caption>
                             </table>
                         </asp:View>
+                        <asp:View ID="View3" runat="server">
+                            <table style="width: 100%; border-width: 5px; border-color: Navy; border-style: solid">
+                                <caption>
+                                    <tr>
+                                        <td style="width: 170px">
+                                            <asp:Label ID="Label23" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Compnay :</asp:Label>
+                                        </td>
+                                        <td style="width: 160px; padding-left: 10px;">
+                                            <asp:TextBox ID="txtDealerCompany" runat="server" Width="160px" CssClass="gvtextbox"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 150px; padding-left: 10px;">
+                                            <asp:Label ID="Label64" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Name :</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtDealerName" runat="server" CssClass="gvtextbox" Width="160px"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 170px">
+                                            <asp:Label ID="Label65" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Phone :</asp:Label>
+                                        </td>
+                                        <td style="width: 160px; padding-left: 10px;">
+                                            <asp:TextBox ID="txtDealerPhone" runat="server" CssClass="gvtextbox" 
+                                                Width="160px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 150px; padding-left: 10px;">
+                                            <asp:Label ID="Label66" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;Email :</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtDealerEmail" runat="server" CssClass="gvtextbox" 
+                                                Width="160px"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 170px">
+                                            <asp:Label ID="Label67" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;Address :</asp:Label>
+                                        </td>
+                                        <td style="width: 160px; padding-left: 10px;">
+                                            <asp:TextBox ID="txtDealerAddress" runat="server" CssClass="gvtextbox" 
+                                                Width="160px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 150px; padding-left: 10px;">
+                                            <asp:Label ID="Label68" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;City :</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtDealerCity" runat="server" CssClass="gvtextbox" 
+                                                Width="160px"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width: 170px">
+                                            <asp:Label ID="Label69" runat="server" CssClass="label"><span style="color:Red"> </span>&nbsp;&nbsp;State :</asp:Label>
+                                        </td>
+                                        <td style="width: 160px; padding-left: 10px;">
+                                            <asp:TextBox ID="txtDealerState" runat="server" CssClass="gvtextbox" 
+                                                Width="160px"></asp:TextBox>
+                                        </td>
+                                        <td style="width: 150px; padding-left: 10px;">
+                                            <asp:Label ID="Label70" runat="server" CssClass="label"><span style="color:black"> </span>&nbsp;&nbsp;PCode :</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="txtDealerPCode" runat="server" CssClass="gvtextbox" 
+                                                Width="160px"></asp:TextBox>
+                                        </td>
+                                    </tr>
+                                </caption>
+                            </table>
+                        </asp:View>
                     </asp:MultiView>
                 </td>
             </tr>
         </table>
         <table style="padding: 30px">
-        <asp:ImageButton ID="btnAddDeliveryTrack" runat="server" ImageUrl="~/Images/btnAddDeliveryTrack.png"  CssClass="btnAddTradeIn"  onClick="AddDeliveryTrack_Click" Style="margin-top: 20px; margin-left: 30px"/>
+        <asp:ImageButton ID="btnAddDeliveryTrack" runat="server" ImageUrl="~/Images/btnAddCustomerPool.png"  CssClass="btnAddTradeIn"  onClick="AddDeliveryTrack_Click" Style="margin-top: 20px; margin-left: 30px"/>
         <asp:ImageButton ID="btnCreateContract" runat="server" ImageUrl="~/Images/btnCreateContract.png"  CssClass="btnAddTradeIn"  onClick="Button4_Click"  ImageAlign=Right Style="margin-top: 20px; margin-right: 30px"/>
+        <asp:ImageButton ID="btnSearchCustomer" runat="server" ImageUrl="~/Images/btnSearchCustomer.png"  CssClass="btnAddTradeIn"  onClick="SearchCustomer_Click"  ImageAlign=Right Style="margin-top: 20px; margin-right: 30px"/>
         </table>
         <table style="padding: 10px; padding-left: 30px">
             <tr>

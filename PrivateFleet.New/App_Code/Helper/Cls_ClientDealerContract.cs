@@ -422,6 +422,25 @@ public class Cls_ClientDealerContract
         return dt;
     }
 
+    public DataTable SearchCustomer(string CustomerName, string Email)
+    {
+        DataTable dt = new DataTable();
+        try
+        {
+            DbCommand objcmd = null;
+            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchCustomer");
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@CustomerName", DbType.String, CustomerName);
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@Email", DbType.String, Email);
+
+            dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            return dt;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
     public DataTable SearchCustomerInfo(string ReqID)
     {
         DataTable dt = new DataTable();
@@ -465,6 +484,23 @@ public class Cls_ClientDealerContract
             DbCommand objcmd = null;
             objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSearchHeaderByReqID");
             Cls_DataAccess.getInstance().AddInParameter(objcmd, "@ReqID", DbType.String, ReqID);
+            dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
+            return dt;
+        }
+        catch (Exception ex)
+        {
+            return null;
+        }
+    }
+
+    public DataTable SearchQuoteIDbyReqID(string ReqID)
+    {
+        DataTable dt = new DataTable();
+        try
+        {
+            DbCommand objcmd = null;
+            objcmd = Cls_DataAccess.getInstance().GetCommand(CommandType.StoredProcedure, "SpSeachQuoteIDbyReqID");
+            Cls_DataAccess.getInstance().AddInParameter(objcmd, "@ReqID", DbType.Int32, Convert.ToInt32(ReqID));
             dt = Cls_DataAccess.getInstance().GetDataTable(objcmd);
             return dt;
         }
